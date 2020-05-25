@@ -20,6 +20,7 @@ class LoginPage extends Component {
     }
   }
 
+  // 회원,비회원 탭 메뉴 //
   liFunc() {
     if (this.state.memCheck===true) {
       this.setState({memCheck:false, nonmemCheck:true, id:"", password:""}, console.log(this.state))
@@ -29,10 +30,17 @@ class LoginPage extends Component {
     }
   }
 
+  // input값 핸들러 //
   inputHandler(event) {
     this.setState({[event.target.name]:event.target.value}, () => (this.validate(), console.log(this.state)))
   }
 
+  // input값이 클릭되었을때 경고창을 추가하게 할 함수 //
+  redAdd(event) { 
+    this.setState({[event.target.name+"Red"]:true})
+  }
+
+  // 유효성 검사(input값비었는지, input이 들어오면 경고창 없어지게 할) //
   validate() {
     if (this.state.id.length !== 0) {this.setState({idRed:false})}
     if (this.state.password.length !== 0) {this.setState({passwordRed:false})}
@@ -44,33 +52,32 @@ class LoginPage extends Component {
     else if (this.state.orderNum.length === 0 & this.state.orderTel.length === 0) {this.setState({validation:false}, () => console.log(this.state.validation))}
   }
 
+  // 마우스 클릭으로 유효성검사 실행하러 가는 함수 //
   clickToLoginFunc() {
     this.goValidate();
   }
 
+  // 엔터키로 유효성검사 실행하러 가는 함수 //
   enterToLoginFunc(event) {
     if(event.keyCode===13) {
       this.goValidate();
     }
   }
 
+  // 유효성검사가 성공적이면 페이지 이동함수가 있는 곳으로 보낼 함수 //
   goValidate() {
     if (this.state.validation===true) {
       this.goToMain();
     } else {
-      alert("입력칸에 내용이 없습니다")
+      alert("입력하신 내용이 없습니다")
     }
   }
 
+  // 페이지 이동 함수 //
   goToMain() {
     console.log(this.state)
     this.props.history.push("/")
-  }
-  
-  redAdd(event) { 
-    this.setState({[event.target.name+"Red"]:true})
-  }
-
+  }  
 
   render() {
     return(
