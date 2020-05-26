@@ -1,0 +1,78 @@
+.Main_nav {
+
+  .header_top {
+    position: relative;
+    height: 90px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 22px;
+      right: 25px;
+      height: 19px;
+
+      .login_wrap {
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        height: 19px;
+        .login {
+          cursor: pointer;
+          font-size: 13px;
+          color: #636363;
+        }
+      }
+      .signup_wrap {
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        height: 19px;
+        .signup {
+          cursor: pointer;
+          font-size: 13px;
+          color: #636363;
+        }
+      }
+
+      .language_container {
+        display: flex;
+        align-items: center;
+        height: 19px;
+        cursor: pointer;
+        .language_wrap {
+          cursor: pointer;
+          margin-left: 30px;
+          color: #636363;
+
+          .language {
+            font-size: 13px;
+          }
+        }
+        .icon_arrowdown_wrap {
+          display: flex;
+          .icon_arrowdown {
+            padding-right: 13px;
+            padding-left: 8px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .header_bottom {
+    position: relative;
+    height: 63px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+    background-color: #727272;
+
+
+  }
+
+}
