@@ -39,10 +39,10 @@ class LoginPage extends Component {
 
   // input값 핸들러 //
   inputHandler(event) {
-    this.setState(
-      { [event.target.name]: event.target.value },
-      () => (this.validate(), console.log(this.state))
-    );
+    this.setState({ [event.target.name]: event.target.value }, () => {
+      this.validate();
+      console.log(this.state);
+    });
   }
 
   // input값이 클릭되었을때 경고창을 추가하게 할 함수 //
