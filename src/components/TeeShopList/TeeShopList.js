@@ -26,7 +26,7 @@ class TeeShopList extends Component {
               <span>낮은가격순</span>
             </div>
             <div className="goodsList">
-              <div className="testDiv">1</div>
+              <div className="testDiv">1test</div>
             </div>
           </div>
         </div>
