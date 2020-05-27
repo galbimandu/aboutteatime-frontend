@@ -1,0 +1,174 @@
+.Nav {
+  .header_top_container {
+    max-width: 1400px;
+    .header_top {
+      position: relative;
+      height: 90px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      
+      .logo {
+        cursor: pointer;
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        top: 22px;
+        right: 25px;
+        height: 19px;
+
+        .login_wrap {
+          display: flex;
+          align-items: center;
+          margin-left: 30px;
+          height: 19px;
+          .login {
+            cursor: pointer;
+            font-size: 13px;
+            color: #636363;
+          }
+        }
+        .signup_wrap {
+          display: flex;
+          align-items: center;
+          margin-left: 30px;
+          height: 19px;
+          .signup {
+            cursor: pointer;
+            font-size: 13px;
+            color: #636363;
+          }
+        }
+
+        .language_container {
+          display: flex;
+          align-items: center;
+          height: 19px;
+          cursor: pointer;
+          .language_wrap {
+            cursor: pointer;
+            margin-left: 30px;
+            color: #636363;
+
+            .language {
+              font-size: 13px;
+            }
+          }
+          .icon_arrowdown_wrap {
+            display: flex;
+            .icon_arrowdown {
+              padding-right: 13px;
+              padding-left: 8px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .header_bottom {
+    position: relative;
+    height: 63px;
+    padding: 0 90px;
+    background-color: #727272;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .menu_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 950px;
+      height: 63px;
+
+      .idx0_wrap {
+        height: 63px;
+
+        .idx0 {
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          color: #fff;
+          height: 63px;
+          cursor: pointer;
+        }
+      }
+
+      .idx1_wrap {
+        height: 63px;
+        .idx1 {
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          color: #fff;
+          height: 63px;
+          cursor: pointer;
+        }
+      }
+
+      .idx2_wrap {
+        height: 63px;
+        .idx2 {
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          color: #fff;
+          height: 63px;
+          cursor: pointer;
+        }
+      }
+
+      .idx3_wrap {
+        height: 63px;
+        .idx3 {
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          color: #fff;
+          height: 63px;
+          cursor: pointer;
+        }
+      }
+
+      .idx4_wrap {
+        height: 63px;
+
+        .idx4 {
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          color: #fff;
+          height: 63px;
+          cursor: pointer;
+        }
+      }
+    }
+    .nav_icon {
+      display: flex;
+      position: absolute;
+      justify-content: space-evenly;
+      right: 280px;
+      width: 140px;
+      .search {
+        .icon_search {
+
+        }
+      }
+      .bucket {
+        .icon_bucket {
+
+        }
+      }
+      .more {
+        .icon_more {
+          
+        }
+      }
+    }
+  }
+}
