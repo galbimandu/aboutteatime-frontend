@@ -1,0 +1,241 @@
+*{
+    font-family: '맑은 고딕', '돋움', Dotum, sans-serif;
+}
+.title{
+    font-weight: bold;
+    font-size: 15px;
+    color: #3b3b3b;
+}
+.checkbox{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: white;
+    cursor: default;
+}
+.checkbox:focus{
+    outline: none;
+}
+.SignupBottom{
+    font-family: '맑은 고딕', '돋움', Dotum, sans-serif;
+    width: 440px;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .topBar{
+        width: 100%;
+        border: 1px solid #dadada;
+        height: 52px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        .checkbox{
+            height: 28px;
+            width: 28px;
+        }
+        span{
+            margin-top: 7px;
+            margin-left: 15px;
+            width: 100%;
+            color: #6c801d;
+            font-size: 21px;
+            padding-bottom: 3px;
+        }
+        .show{
+            box-sizing: content-box;
+            background-color: white;
+            border-width: 2px 2px 0px 0px;
+            border-color: #6c801d;
+            transform: rotate(-45deg);
+            width: 13.9px;
+            height: 12px;
+            padding: 0;  
+            margin-top:10px;
+            margin-right: 5px;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        .hide{
+            box-sizing: content-box;
+            background-color: white;
+            border-width: 0px 0px 2px 2px;
+            border-color: #6c801d;
+            transform: rotate(-45deg);
+            width: 13.9px;
+            height: 12px;
+            padding: 0;  
+            margin-bottom:5px;
+            margin-right: 5px;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        button:focus{
+            outline: none;
+        }
+    }
+    .appear{
+        .agreement_info{
+            p{
+                margin-top: 10px;
+                padding-right: 17px;
+                line-height: 22px;
+                font-size: 13px;
+                color: #707070;
+            }
+        }
+        .account_check{
+            width: 100%;
+            padding-top: 28px;
+            line-height: 25px;
+            ul{
+                margin-top: 8px;
+                li{
+                    display: flex;
+                    align-items: center;
+                    .checkbox{
+                        height: 25px;
+                        width: 25px;
+                        margin-bottom: 15px;
+                    }
+                    span{
+                        font-family: '맑은 고딕', '돋움', Dotum, sans-serif;
+                        width: 100%;
+                        margin-left: 15px;
+                        margin-bottom: 5px;
+                        padding-bottom: 5px;
+                        font-size: 15px;
+                        color: #3b3b3b;
+                    }
+                    img{
+                        height: 29px;
+                        width: 29px;
+                        margin-top: 2px;
+                    }
+                }
+                li:nth-child(3){
+                    div{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    span{
+                        font-family: '맑은 고딕', '돋움', Dotum, sans-serif;
+                        padding-bottom: 0;
+                        font-size: 15px;
+                        color: #3b3b3b;
+                    }
+                    span:nth-child(2){
+                        padding-bottom: 7px;
+                        margin-top: -5px;
+                        font-size: 13px;
+                        color: #707070;
+                        line-height: 15px;
+                    }
+                }
+            }
+        }
+        .ad_check{
+            
+            width: 100%;
+            margin-top: 10px;
+            color: #3b3b3b;
+            line-height: 25px;
+            .sub{
+                
+                margin-left: 5px;
+                color: #707070;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            ul{
+                margin-top: 8px;
+                li{
+                    display: flex;
+                    align-items: center;
+                    .checkbox{
+                        height: 25px;
+                        width: 25px;
+                        margin-bottom: 15px;
+                    }
+                    span{
+                        font-family: '맑은 고딕', '돋움', Dotum, sans-serif;
+                        width: 100%;
+                        margin-left: 15px;
+                        margin-bottom: 10px;
+                        font-size: 15px;
+                    }
+                    img{
+                        height: 29px;
+                        width: 29px;
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+        .personal_info{
+            margin-top: 20px;
+            p{
+                font-family: '맑은 고딕', '돋움', Dotum, sans-serif;
+                margin-top: 10px;
+                padding-right: 17px;
+                line-height: 22px;
+                font-size: 13px;
+                color: #707070;
+                word-break: break-all;
+                strong{
+                    color: #000;
+                    font-family: '맑은 고딕', '돋움', Dotum, sans-serif;
+                }
+            }
+        }
+    }
+    .disappear{
+        display: none;
+    }
+    .final_btn{
+        width: 460px;
+        margin-top: 10px;
+        .true{
+            width: 100%;
+            color: #fff;
+            line-height: 52px;
+            font-size: 20px;
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid transparent;
+            background: #6c801d;
+            border-color: #6c801d;
+        }
+        .false{
+            width: 100%;
+            color: #fff;
+            line-height: 52px;
+            font-size: 20px;
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid transparent;
+            background: #555;
+            border-color: #555;
+        }
+    }
+    .foreign_btn{
+        margin: 10px 0px;
+        button{
+            display: inline-block;
+            height: 32px;
+            margin: 14px auto 0;
+            padding: 0 24px 0 15px;
+            color: #484848;
+            text-align: center;
+            line-height: 32px;
+            border: 1px solid #a3a3a3;
+            border-radius: 30px;
+            font-size: 15px;
+            background-color: white;
+        }
+    }
+}
+
