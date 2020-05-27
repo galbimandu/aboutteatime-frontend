@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "name": "n",
+      "age": "1"
+    },
+    {
+      "name": "b",
+      "age": "2"
+    }
+  ]
+}
+
+// fetch("/data/data.json")

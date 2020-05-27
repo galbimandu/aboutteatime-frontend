@@ -1,19 +1,26 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./pages/Main/MainPage";
-import Test from "./components/TeaShopItem/Test";
+import Login from "./pages/Login/LoginPage";
+import TeeShop from "./pages/TeeShop/TeeShopPage";
 import SignupBottom from "./components/SignupBottom/SignupBottom";
-import Footer from "./components/Footer/Footer"
+
 class Routes extends Component {
+  constructor() {
+    super();
+  }
+
   render() {
-    return(
+    return (
       <Router>
         <Switch>
           <Route exact path="/" component={Main} />
           <Route exact path="/test" component={SignupBottom} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/teeshop" component={TeeShop} />
         </Switch>
       </Router>
-    )
+    );
   }
 }
 
