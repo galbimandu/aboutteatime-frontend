@@ -1,0 +1,221 @@
+@font-face {
+  font-family: Buri;
+  src: url(../../styles/fonts/Arita-buriM-subset.woff);
+}
+@font-face {
+  font-family: fontello;
+  src: url(../../styles/fonts/fontello.woff);
+}
+@font-face {
+  font-family: Noto_M;
+  src: url(../../styles/fonts/notokr-regular.woff2);
+}
+
+li {
+  font-family: "Noto_M", "본고딕", "Noto Sans CJK kR Medium",
+    "Noto Sans CJK kR Medium";
+}
+
+.teaShopList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .teaShopListwrap {
+    margin: 40px 0 0 0;
+    width: 1400px;
+    display: flex;
+    justify-content: center;
+    .subMenu {
+      margin-right: 15px;
+      width: 165px;
+      display: flex;
+      flex-direction: column;
+      .subMenuTitle {
+        height: 2em;
+        display: flex;
+        align-items: center;
+        span {
+          color: #363535;
+          font-size: 18px;
+        }
+      }
+      .subMenuList {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        color: #363535;
+        width: 100%;
+        .subMenuListinner {
+          margin-left: 50px;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          li {
+            position: relative;
+            list-style: none;
+            cursor: pointer;
+            margin: 1.2em 0;
+            font-size: 18px;
+            color: #363535;
+            &:hover {
+              color: #6c801a;
+            }
+          }
+          .hiddenDiv {
+            display: flex;
+            position: absolute;
+            top: -15px;
+            left: 90px;
+            z-index: 2;
+            background-color: white;
+            img {
+              margin: 15px 9px 0 0;
+              height: 0.8em;
+              width: 0.5em;
+            }
+            .hididinDivInner {
+              width: 150px;
+              border: 0.8px #e1e1e1 solid;
+              ul {
+                margin: 15px 0 15px 20px;
+                li {
+                  margin: 1.4em 0;
+                  font-family: "Noto_M", "본고딕", "Noto Sans CJK kR Medium",
+                    "Noto Sans CJK kR Medium";
+                  font-size: 14px;
+                  background-color: white;
+                  a {
+                    text-decoration: none;
+                    color: black;
+                    &:visited {
+                      text-decoration: none;
+                    }
+                    &:hover {
+                      font-weight: bold;
+                      color: #6c801a;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .hiddenOn {
+            display: "";
+          }
+          .hiddenOff {
+            display: none;
+          }
+        }
+      }
+    }
+    .contents {
+      width: 100%;
+      .cotentsTitle {
+        height: 7em;
+        .cotentsTitleTop {
+          width: 100%;
+          height: 2.5em;
+          display: flex;
+          align-items: center;
+          border-bottom: 3px #f6f6f6 solid;
+          span {
+            font-size: 18px;
+          }
+          .cotentsTitleTopRight {
+            display: flex;
+            justify-content: space-around;
+            margin-left: auto;
+            margin-right: 10px;
+            width: 36em;
+            height: 100%;
+            letter-spacing: -2px;
+            li {
+              display: flex;
+              align-items: center;
+              list-style: none;
+              cursor: pointer;
+              font-size: 18px;
+            }
+            li:hover {
+              color: #6c801a;
+            }
+            .choiceSpan {
+              color: #6c801a;
+              height: 107%;
+              border-bottom: 3px #6c801a solid;
+            }
+          }
+        }
+        .cotentsTitleBottom {
+          width: 100%;
+          height: 4em;
+          display: flex;
+          align-items: center;
+          .cotentsTitleBottomLeft {
+            span {
+              letter-spacing: -0.5px;
+              font-size: 16px;
+            }
+          }
+          .cotentsTitleBottomRight {
+            display: flex;
+            justify-content: space-between;
+            margin-left: auto;
+            width: 29em;
+            li {
+              list-style: none;
+              cursor: pointer;
+              width: 84px;
+              height: 38px;
+              border-radius: 30px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              span {
+                font-size: 18px;
+                letter-spacing: -1.5px;
+              }
+            }
+            .categoryOn {
+              color: #ffffff;
+              background: #6c801a;
+            }
+            .categoryOff {
+              color: #a5a5a5;
+              background: #f1f1f1;
+            }
+          }
+        }
+      }
+      .goodsList {
+        margin-top: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .testDiv {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 10em;
+          border-right: 2px #f6f6f6 solid;
+        }
+        @media (min-width: 1100px) {
+          .testDiv {
+            width: 25%;
+          }
+          .testDiv:nth-child(4n) {
+            border-right: 0;
+          }
+        }
+        @media (max-width: 1101px) {
+          .testDiv {
+            width: 33%;
+          }
+          .testDiv:nth-child(3n) {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
