@@ -1,6 +1,7 @@
 {
-  "item" : [
-    {
+  "data" : 
+    [
+      {
       "back" : "https://www.osulloc.com/upload/kr/ko/item_overImg/5041.png?quality=80&shrink=304:340",
       "front" : "https://www.osulloc.com/upload/kr/ko/adminImage/PW/US/200_20180406140800938CQ.png?quality=80",
       "best" : true,
@@ -9,6 +10,6 @@
       "price" : "8,500",
       "likes" : 18,
       "comments" : 556
-    }
-  ]
+      }
+    ]
 }

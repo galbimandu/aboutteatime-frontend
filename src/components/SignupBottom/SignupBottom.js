@@ -48,7 +48,7 @@ class SignupBottom extends Component{
     changeShape = (num) => {
         if(num === "zero"){
             this.setState({ [num] : !this.state[num]},()=>{
-                if(this.state.zero == false){
+                if(this.state.zero === false){
                     this.setState({isAllUnSelected:true,isAllSelected:false},()=>{this.checkAll()})
                 }else{
                     this.setState({isAllSelected:true,isAllUnSelected:false},()=>{this.checkAll()})
@@ -56,11 +56,11 @@ class SignupBottom extends Component{
             })
         }else{
             this.setState({ [num] : !this.state[num]},()=>{
-                if(this.state.one == true && this.state.two == true && this.state.three == true && this.state.four == true && this.state.five == true && this.state.six == true){
+                if(this.state.one === true && this.state.two === true && this.state.three === true && this.state.four === true && this.state.five === true && this.state.six === true){
                     this.setState({zero:true,isAllUnSelected:false,isAllSelected:true},()=>{this.checkAll()})
-                }else if(this.state.one == false && this.state.two == false && this.state.three == false && this.state.four == false && this.state.five == false && this.state.six == false){
+                }else if(this.state.one === false && this.state.two === false && this.state.three === false && this.state.four === false && this.state.five === false && this.state.six === false){
                     this.setState({zero:false,isAllUnSelected:true,isAllSelected:false},()=>{this.checkAll()})
-                }else if(this.state[num] == false && this.state.zero!=false){
+                }else if(this.state[num] === false && this.state.zero!==false){
                     this.setState({zero:false,isAllUnSelected:false,isAllSelected:false})
                 }else{
                     this.setState({isAllUnSelected:false,isAllSelected:false})
@@ -101,7 +101,7 @@ class SignupBottom extends Component{
             <div className = "SignupBottom">
                 <div className = "topBar">
                     <button onClick={() => this.changeShape("zero")}type="checkbox" className="checkbox">
-                        <img src={ this.state.zero === false ? click : clicked }/>
+                        <img src={ this.state.zero === false ? click : clicked } alt="click"/>
                     </button>
                     <span>모든 약관 동의</span>
                     <button className={ this.state.foldUp } onClick = { () => this.foldUp() }>
