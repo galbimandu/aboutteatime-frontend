@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./TeaShopList.scss";
 import { Link } from "react-router-dom";
-import url from "../../config";
 
 class TeaShopList extends Component {
   constructor() {
