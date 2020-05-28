@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./TeaShopPage.scss";
-import TeeShopList from "../../components/TeaShopList/TeaShopList";
+import TeaShopList from "../../components/TeaShopList/TeaShopList";
+import VideoLayer from "../../components/VideoLayer/VideoLayer";
 
 class TeaShopPage extends Component {
   constructor() {
@@ -10,7 +11,8 @@ class TeaShopPage extends Component {
   render() {
     return (
       <div className="TeaShopPage">
-        <TeeShopList />
+        <VideoLayer />
+        <TeaShopList />
       </div>
     );
   }
