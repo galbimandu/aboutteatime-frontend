@@ -175,7 +175,7 @@ class SignupBottom extends Component{
                 </div>
                 </div>
                 <div className = "final_btn">
-                    <button onClick = { this.signUp() }className = {this.state.btnColor.toString()}>본인인증 및 회원가입</button>
+                    <button onClick = { this.signUp }className = {this.state.btnColor.toString()}>본인인증 및 회원가입</button>
                 </div>
                 <div className = "foreign_btn">
                     <button>외국인 회원가입></button>
