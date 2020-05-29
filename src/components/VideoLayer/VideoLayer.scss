@@ -1,4 +1,6 @@
 .videoLayer {
+  overflow-x: hidden;
+  width: 100%;
   .videoLayerPlayer {
     display: flex;
     justify-content: center;
@@ -6,17 +8,13 @@
     width: 100%;
     .videoinner {
       height: 490px;
-      video {
-        height: 100%;
-        background-color: #000000;
-      }
+      video,
       img {
         height: 100%;
-        opacity: 1;
       }
     }
   }
-  .videoCover {
+  .videoBottomButtun {
     background-color: #000000;
     height: 90px;
     width: 100%;

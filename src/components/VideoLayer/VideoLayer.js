@@ -11,64 +11,102 @@ class VideoLayer extends Component {
       gTea: false,
       hTea: false,
       bTea: false,
+      transformStay: 0,
     };
   }
 
   mTeaFunc() {
     if (this.state.mTea === false) {
-      this.setState({ mTea: true, gTea: false, hTea: false, bTea: false }, () =>
-        console.log(this.state)
+      this.setState(
+        { transformStay: 0, mTea: true, gTea: false, hTea: false, bTea: false },
+        () => console.log(this.state)
       );
     }
   }
 
   gTeaFunc() {
     if (this.state.gTea === false) {
-      this.setState({ mTea: false, gTea: true, hTea: false, bTea: false }, () =>
-        console.log(this.state)
+      this.setState(
+        {
+          transformStay: -490,
+          mTea: false,
+          gTea: true,
+          hTea: false,
+          bTea: false,
+        },
+        () => console.log(this.state)
       );
     }
   }
 
   hTeaFunc() {
     if (this.state.hTea === false) {
-      this.setState({ mTea: false, gTea: false, hTea: true, bTea: false }, () =>
-        console.log(this.state)
+      this.setState(
+        {
+          transformStay: -980,
+          mTea: false,
+          gTea: false,
+          hTea: true,
+          bTea: false,
+        },
+        () => console.log(this.state)
       );
     }
   }
 
   bTeaFunc() {
     if (this.state.bTea === false) {
-      this.setState({ mTea: false, gTea: false, hTea: false, bTea: true }, () =>
-        console.log(this.state)
+      this.setState(
+        {
+          transformStay: -1470,
+          mTea: false,
+          gTea: false,
+          hTea: false,
+          bTea: true,
+        },
+        () => console.log(this.state)
       );
     }
   }
 
   render() {
+    const videoStyle = {
+      transform: `translate(${this.state.transformStay}px, 0)`,
+      transition: "2s",
+    };
     return (
       <div className="videoLayer">
-        <div className="videoLayerPlayer">
-          <div className="videoinner video1">
+        <div className="videoLayerPlayer" style={videoStyle}>
+          <div className="videoinner">
+            <video controls="" autoPlay loop muted>
+              <source src={video} type="video/mp4" />
+            </video>
+          </div>
+          <div className="videoinner">
             <img
               src={require("../../images/20191105112546236OO.jpg")}
               alt="kakao"
             />
           </div>
-          <div className="videoinner video2">
+          <div className="videoinner">
             <video controls="" autoPlay loop muted>
               <source src={video} type="video/mp4" />
             </video>
           </div>
-          <div className="videoinner video3">
+          <div className="videoinner">
+            <img
+              src={require("../../images/20191105112617747VR.jpg")}
+              alt="kakao"
+            />
+          </div>
+          <div className="videoinner">
             <img
               src={require("../../images/20191105112617747VR.jpg")}
               alt="kakao"
             />
           </div>
         </div>
-        <div className="videoCover">
+        <div className="videoBottomButtun">
           <ul>
             <li
               onClick={this.mTeaFunc.bind(this)}
