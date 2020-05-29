@@ -1,0 +1,15 @@
+.teaShopList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .teaShopListwrap {
+    margin: 40px 0 0 0;
+    width: 1400px;
+    display: flex;
+    justify-content: center;
+    .contents {
+      width: 100%;
+    }
+  }
+}
