@@ -2,19 +2,77 @@
   overflow-x: hidden;
   width: 100%;
   .videoLayerPlayer {
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-left: 865px;
     .videoinner {
       height: 490px;
-      video,
-      img {
+      .teaVideo {
         height: 100%;
+        position: relative;
+        video {
+          height: 580px;
+          overflow: hidden;
+        }
+        .teaText {
+          position: absolute;
+          bottom: 13%;
+          right: 3%;
+          a {
+            height: 10%;
+            color: white;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            b {
+              font-size: 40px;
+              font-family: "AritaBuriSB";
+              margin: 5px 0;
+            }
+            p {
+              margin: 5px 0;
+              font-size: 18px;
+              font-family: "notokr-regular";
+            }
+          }
+        }
+        .teaTextOn {
+          animation-name: movingText;
+          animation-duration: 2s;
+          animation-iteration-count: 1;
+        }
+        @keyframes movingText {
+          from {
+            margin-bottom: -5%;
+          }
+          to {
+            margin-bottom: 0%;
+          }
+        }
+      }
+      .teaVideoOn {
+        display: "";
+      }
+      .teaVideoOff {
+        display: none;
+      }
+      .teaImage {
+        height: 100%;
+        img {
+          height: 100%;
+          filter: brightness(50%);
+        }
       }
     }
   }
+
   .videoBottomButtun {
+    position: relative;
+    z-index: 3;
     background-color: #000000;
     height: 90px;
     width: 100%;
@@ -24,7 +82,7 @@
     ul {
       display: flex;
       align-items: center;
-      width: 85%;
+      width: 80%;
       justify-content: space-around;
       li {
         cursor: pointer;

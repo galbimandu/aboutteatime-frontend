@@ -29,11 +29,9 @@ class TeaShopGoTopButton extends Component {
         className={
           this.state.scrolling ? "goTop goTopVisible" : "goTop goTopInvisible"
         }
-        // onClick={this.scrollingFunc.bind(this)}
+        onClick={this.scrollingFunc.bind(this)}
       >
-        <a href="#">
-          <img src={require("../../images/btn_goTop.png")} alt="kakao" />
-        </a>
+        <img src={require("../../images/btn_goTop.png")} alt="kakao" />
       </div>
     );
   }
