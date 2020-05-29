@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import "./TeeShopList.scss";
+import "./TeaShopList.scss";
 
-class TeeShopList extends Component {
+class TeaShopList extends Component {
   constructor() {
     super();
   }
 
   render() {
     return (
-      <div className="teeShopList">
-        <div className="teeShopListwrap">
+      <div className="teaShopList">
+        <div className="teaShopListwrap">
           <div className="subMenu">
             <h2>TEA SHOP</h2>
             <h3>Tea</h3>
@@ -35,4 +35,4 @@ class TeeShopList extends Component {
   }
 }
 
-export default TeeShopList;
+export default TeaShopList;
