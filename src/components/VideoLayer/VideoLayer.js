@@ -22,65 +22,53 @@ class VideoLayer extends Component {
 
   mTeaFunc() {
     if (this.state.mTea === false) {
-      this.setState(
-        {
-          transformStay: 0,
-          mTea: true,
-          gTea: false,
-          hTea: false,
-          bTea: false,
-          autoPlayIndex: 2,
-        },
-        () => console.log(this.state)
-      );
+      this.setState({
+        transformStay: 0,
+        mTea: true,
+        gTea: false,
+        hTea: false,
+        bTea: false,
+        autoPlayIndex: 2,
+      });
     }
   }
 
   gTeaFunc() {
     if (this.state.gTea === false) {
-      this.setState(
-        {
-          transformStay: -870,
-          mTea: false,
-          gTea: true,
-          hTea: false,
-          bTea: false,
-          autoPlayIndex: 3,
-        },
-        () => console.log(this.state)
-      );
+      this.setState({
+        transformStay: -1000,
+        mTea: false,
+        gTea: true,
+        hTea: false,
+        bTea: false,
+        autoPlayIndex: 3,
+      });
     }
   }
 
   hTeaFunc() {
     if (this.state.hTea === false) {
-      this.setState(
-        {
-          transformStay: -1740,
-          mTea: false,
-          gTea: false,
-          hTea: true,
-          bTea: false,
-          autoPlayIndex: 4,
-        },
-        () => console.log(this.state)
-      );
+      this.setState({
+        transformStay: -2000,
+        mTea: false,
+        gTea: false,
+        hTea: true,
+        bTea: false,
+        autoPlayIndex: 4,
+      });
     }
   }
 
   bTeaFunc() {
     if (this.state.bTea === false) {
-      this.setState(
-        {
-          transformStay: -2610,
-          mTea: false,
-          gTea: false,
-          hTea: false,
-          bTea: true,
-          autoPlayIndex: 1,
-        },
-        () => console.log(this.state)
-      );
+      this.setState({
+        transformStay: -3000,
+        mTea: false,
+        gTea: false,
+        hTea: false,
+        bTea: true,
+        autoPlayIndex: 1,
+      });
     }
   }
 
@@ -97,24 +85,19 @@ class VideoLayer extends Component {
   };
 
   componentDidMount() {
-    setInterval(this.autoVideoChangeFunc, 12000);
+    setInterval(this.autoVideoChangeFunc, 15000);
   }
 
   render() {
+    //video slide시킬 translate
     const videoStyle = {
       transform: `translate(${this.state.transformStay}px, 0)`,
       transition: "ease 1s",
     };
-    console.log(this.state.autoPlayIndex);
     return (
       <div className="videoLayer">
         <div className="videoLayerPlayer" style={videoStyle}>
           {/* left 고정 사진 div 시작 */}
-          <div className="videoinner">
-            <div className="teaImage">
-              <img src={require("../../images/teaSample3.jpg")} alt="tea" />
-            </div>
-          </div>
           <div className="videoinner">
             <div className="teaImage">
               <img src={require("../../images/teaSample2.jpg")} alt="tea" />
@@ -128,6 +111,11 @@ class VideoLayer extends Component {
           <div className="videoinner">
             <div className="teaImage">
               <img src={require("../../images/teaSample4.jpg")} alt="tea" />
+            </div>
+          </div>
+          <div className="videoinner">
+            <div className="teaImage">
+              <img src={require("../../images/teaSample7.jpg")} alt="tea" />
             </div>
           </div>
           {/* left 고정 사진 div 시작  끝 */}
@@ -257,46 +245,37 @@ class VideoLayer extends Component {
               <img src={require("../../images/teaSample7.jpg")} alt="tea" />
             </div>
           </div>
-          <div className="videoinner">
-            <div className="teaImage">
-              <img src={require("../../images/teaSample5.jpg")} alt="tea" />
-            </div>
-          </div>
-          <div className="videoinner">
-            <div className="teaImage">
-              <img src={require("../../images/teaSample6.jpg")} alt="tea" />
-            </div>
-          </div>
           {/* right 고정 사진 div 시작  끝 */}
         </div>
-
         <div className="videoBottomButtun">
-          <ul>
-            <li
-              onClick={this.mTeaFunc.bind(this)}
-              className={this.state.mTea ? "activate" : ""}
-            >
-              명차
-            </li>
-            <li
-              onClick={this.gTeaFunc.bind(this)}
-              className={this.state.gTea ? "activate" : ""}
-            >
-              녹차/발효차/홍차
-            </li>
-            <li
-              onClick={this.hTeaFunc.bind(this)}
-              className={this.state.hTea ? "activate" : ""}
-            >
-              허브티(무카페인)
-            </li>
-            <li
-              onClick={this.bTeaFunc.bind(this)}
-              className={this.state.bTea ? "activate" : ""}
-            >
-              블렌디드티
-            </li>
-          </ul>
+          <div className="videoBottomButtunContents">
+            <ul>
+              <li
+                onClick={this.mTeaFunc.bind(this)}
+                className={this.state.mTea ? "activate" : ""}
+              >
+                명차
+              </li>
+              <li
+                onClick={this.gTeaFunc.bind(this)}
+                className={this.state.gTea ? "activate" : ""}
+              >
+                녹차/발효차/홍차
+              </li>
+              <li
+                onClick={this.hTeaFunc.bind(this)}
+                className={this.state.hTea ? "activate" : ""}
+              >
+                허브티(무카페인)
+              </li>
+              <li
+                onClick={this.bTeaFunc.bind(this)}
+                className={this.state.bTea ? "activate" : ""}
+              >
+                블렌디드티
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     );
