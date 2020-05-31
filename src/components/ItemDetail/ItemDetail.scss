@@ -1,0 +1,312 @@
+@font-face {
+  font-family: "Noto_M";
+  src: url(../../styles/fonts/notokr-regular.woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: AritaBuriSB;
+  src: url(../../styles/fonts/Arita-buriM-subset.woff);
+}
+.Pager {
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto_M";
+  .ItemDetail {
+    width: 1220px;
+    height: 680px;
+    border: solid black 1px;
+    display: flex;
+    justify-content: space-between;
+    .leftWrap {
+      position: relative;
+      height: 100%;
+      .left {
+        background: #f8f9fb;
+        width: 580px;
+        height: 615px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        .topTag {
+          display: flex;
+          margin-left: auto;
+          position: absolute;
+          right: 0;
+          .none {
+            display: none;
+          }
+        }
+        .item {
+          height: 474px;
+          width: 474px;
+        }
+        .bottomTag {
+          position: absolute;
+          bottom: 0;
+          ul {
+            margin-left: 10px;
+            width: 100%;
+            height: 86px;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+              display: flex;
+              align-items: center;
+              span {
+                padding-left: 30px;
+                font-family: "Noto_M";
+                color: #505051;
+                font-size: 15px;
+              }
+            }
+
+            .ic01 {
+              background: URL("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_ico1.png?quality=80")
+                0 0 no-repeat;
+              height: 21px;
+              width: 38%;
+            }
+            .ic02 {
+              background: URL("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_ico1.png?quality=80")
+                0 -30px no-repeat;
+              height: 21px;
+              width: 28%;
+            }
+            .ic03 {
+              background: URL("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_ico1.png?quality=80")
+                0 -60px no-repeat;
+              height: 21px;
+              span {
+                padding-left: 33px;
+              }
+            }
+            .ic04 {
+              background: URL("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_ico1.png?quality=80")
+                0 -90px no-repeat;
+              height: 21px;
+              width: 38%;
+            }
+            .ic05 {
+              background: URL("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_ico1.png?quality=80")
+                0 -120px no-repeat;
+              height: 21px;
+            }
+          }
+        }
+      }
+      .review {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 590px;
+        .revLeft {
+          display: flex;
+
+          .leftBox {
+            .txt {
+              font-size: 30px;
+              margin: 0 15px 0 0;
+              color: #555555;
+            }
+            .score {
+              color: #6c801a;
+              font-size: 40px;
+              font-weight: bold;
+            }
+          }
+          .stars {
+            margin-top: auto;
+            margin-bottom: 1px;
+            margin-left: 10px;
+            height: 25px;
+            width: 116.5px;
+            position: relative;
+            background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+              0 0 no-repeat;
+            overflow: hidden;
+            .bar0 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 0%;
+            }
+            .bar5 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 8.83%;
+            }
+            .bar10 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 20%;
+            }
+            .bar15 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 29.5%;
+            }
+            .bar20 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 40%;
+            }
+            .bar25 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 50%;
+            }
+            .bar30 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 60%;
+            }
+            .bar35 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 70.7%;
+            }
+            .bar40 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 81%;
+            }
+            .bar45 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 91.4%;
+            }
+            .bar50 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 100%;
+            }
+          }
+        }
+        .revRight {
+          height: 30px;
+          display: flex;
+          align-items: center;
+          margin-top: auto;
+          span:first-child {
+            color: #9e9e9e;
+            font-size: 20px;
+          }
+          span:nth-child(2) {
+            color: #2f2f2f;
+            font-size: 20px;
+            margin-left: 3px;
+          }
+          img {
+            margin-left: 10px;
+            height: 14px;
+            width: 10px;
+          }
+        }
+      }
+    }
+    .rightWrap {
+      height: 100%;
+      .right {
+        width: 580px;
+        border: solid black 1px;
+        .category {
+          display: flex;
+          align-items: center;
+          span {
+            color: #9d9d9d;
+            font-size: 16px;
+          }
+          img {
+            width: 6px;
+            height: 10px;
+            margin: 0 7px;
+          }
+        }
+        .itemName {
+          color: #000000;
+          font-family: "AritaBuriSB";
+          font-size: 36px;
+          margin-top: 15px;
+        }
+        .description {
+          color: #656565;
+          font-size: 20px;
+          margin-top: 10px;
+          line-height: 1.5;
+        }
+        .middleBox {
+          display: flex;
+          justify-content: space-between;
+          .icons {
+            width: 210px;
+            display: flex;
+            justify-content: space-between;
+            img {
+              border-radius: 50px;
+            }
+          }
+          .price {
+            .priceTop {
+              color: #b8b8b8;
+              font-size: 20px;
+              text-decoration: line-through;
+            }
+            .priceBottom {
+              display: flex;
+              .finalPrice {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -71,6 +71,18 @@ class TeaShopItem extends Component {
             src="https://www.osulloc.com/kr/ko/static_renew/images/label_gift.gif"
             alt="free"
           />
+          <img
+            className={
+              this.props.data && this.props.data.sold_out ? "" : "none"
+            }
+            src="https://www.osulloc.com/kr/ko/static_renew/images/label_sold.gif"
+            alt="soldout"
+          />
+          <img
+            className={this.props.data && this.props.data.new ? "" : "none"}
+            src="https://www.osulloc.com/kr/ko/static_renew/images/label_new.gif"
+            alt="new"
+          />
         </div>
         <p className="name">{this.props.data && this.props.data.name}</p>
         <p className="price">

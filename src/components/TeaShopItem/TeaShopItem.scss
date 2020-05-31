@@ -4,74 +4,75 @@
 }
 @font-face {
   font-family: notokr-regular;
-  src: url(../../styles/fonts/notokr-regular.woff2);
+  src: url(../../styles/fonts/notokr-regular.eot);
 }
 @font-face {
   font-family: Noto_M;
-  src: url(../../styles/fonts/notokr-regular.eot);
+  src: url(../../styles/fonts/notokr-regular.woff2);
 }
-.ShopItem{
-  width : 320px;
+.ShopItem {
+  width: 320px;
   height: 537px;
- 
+
   padding: 0 22px 70px;
-  .image{
+  .image {
     width: 100%;
     display: flex;
     position: relative;
     justify-content: center;
     margin-bottom: 18px;
-    img{
+    img {
       width: 100%;
     }
-    img:nth-child(2){
+    img:nth-child(2) {
       position: absolute;
       right: 10px;
       bottom: 10px;
       width: 64px;
       height: 64px;
     }
-    .basket{
+    .basket {
       display: none;
     }
   }
-  .tag{
+  .tag {
     height: 32px;
-    img{
-      height:21px;
-      width:41px;
+    img {
+      height: 21px;
+      width: 41px;
     }
-    .none{
+    .none {
       display: none;
     }
   }
-  .name{
+  .name {
     height: 48px;
     margin: 0 0 5px;
     line-height: 1;
     letter-spacing: -0.3px;
     color: #555555;
-    font-family: 'AritaBuriSB';
+    font-family: "AritaBuriSB";
     font-size: 20px;
   }
-  .price{
+  .price {
     height: 50px;
-    font-family: 'notokr-regular', 'Noto Sans CJK';
+    font-family: "notokr-regular", "Noto Sans CJK";
     font-size: 20px;
   }
-  .likecomment{
+  .likecomment {
     height: 27px;
     display: flex;
     align-items: center;
-    img{
+    img {
       height: 21px;
       width: 23px;
     }
-    span{
+    span {
       line-height: 1.5;
       color: #bcbcbc;
       font-size: 20px;
-      font-family: 'Noto_M', '본고딕', 'Noto Sans CJK kR Medium', 'Noto Sans CJK kR Medium';
+      font-family: "Noto_M", "본고딕", "Noto Sans CJK kR Medium",
+        "Noto Sans CJK kR Medium";
       margin-left: 5px;
       margin-right: 50px;
       padding-bottom: 5px;
