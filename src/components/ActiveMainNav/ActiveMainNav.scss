@@ -1,7 +1,53 @@
 .activeMainNav {
   background-color: purple;
   position: fixed;
-  top: 50vh;
-  right: 1vh;
-  z-index: 5;
+  width: 10em;
+  height: 15em;
+  top: 30vh;
+  right: 0;
+  z-index: 100;
+  .navButton {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .navCommon {
+      position: relative;
+      cursor: pointer;
+      width: 100%;
+      height: 3em;
+      background-color: blue;
+      .textCommon {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        margin-left: -100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+          color: white;
+          font-size: 14px;
+          font-family: "Buri";
+        }
+      }
+      .textActive {
+        display: "";
+      }
+      .textHidden {
+        display: none;
+      }
+    }
+    .part1 {
+    }
+    .part2 {
+    }
+    .part3 {
+    }
+    .active {
+      background-color: white;
+    }
+  }
 }
