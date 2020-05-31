@@ -23,7 +23,23 @@ class Basket extends Component {
                 장바구니
               </h1>
             </header>
-            
+            <div className="tab_container">
+              <ul className="tab_wrap">
+                <li className="tab">
+                  <div className="tab_text">
+                    일반상품&nbsp;
+                    <i className="n_wrap">
+                      (
+                      <b id="n">0</b>
+                      )
+                    </i>
+                  </div>
+                </li>
+              </ul>              
+            </div>
+            <section>
+              
+            </section>
 
 
           </section>
