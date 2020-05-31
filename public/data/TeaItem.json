@@ -1,17 +1,34 @@
 {
-  "data" : 
-    [
-      {
-      "back" : "https://www.osulloc.com/upload/kr/ko/item_overImg/5041.png?quality=80&shrink=304:340",
-      "front" : "https://www.osulloc.com/upload/kr/ko/adminImage/PW/US/200_20180406140800938CQ.png?quality=80",
-      "best" : true,
-      "gift" : true,
-      "sale" : true,
-      "free" : true,
-      "name" : "녹차밀크스프레드 200 g",
-      "price" : "8,500",
-      "likes" : 18,
-      "comments" : 556
-      }
-    ]
+  "data": [
+    {
+      "back": "https://www.osulloc.com/upload/kr/ko/item_overImg/5041.png?quality=80&shrink=304:340",
+      "front": "https://www.osulloc.com/upload/kr/ko/adminImage/PW/US/200_20180406140800938CQ.png?quality=80",
+      "best": true,
+      "gift": true,
+      "name": "녹차밀크스프레드 200 g",
+      "price": "8,500",
+      "likes": 18,
+      "comments": 556
+    },
+    {
+      "back": "https://www.osulloc.com/upload/kr/ko/item_overImg/5041.png?quality=80&shrink=304:340",
+      "front": "https://www.osulloc.com/upload/kr/ko/adminImage/PW/US/200_20180406140800938CQ.png?quality=80",
+      "best": true,
+      "gift": false,
+      "name": "테스트2 200 g",
+      "price": "9,000",
+      "likes": 2,
+      "comments": 100
+    },
+    {
+      "back": "https://www.osulloc.com/upload/kr/ko/item_overImg/5041.png?quality=80&shrink=304:340",
+      "front": "https://www.osulloc.com/upload/kr/ko/adminImage/PW/US/200_20180406140800938CQ.png?quality=80",
+      "best": false,
+      "gift": true,
+      "name": "테스트3 200 g",
+      "price": "1,000",
+      "likes": 3,
+      "comments": 16
+    }
+  ]
 }

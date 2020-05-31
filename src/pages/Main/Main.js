@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './Main.scss';
+import React, { Component } from "react";
+import "./Main.scss";
 import Nav from "../../components/Nav/Nav";
 import { withRouter } from "react-router-dom";
 
@@ -7,10 +7,7 @@ class Main extends Component {
   constructor() {
     super();
 
-    this.state = {
-
-      
-    }
+    this.state = {};
   }
 
   render() {
@@ -18,8 +15,7 @@ class Main extends Component {
       <div className="Main">
         <Nav />
       </div>
-
-    )
+    );
   }
 }
 

@@ -19,9 +19,10 @@ class Test extends Component {
   };
 
   render() {
+    console.log(this.state.data[0]);
     return (
       <>
-        <TeaShopItem data={this.state.data[0]} />
+        <TeaShopItem data={this.state.data[1]} />
       </>
     );
   }

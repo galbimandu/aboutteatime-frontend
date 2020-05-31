@@ -264,9 +264,9 @@ class LoginPage extends Component {
           </div>
           <div className="directButton">
             <Link to="/">회원가입</Link>
-            <span>|</span>
+            <i></i>
             <Link to="/">아이디 찾기</Link>
-            <span>|</span>
+            <i></i>
             <Link to="/">비밀번호 찾기</Link>
           </div>
           <div className="snsButton">
