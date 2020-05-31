@@ -18,17 +18,19 @@ class SignupTop extends Component {
       direct_check: check_clicked,
       auto_check: check_toclick,
       hide_password: "user_password_wrap",
+      password_notice: "password_notice",
+      confirm_password_notice: "confirm_password_notice",
     }
   }
 
   male_checked = () => {
     this.setState({ male_active: "gender_male_wrap2", female_active: "gender_female_wrap"})
-    this.props.gender_change(true)
+    this.props.gender_change("male")
   }
 
   female_checked = () => {
     this.setState({ male_active: "gender_male_wrap", female_active: "gender_female_wrap2"})
-    this.props.gender_change(false)
+    this.props.gender_change("female")
   }
 
   direct_checked = () => {
@@ -39,6 +41,25 @@ class SignupTop extends Component {
     this.setState({ direct_active: "select_password_direct2", auto_active: "select_password_auto", direct_check: check_toclick, auto_check: check_clicked, hide_password: "user_password_wrap2"})
   }
 
+  password_notice = (e) => {
+    if (e.target.value.length === 0) {
+      this.setState({ password_notice: "password_notice_active" })
+    }
+  }
+
+  password_notice_off = () => {
+    this.setState({ password_notice: "password_notice"})
+  }
+
+  confirm_password_notice = (e) => {
+    if (e.target.value.length === 0) {
+      this.setState({ confirm_password_notice: "confirm_password_notice_active" })
+    }
+  }
+
+  confirm_password_notice_off = () => {
+    this.setState({ confirm_password_notice: "confirm_password_notice" })
+  }
 
 
 
@@ -115,12 +136,14 @@ class SignupTop extends Component {
           </div>
           <div className={this.state.hide_password}>
             <div className="input_password">
-              <input onChange={this.props.handle_change} id="user_password" maxLength="16" type="password" name="password" className="user_password" autoCapitalize="off" placeholder="비밀번호는 (6~16자)"></input>
-              {/* <label for="user_password" className="input_password_label">비밀번호는 6~16자 영문 대소문자, 숫자, 특수문자 중 최소 2가지 이상 조합하여 입력해주세요</label> */}
+              <span className={this.state.password_notice}>비밀번호는 영문 대문자, 소문자, 숫자, 특수문자 중 최소 2가지 이상의 문자조합 6-16자로 입력해주세요
+              </span>
+              <input onChange={this.props.handle_change, this.password_notice_off} onClick={this.password_notice} id="user_password" maxLength="16" type="password" name="password" className="user_password" autoCapitalize="off" placeholder="비밀번호는 (6~16자)"></input>
             </div>
             <div className="confirm_password">
-              <input id="user_password" type="password" className="user_password" maxLength="16" autoCapitalize="off" placeholder="비밀번호 확인"></input>
-              {/* <label for="user_password" className="confirm_password_label">비밀번호 확인</label> */}
+              <span className={this.state.confirm_password_notice}>비밀번호 확인을 입력하세요.
+              </span>
+              <input onChange={this.confirm_password_notice_off} onClick={this.confirm_password_notice} id="confirm_password" name="confirm_password" type="password" className="user_password" maxLength="16" autoCapitalize="off" placeholder="비밀번호 확인"></input>
             </div>
           </div>
         </div>
