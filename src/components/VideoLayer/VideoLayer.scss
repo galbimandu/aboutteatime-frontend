@@ -1,0 +1,126 @@
+.videoLayer {
+  overflow-x: hidden;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .videoLayerPlayer {
+    display: flex;
+    width: 9000px;
+    .videoinner {
+      height: 490px;
+      width: 1000px;
+      .teaVideo {
+        position: relative;
+        display: flex;
+        video {
+          width: 100%;
+          overflow: hidden;
+        }
+        .teaText {
+          position: absolute;
+          bottom: 25%;
+          right: 3%;
+          a {
+            height: 10%;
+            color: white;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            &:hover {
+              animation-name: colorchange;
+              animation-duration: 5s;
+              animation-iteration-count: 1;
+              @keyframes colorchange {
+                from {
+                  color: white;
+                }
+                to {
+                  color: #e9ff91;
+                }
+              }
+            }
+            b {
+              font-size: 40px;
+              font-family: "AritaBuriSB";
+              margin: 5px 0;
+            }
+            p {
+              margin: 5px 0;
+              font-size: 18px;
+              font-family: "notokr-regular";
+            }
+          }
+        }
+        .teaTextOn {
+          animation-name: movingText;
+          animation-duration: 3s;
+          animation-iteration-count: 1;
+        }
+        @keyframes movingText {
+          from {
+            margin-bottom: -5%;
+            transition: 1s;
+          }
+          to {
+            margin-bottom: 0%;
+            transition: 1s;
+          }
+        }
+      }
+      .teaVideoOn {
+        display: "";
+      }
+      .teaVideoOff {
+        display: none;
+      }
+      .teaImage {
+        height: 100%;
+        img {
+          height: 100%;
+          width: 1005px;
+          overflow: visible;
+          filter: brightness(50%);
+          margin: 0 -2px;
+        }
+      }
+    }
+  }
+  .videoBottomButtun {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    background-color: #000000;
+    height: 90px;
+    .videoBottomButtunContents {
+      width: 1447px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      ul {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        li {
+          text-align: center;
+          width: 280px;
+          cursor: pointer;
+          list-style: none;
+          color: #969696;
+          font-size: 20px;
+          font-family: "Noto_M";
+        }
+        .activate {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

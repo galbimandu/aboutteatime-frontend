@@ -1,0 +1,83 @@
+.TeaShopSubMenu {
+  margin-right: 15px;
+  width: 165px;
+  display: flex;
+  flex-direction: column;
+  .subMenuTitle {
+    height: 2em;
+    display: flex;
+    align-items: center;
+    span {
+      color: #363535;
+      font-size: 18px;
+    }
+  }
+  .subMenuList {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    color: #363535;
+    width: 100%;
+    .subMenuListinner {
+      margin-left: 50px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      li {
+        position: relative;
+        list-style: none;
+        cursor: pointer;
+        margin: 1.2em 0;
+        font-size: 18px;
+        color: #363535;
+        &:hover {
+          color: #6c801a;
+        }
+      }
+      .hiddenDiv {
+        display: flex;
+        position: absolute;
+        top: -15px;
+        left: 90px;
+        z-index: 2;
+        background-color: white;
+        img {
+          margin: 15px 9px 0 0;
+          height: 0.8em;
+          width: 0.5em;
+        }
+        .hididinDivInner {
+          width: 150px;
+          border: 0.8px #e1e1e1 solid;
+          ul {
+            margin: 15px 0 15px 20px;
+            li {
+              margin: 1.4em 0;
+              font-family: "Noto_M", "본고딕", "Noto Sans CJK kR Medium",
+                "Noto Sans CJK kR Medium";
+              font-size: 14px;
+              background-color: white;
+              a {
+                text-decoration: none;
+                color: black;
+                &:visited {
+                  text-decoration: none;
+                }
+                &:hover {
+                  font-weight: bold;
+                  color: #6c801a;
+                }
+              }
+            }
+          }
+        }
+      }
+      .hiddenOn {
+        display: "";
+      }
+      .hiddenOff {
+        display: none;
+      }
+    }
+  }
+}

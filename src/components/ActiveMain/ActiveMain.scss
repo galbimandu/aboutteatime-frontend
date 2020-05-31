@@ -1,0 +1,14 @@
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+.activeMain {
+  .activeMainContents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+    position: relative;
+  }
+}
