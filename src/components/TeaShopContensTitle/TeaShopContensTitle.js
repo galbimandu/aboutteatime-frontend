@@ -6,12 +6,12 @@ class TeaShopContensTitle extends Component {
     super();
 
     this.state = {
-      review: false,
+      review: true,
       sale: false,
       new: false,
       high: false,
       row: false,
-      categoryAll: false,
+      categoryAll: true,
       categoryLeaf: false,
       categoryPyramid: false,
       categoryTeabag: false,
