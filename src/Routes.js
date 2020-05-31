@@ -4,6 +4,7 @@ import Signup from "./pages/Signup/Signup";
 import Main from "./pages/Main/Main";
 import Login from "./pages/Login/LoginPage";
 import TeaShop from "./pages/TeaShop/TeaShopPage";
+import Active from "./components/ActiveMain/ActiveMain";
 
 class Routes extends Component {
   render() {
@@ -14,6 +15,7 @@ class Routes extends Component {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/teashop" component={TeaShop} />
+          <Route exact path="/active" component={Active} />
         </Switch>
       </Router>
     );

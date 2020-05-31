@@ -1,0 +1,16 @@
+.activeMainSlide {
+  width: 700px;
+  z-index: 2;
+  background-color: red;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .test {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: 50px;
+  }
+}
