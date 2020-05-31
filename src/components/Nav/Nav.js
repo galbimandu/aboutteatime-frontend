@@ -25,7 +25,7 @@ class Nav extends Component {
       color_about: "idx3",
       color_jeju: "idx4",
       sub_tea_hover: "sub_menu_tea_container",
-      sub_teaware_hover: "sub_menu_teaware_container",
+      sub_teaware_hover: "sub_menu_teaware_container"
     }
   }
 
