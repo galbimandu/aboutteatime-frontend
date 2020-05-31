@@ -283,10 +283,13 @@
           line-height: 1.5;
         }
         .middleBox {
+          margin-top: 30px;
           display: flex;
           justify-content: space-between;
+          align-items: flex-end;
           .icons {
             width: 210px;
+            height: 44px;
             display: flex;
             justify-content: space-between;
             img {
@@ -298,10 +301,25 @@
               color: #b8b8b8;
               font-size: 20px;
               text-decoration: line-through;
+              text-align: right;
             }
             .priceBottom {
               display: flex;
+              margin-top: 5px;
               .finalPrice {
+                color: #000000;
+                font-weight: bold;
+                font-size: 28px;
+                span {
+                  color: #7b7b7b;
+                  font-size: 28px;
+                  font-weight: 400;
+                }
+              }
+              .percent {
+                color: #fd5c5c;
+                font-size: 26px;
+                margin-left: 10px;
               }
             }
           }

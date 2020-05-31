@@ -139,14 +139,20 @@ class ItemDetail extends Component {
                 </div>
                 <div className="price">
                   <div className="priceTop">
-                    <span>8500</span>
+                    <span>8500 원</span>
                   </div>
                   <div className="priceBottom">
-                    <div className="finalPrice">6,800원</div>
+                    <div className="finalPrice">
+                      6,800<span>원</span>
+                    </div>
                     <div className="percent">20 %</div>
                   </div>
                 </div>
               </div>
+              <div className="additionals">
+
+              </div>
+              <div className=""></div>
             </div>
           </div>
         </div>
