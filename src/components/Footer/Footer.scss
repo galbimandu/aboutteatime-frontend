@@ -196,16 +196,10 @@
                 height: 10px;
                 margin: 0 2px;
                 padding-right: 5px;
-                button {
-                  font-size: 12px;
-                  background-color: white;
-                  border: none;
-                  color: rgb(63, 63, 63);
-                  letter-spacing: -0.1em;
-                }
-                button:focus {
-                  outline: none;
-                }
+                font-size: 12px;
+                background-color: white;
+                color: rgb(63, 63, 63);
+                letter-spacing: -0.1em;
               }
               li:nth-child(3) {
                 button {

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./LoginPage.scss";
 import { Link } from "react-router-dom";
-import url from "../../config";
-
+import { url } from "../../config";
+import Nav from "../../components/Nav/Nav";
+import Footer from "../../components/Footer/Footer";
 class LoginPage extends Component {
   constructor() {
     super();
@@ -143,166 +144,176 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <div className="LoginPage">
-        <div className="LoginPage-wrap">
-          <div className="loginLogo">
-            <h2>Log In</h2>
-          </div>
-          <ul>
-            <li
-              onClick={this.liFunc.bind(this)}
-              className={this.state.memCheck ? "trueli" : "falseli"}
-            >
-              <span>회원로그인</span>
-            </li>
-            <li
-              onClick={this.liFunc.bind(this)}
-              className={this.state.nonmemCheck ? "trueli" : "falseli"}
-            >
-              <span>비회원(주문조회)</span>
-            </li>
-          </ul>
-          <div
-            className={
-              this.state.memCheck
-                ? "memberInput divTrue"
-                : "memberInput divFalse"
-            }
-            onKeyDown={this.enterToLoginFunc.bind(this)}
-          >
-            <input
-              onClick={this.redAdd.bind(this)}
-              className={this.state.idRed ? "idAdd" : "nonidAdd"}
-              type="text"
-              name="id"
-              placeholder="아이디"
-              onChange={this.inputHandler.bind(this)}
-              value={this.state.id}
-            ></input>
+      <>
+        <Nav />
+        <div className="LoginPage">
+          <div className="LoginPage-wrap">
+            <div className="loginLogo">
+              <h2>Log In</h2>
+            </div>
+            <ul>
+              <li
+                onClick={this.liFunc.bind(this)}
+                className={this.state.memCheck ? "trueli" : "falseli"}
+              >
+                <span>회원로그인</span>
+              </li>
+              <li
+                onClick={this.liFunc.bind(this)}
+                className={this.state.nonmemCheck ? "trueli" : "falseli"}
+              >
+                <span>비회원(주문조회)</span>
+              </li>
+            </ul>
             <div
               className={
-                this.state.idRed ? "hiddenDiv idRedOn" : "hiddenDiv idRedOff"
+                this.state.memCheck
+                  ? "memberInput divTrue"
+                  : "memberInput divFalse"
               }
+              onKeyDown={this.enterToLoginFunc.bind(this)}
             >
-              <span>아이디를 입력해주세요.</span>
+              <input
+                onClick={this.redAdd.bind(this)}
+                className={this.state.idRed ? "idAdd" : "nonidAdd"}
+                type="text"
+                name="id"
+                placeholder="아이디"
+                onChange={this.inputHandler.bind(this)}
+                value={this.state.id}
+              ></input>
+              <div
+                className={
+                  this.state.idRed ? "hiddenDiv idRedOn" : "hiddenDiv idRedOff"
+                }
+              >
+                <span>아이디를 입력해주세요.</span>
+              </div>
+              <input
+                onClick={this.redAdd.bind(this)}
+                className={
+                  this.state.passwordRed ? "passwordAdd" : "nonpasswordAdd"
+                }
+                type="password"
+                name="password"
+                placeholder="비밀번호"
+                onChange={this.inputHandler.bind(this)}
+                value={this.state.password}
+              ></input>
+              <div
+                className={
+                  this.state.passwordRed
+                    ? "hiddenDiv passwordRedOn"
+                    : "hiddenDiv passwordRedOff"
+                }
+              >
+                <span>비밀번호를 입력해주세요.</span>
+              </div>
+              <button onClick={this.clickToLoginFunc.bind(this)}>로그인</button>
             </div>
-            <input
-              onClick={this.redAdd.bind(this)}
-              className={
-                this.state.passwordRed ? "passwordAdd" : "nonpasswordAdd"
-              }
-              type="password"
-              name="password"
-              placeholder="비밀번호"
-              onChange={this.inputHandler.bind(this)}
-              value={this.state.password}
-            ></input>
             <div
               className={
-                this.state.passwordRed
-                  ? "hiddenDiv passwordRedOn"
-                  : "hiddenDiv passwordRedOff"
+                this.state.nonmemCheck
+                  ? "nonmemberInput divTrue"
+                  : "nonmemberInput divFalse"
               }
+              onKeyDown={this.enterToLoginFunc.bind(this)}
             >
-              <span>비밀번호를 입력해주세요.</span>
+              <input
+                onClick={this.redAdd.bind(this)}
+                className={
+                  this.state.orderNumRed ? "orderNumAdd" : "nonorderNumAdd"
+                }
+                type="text"
+                name="orderNum"
+                placeholder="주문번호"
+                onChange={this.inputHandler.bind(this)}
+                value={this.state.orderNum}
+              ></input>
+              <div
+                className={
+                  this.state.orderNumRed
+                    ? "hiddenDiv orderNumRedOn"
+                    : "hiddenDiv orderNumRedOff"
+                }
+              >
+                <span>주문번호를 입력해주세요.</span>
+              </div>
+              <input
+                onClick={this.redAdd.bind(this)}
+                className={
+                  this.state.orderTelRed ? "orderTelAdd" : "nonorderTelAdd"
+                }
+                type="text"
+                name="orderTel"
+                placeholder="주문자 연락처"
+                onChange={this.inputHandler.bind(this)}
+                value={this.state.orderTel}
+              ></input>
+              <div
+                className={
+                  this.state.orderTelRed
+                    ? "hiddenDiv orderTelRedOn"
+                    : "hiddenDiv orderTelRedOff"
+                }
+              >
+                <span>주문시 입력한 연락처를 정확히 입력해 주세요.</span>
+                <span>연락처 입력시 '-'를 포함해야 합니다.</span>
+              </div>
+              <button onClick={this.clickToLoginFunc.bind(this)}>로그인</button>
             </div>
-            <button onClick={this.clickToLoginFunc.bind(this)}>로그인</button>
-          </div>
-          <div
-            className={
-              this.state.nonmemCheck
-                ? "nonmemberInput divTrue"
-                : "nonmemberInput divFalse"
-            }
-            onKeyDown={this.enterToLoginFunc.bind(this)}
-          >
-            <input
-              onClick={this.redAdd.bind(this)}
-              className={
-                this.state.orderNumRed ? "orderNumAdd" : "nonorderNumAdd"
-              }
-              type="text"
-              name="orderNum"
-              placeholder="주문번호"
-              onChange={this.inputHandler.bind(this)}
-              value={this.state.orderNum}
-            ></input>
-            <div
-              className={
-                this.state.orderNumRed
-                  ? "hiddenDiv orderNumRedOn"
-                  : "hiddenDiv orderNumRedOff"
-              }
-            >
-              <span>주문번호를 입력해주세요.</span>
+            <div className="hr">
+              <hr />
             </div>
-            <input
-              onClick={this.redAdd.bind(this)}
-              className={
-                this.state.orderTelRed ? "orderTelAdd" : "nonorderTelAdd"
-              }
-              type="text"
-              name="orderTel"
-              placeholder="주문자 연락처"
-              onChange={this.inputHandler.bind(this)}
-              value={this.state.orderTel}
-            ></input>
-            <div
-              className={
-                this.state.orderTelRed
-                  ? "hiddenDiv orderTelRedOn"
-                  : "hiddenDiv orderTelRedOff"
-              }
-            >
-              <span>주문시 입력한 연락처를 정확히 입력해 주세요.</span>
-              <span>연락처 입력시 '-'를 포함해야 합니다.</span>
+            <div className="directButton">
+              <Link to="/">회원가입</Link>
+              <i></i>
+              <Link to="/">아이디 찾기</Link>
+              <i></i>
+              <Link to="/">비밀번호 찾기</Link>
             </div>
-            <button onClick={this.clickToLoginFunc.bind(this)}>로그인</button>
-          </div>
-          <div className="hr">
-            <hr />
-          </div>
-          <div className="directButton">
-            <Link to="/">회원가입</Link>
-            <i></i>
-            <Link to="/">아이디 찾기</Link>
-            <i></i>
-            <Link to="/">비밀번호 찾기</Link>
-          </div>
-          <div className="snsButton">
-            <a
-              className="kakaoButton"
-              href="https://accounts.kakao.com/login?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fredirect_uri%3Dkakaojs%26response_type%3Dcode%26state%3Dytsdlwn891ntlnj5ms4vz%26proxy%3DeasyXDM_Kakao_zyuca3oqd5a_provider%26ka%3Dsdk%252F1.39.0%2520os%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fwww.osulloc.com%26origin%3Dhttps%253A%252F%252Fwww.osulloc.com%26client_id%3D10efbf6471f1f69df223d382a6e5c135"
-              target="_blank"
-            >
-              <img src={require("../../images/login_kakao.png")} alt="kakao" />
-              <span>카카오 계정으로 로그인</span>
-              <p></p>
-            </a>
-            <a
-              className="naverButton"
-              href="https://nid.naver.com/nidlogin.login?oauth_token=HZE8goU3Gn8wEaylZP&consumer_key=rTEWJSFT1cw00Jm51n_3&logintp=oauth2&nurl=https%3A%2F%2Fnid.naver.com%2Foauth2.0%2Fauthorize%3Fresponse_type%3Dtoken%26state%3D7ee1828b-d377-4e03-894c-dbcd24d7244b%26client_id%3DrTEWJSFT1cw00Jm51n_3%26redirect_uri%3Dhttps%253A%252F%252Fwww.osulloc.com%252Fkr%252Fko%252Flogin%252FsnsloginCallBack%26locale%3Dko_KR%26inapp_view%3D%26oauth_os%3D&locale=ko_KR&inapp_view=&svctype="
-              target="_blank"
-            >
-              <img src={require("../../images/login_naver.png")} alt="kakao" />
-              <span>네이버 계정으로 로그인</span>
-              <p></p>
-            </a>
-            <a
-              className="facebookButton"
-              href="https://www.facebook.com/login.php?skip_api_login=1&api_key=414492629203266&kid_directed_site=0&app_id=414492629203266&signed_next=1&next=https%3A%2F%2Fweb.facebook.com%2Fv4.0%2Fdialog%2Foauth%3Fapp_id%3D414492629203266%26cbt%3D1590390211670%26channel_url%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fconnect%252Fxd_arbiter.php%253Fversion%253D46%2523cb%253Df5014660731%2526domain%253Dwww.osulloc.com%2526origin%253Dhttps%25253A%25252F%25252Fwww.osulloc.com%25252Ff689651fd7726%2526relation%253Dopener%26client_id%3D414492629203266%26display%3Dpopup%26domain%3Dwww.osulloc.com%26e2e%3D%257B%257D%26fallback_redirect_uri%3Dhttps%253A%252F%252Fwww.osulloc.com%252Fkr%252Fko%252Flogin%253Fr%253Dhttps%253A%252F%252Fwww.osulloc.com%252Fkr%252Fko%252Flogin%2523%26locale%3Den_US%26logger_id%3Dfe3f81dcb93d08%26origin%3D1%26redirect_uri%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fconnect%252Fxd_arbiter.php%253Fversion%253D46%2523cb%253Df131c0dbc73909c%2526domain%253Dwww.osulloc.com%2526origin%253Dhttps%25253A%25252F%25252Fwww.osulloc.com%25252Ff689651fd7726%2526relation%253Dopener%2526frame%253Df31a42bf1d1484%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%26sdk%3Djoey%26version%3Dv4.0%26ret%3Dlogin%26fbapp_pres%3D0&cancel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D46%23cb%3Df131c0dbc73909c%26domain%3Dwww.osulloc.com%26origin%3Dhttps%253A%252F%252Fwww.osulloc.com%252Ff689651fd7726%26relation%3Dopener%26frame%3Df31a42bf1d1484%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied&display=popup&locale=en_US&pl_dbl=0&_rdc=1&_rdr"
-              target="_blank"
-            >
-              <img
-                src={require("../../images/login_facebook.png")}
-                alt="kakao"
-              />
-              <span>페이스북 계정으로 로그인</span>
-              <p></p>
-            </a>
+            <div className="snsButton">
+              <a
+                className="kakaoButton"
+                href="https://accounts.kakao.com/login?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fredirect_uri%3Dkakaojs%26response_type%3Dcode%26state%3Dytsdlwn891ntlnj5ms4vz%26proxy%3DeasyXDM_Kakao_zyuca3oqd5a_provider%26ka%3Dsdk%252F1.39.0%2520os%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fwww.osulloc.com%26origin%3Dhttps%253A%252F%252Fwww.osulloc.com%26client_id%3D10efbf6471f1f69df223d382a6e5c135"
+                target="_blank"
+              >
+                <img
+                  src={require("../../images/login_kakao.png")}
+                  alt="kakao"
+                />
+                <span>카카오 계정으로 로그인</span>
+                <p></p>
+              </a>
+              <a
+                className="naverButton"
+                href="https://nid.naver.com/nidlogin.login?oauth_token=HZE8goU3Gn8wEaylZP&consumer_key=rTEWJSFT1cw00Jm51n_3&logintp=oauth2&nurl=https%3A%2F%2Fnid.naver.com%2Foauth2.0%2Fauthorize%3Fresponse_type%3Dtoken%26state%3D7ee1828b-d377-4e03-894c-dbcd24d7244b%26client_id%3DrTEWJSFT1cw00Jm51n_3%26redirect_uri%3Dhttps%253A%252F%252Fwww.osulloc.com%252Fkr%252Fko%252Flogin%252FsnsloginCallBack%26locale%3Dko_KR%26inapp_view%3D%26oauth_os%3D&locale=ko_KR&inapp_view=&svctype="
+                target="_blank"
+              >
+                <img
+                  src={require("../../images/login_naver.png")}
+                  alt="kakao"
+                />
+                <span>네이버 계정으로 로그인</span>
+                <p></p>
+              </a>
+              <a
+                className="facebookButton"
+                href="https://www.facebook.com/login.php?skip_api_login=1&api_key=414492629203266&kid_directed_site=0&app_id=414492629203266&signed_next=1&next=https%3A%2F%2Fweb.facebook.com%2Fv4.0%2Fdialog%2Foauth%3Fapp_id%3D414492629203266%26cbt%3D1590390211670%26channel_url%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fconnect%252Fxd_arbiter.php%253Fversion%253D46%2523cb%253Df5014660731%2526domain%253Dwww.osulloc.com%2526origin%253Dhttps%25253A%25252F%25252Fwww.osulloc.com%25252Ff689651fd7726%2526relation%253Dopener%26client_id%3D414492629203266%26display%3Dpopup%26domain%3Dwww.osulloc.com%26e2e%3D%257B%257D%26fallback_redirect_uri%3Dhttps%253A%252F%252Fwww.osulloc.com%252Fkr%252Fko%252Flogin%253Fr%253Dhttps%253A%252F%252Fwww.osulloc.com%252Fkr%252Fko%252Flogin%2523%26locale%3Den_US%26logger_id%3Dfe3f81dcb93d08%26origin%3D1%26redirect_uri%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fconnect%252Fxd_arbiter.php%253Fversion%253D46%2523cb%253Df131c0dbc73909c%2526domain%253Dwww.osulloc.com%2526origin%253Dhttps%25253A%25252F%25252Fwww.osulloc.com%25252Ff689651fd7726%2526relation%253Dopener%2526frame%253Df31a42bf1d1484%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%26sdk%3Djoey%26version%3Dv4.0%26ret%3Dlogin%26fbapp_pres%3D0&cancel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D46%23cb%3Df131c0dbc73909c%26domain%3Dwww.osulloc.com%26origin%3Dhttps%253A%252F%252Fwww.osulloc.com%252Ff689651fd7726%26relation%3Dopener%26frame%3Df31a42bf1d1484%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied&display=popup&locale=en_US&pl_dbl=0&_rdc=1&_rdr"
+                target="_blank"
+              >
+                <img
+                  src={require("../../images/login_facebook.png")}
+                  alt="kakao"
+                />
+                <span>페이스북 계정으로 로그인</span>
+                <p></p>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+        <Footer />
+      </>
     );
   }
 }

@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import "./Footer.scss";
 
 class Footer extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
   render() {
     return (
       <div className="Footer">
@@ -119,32 +115,16 @@ class Footer extends Component {
               <div className="left">
                 <div className="topList">
                   <ul>
+                    <li>회사소개</li>
+                    <li>서비스 이용약관</li>
                     <li>
-                      <button>회사소개</button>
+                      <strong>개인정보 처리방침</strong>
                     </li>
-                    <li>
-                      <button>서비스 이용약관</button>
-                    </li>
-                    <li>
-                      <button>
-                        <strong>개인정보 처리방침</strong>
-                      </button>
-                    </li>
-                    <li>
-                      <button>영상정보 처리방침</button>
-                    </li>
-                    <li>
-                      <button>뷰티포인트</button>
-                    </li>
-                    <li>
-                      <button>임직원할인</button>
-                    </li>
-                    <li>
-                      <button>사이트맵</button>
-                    </li>
-                    <li>
-                      <button>전자공고</button>
-                    </li>
+                    <li>영상정보 처리방침</li>
+                    <li>뷰티포인트</li>
+                    <li>임직원할인</li>
+                    <li>사이트맵</li>
+                    <li>전자공고</li>
                   </ul>
                 </div>
                 <div className="info">

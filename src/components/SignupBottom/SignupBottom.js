@@ -192,10 +192,13 @@ class SignupBottom extends Component {
                   type="checkbox"
                   className="checkbox"
                 >
-                  <img src={this.state.one === false ? click : clicked} />
+                  <img
+                    src={this.state.one === false ? click : clicked}
+                    alt="click"
+                  />
                 </button>
                 <span>[필수] 뷰티포인트 서비스 이용약관</span>
-                <img src={arrowright} />
+                <img src={arrowright} alt="arrowright"/>
               </li>
               <li>
                 <button
