@@ -1,162 +1,159 @@
 import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
-import "./Nav.scss";
 import logo_img from "../../images/logo_img.png";
 import icon_arrowdown from "../../images/icon_arrowdown.png";
 import icon_search from "../../images/icon_search.png";
 import icon_bucket from "../../images/icon_bucket.png";
 import icon_more from "../../images/icon_more.png";
 import banner_img from "../../images/banner_img.png";
+import "./Nav.scss";
 
 class Nav extends Component {
   constructor() {
     super();
 
     this.state = {
-      hover: "menu_hide_container",
-      onmouse_shop: "idx0_list",
-      onmouse_tealife: "idx1_list",
-      onmouse_event: "idx2_list",
-      onmouse_about: "idx3_list",
-      onmouse_jeju: "idx4_list",
-      color_shop: "idx0",
-      color_tealife: "idx1",
-      color_event: "idx2",
-      color_about: "idx3",
-      color_jeju: "idx4",
-      sub_tea_hover: "sub_menu_tea_container",
-      sub_teaware_hover: "sub_menu_teaware_container",
+      hover: false,
+      onmouse_shop: false,
+      onmouse_tealife: false,
+      onmouse_event: false,
+      onmouse_about: false,
+      onmouse_jeju: false,
+      color_shop: false,
+      color_tealife: false,
+      color_event: false,
+      color_about: false,
+      color_jeju: false,
+      sub_tea_hover: false,
+      sub_teaware_hover: false,
     };
   }
 
-  goto_main = () => {
-    this.props.history.push("/");
-  };
-
-  goto_login = () => {
-    this.props.history.push("/login");
-  };
-
-  goto_signup = () => {
-    this.props.history.push("/signup");
-  };
-
   enter_shop = () => {
-    this.setState({
-      hover: "menu_hide_container_active",
-      onmouse_shop: "idx0_list2",
-      color_shop: "idx0_1",
-    });
+    this.setState({ hover: true, onmouse_shop: true, color_shop: true });
   };
 
   leave_shop = () => {
-    this.setState({ onmouse_shop: "idx0_list", color_shop: "idx0" });
+    this.setState({ onmouse_shop: false, color_shop: false });
   };
 
   enter_tealife = () => {
     this.setState({
-      hover: "menu_hide_container_active",
-      onmouse_tealife: "idx1_list2",
-      color_tealife: "idx1_1",
-      sub_tea_hover: "sub_menu_tea_container",
-      sub_teaware_hover: "sub_menu_teaware_container",
+      hover: true,
+      onmouse_tealife: true,
+      color_tealife: true,
+      sub_tea_hover: false,
+      sub_teaware_hover: false,
     });
   };
 
   leave_tealife = () => {
-    this.setState({ onmouse_tealife: "idx1_list", color_tealife: "idx1" });
+    this.setState({ onmouse_tealife: false, color_tealife: false });
   };
 
   enter_event = () => {
     this.setState({
-      hover: "menu_hide_container_active",
-      onmouse_event: "idx2_list2",
-      color_event: "idx2_1",
-      sub_tea_hover: "sub_menu_tea_container",
-      sub_teaware_hover: "sub_menu_teaware_container",
+      hover: true,
+      onmouse_event: true,
+      color_event: true,
+      sub_tea_hover: false,
+      sub_teaware_hover: false,
     });
   };
 
   leave_event = () => {
-    this.setState({ onmouse_event: "idx2_list", color_event: "idx2" });
+    this.setState({ onmouse_event: false, color_event: false });
   };
 
   enter_about = () => {
     this.setState({
-      hover: "menu_hide_container_active",
-      onmouse_about: "idx3_list2",
-      color_about: "idx3_1",
-      sub_tea_hover: "sub_menu_tea_container",
-      sub_teaware_hover: "sub_menu_teaware_container",
+      hover: true,
+      onmouse_about: true,
+      color_about: true,
+      sub_tea_hover: false,
+      sub_teaware_hover: false,
     });
   };
 
   leave_about = () => {
-    this.setState({ onmouse_about: "idx3_list", color_about: "idx3" });
+    this.setState({ onmouse_about: false, color_about: false });
   };
 
   enter_jeju = () => {
     this.setState({
-      hover: "menu_hide_container_active",
-      onmouse_jeju: "idx4_list2",
-      color_jeju: "idx4_1",
-      sub_tea_hover: "sub_menu_tea_container",
-      sub_teaware_hover: "sub_menu_teaware_container",
+      hover: true,
+      onmouse_jeju: true,
+      color_jeju: true,
+      sub_tea_hover: false,
+      sub_teaware_hover: false,
     });
   };
 
   leave_jeju = () => {
-    this.setState({ onmouse_jeju: "idx4_list", color_jeju: "idx4" });
+    this.setState({ onmouse_jeju: false, color_jeju: false });
   };
 
   enter_teashop = () => {
-    this.setState({
-      sub_tea_hover: "sub_menu_tea_container_active",
-      sub_teaware_hover: "sub_menu_teaware_container",
-    });
+    this.setState({ sub_tea_hover: true, sub_teaware_hover: false });
   };
 
   enter_teaware = () => {
-    this.setState({ sub_teaware_hover: "sub_menu_teaware_container_active" });
+    this.setState({ sub_teaware_hover: true });
   };
 
   leave_sub = () => {
-    this.setState({
-      sub_tea_hover: "sub_menu_tea_container",
-      sub_teaware_hover: "sub_menu_teaware_container",
-    });
+    this.setState({ sub_tea_hover: false, sub_teaware_hover: false });
   };
 
   // mouse leave 초기화
   menu_leave = () => {
     this.setState({
-      hover: "menu_hide_container",
-      onmouse_shop: "idx0_list",
-      onmouse_tealife: "idx1_list",
-      onmouse_event: "idx2_list",
-      onmouse_about: "idx3_list",
-      onmouse_jeju: "idx4_list",
-      sub_tea_hover: "sub_menu_tea_container",
-      sub_teaware_hover: "sub_menu_teaware_container",
+      hover: false,
+      onmouse_shop: false,
+      onmouse_tealife: false,
+      onmouse_event: false,
+      onmouse_about: false,
+      onmouse_jeju: false,
+      sub_tea_hover: false,
+      sub_teaware_hover: false,
     });
   };
 
   render() {
+    const {
+      color_shop,
+      color_tealife,
+      color_event,
+      color_about,
+      color_jeju,
+      hover,
+      onmouse_shop,
+      onmouse_tealife,
+      onmouse_event,
+      onmouse_about,
+      onmouse_jeju,
+      sub_tea_hover,
+      sub_teaware_hover,
+    } = this.state;
     return (
       <div className="Nav" onMouseLeave={this.menu_leave}>
         <div className="header_top_container">
           <div className="header_top">
-            <div className="logo" onClick={this.goto_main}>
-              <img src={logo_img} alt="logo_img" />
+            <div className="logo">
+              <Link to="/">
+                <img src={logo_img} alt="logo_img" />
+              </Link>
             </div>
             <div className="buttons">
               <div className="login_wrap">
-                <div className="login" onClick={this.goto_login}>
-                  로그인
+                <div className="login">
+                  <Link to="/login">로그인</Link>
                 </div>
               </div>
-              <div className="signup_wrap" onClick={this.goto_signup}>
-                <div className="signup">회원가입</div>
+              <div className="signup_wrap">
+                <div className="signup">
+                  <Link to="/signup">회원가입</Link>
+                </div>
               </div>
               <div className="language_container">
                 <div className="language_wrap">
@@ -178,16 +175,15 @@ class Nav extends Component {
             <ul className="menu_wrap">
               <li className="idx0_wrap" onMouseLeave={this.leave_shop}>
                 <div
-                  className={this.state.color_shop}
+                  className={color_shop ? "idx0_1" : "idx0"}
                   onMouseEnter={this.enter_shop}
-                  onClick={() => this.props.history.push("/teashop")}
                 >
                   Shop
                 </div>
               </li>
               <li className="idx1_wrap" onMouseLeave={this.leave_tealife}>
                 <div
-                  className={this.state.color_tealife}
+                  className={color_tealife ? "idx1_1" : "idx1"}
                   onMouseEnter={this.enter_tealife}
                 >
                   Tea Life
@@ -195,7 +191,7 @@ class Nav extends Component {
               </li>
               <li className="idx2_wrap" onMouseLeave={this.leave_event}>
                 <div
-                  className={this.state.color_event}
+                  className={color_event ? "idx2_1" : "idx2"}
                   onMouseEnter={this.enter_event}
                 >
                   Event
@@ -203,7 +199,7 @@ class Nav extends Component {
               </li>
               <li className="idx3_wrap" onMouseLeave={this.leave_about}>
                 <div
-                  className={this.state.color_about}
+                  className={color_about ? "idx3_1" : "idx3"}
                   onMouseEnter={this.enter_about}
                 >
                   About OSULLOC
@@ -211,7 +207,7 @@ class Nav extends Component {
               </li>
               <li className="idx4_wrap" onMouseLeave={this.leave_jeju}>
                 <div
-                  className={this.state.color_jeju}
+                  className={color_jeju ? "idx4_1" : "idx4"}
                   onMouseEnter={this.enter_jeju}
                 >
                   Jeju Tea Museum
@@ -239,18 +235,21 @@ class Nav extends Component {
             </div>
           </div>
         </div>
-        <div className={this.state.hover}>
+        <div
+          className={
+            hover ? "menu_hide_container_active" : "menu_hide_container"
+          }
+        >
           <div className="banner_hide_wrap">
             <span className="banner_text1">오늘만 이 가격</span>
             <span className="banner_text2">30% 할인된 가격에 구매할 기회!</span>
             <span className="banner_text2">놓치지 마세요~</span>
             <img className="banner_img" src={banner_img} alt="banner_img" />
           </div>
-
           <div className="menu_hide_wrap">
             {/* idx0_list */}
             <ul
-              className={this.state.onmouse_shop}
+              className={onmouse_shop ? "idx0_list2" : "idx0_list"}
               onMouseEnter={this.enter_shop}
               onMouseLeave={this.leave_shop}
             >
@@ -282,7 +281,7 @@ class Nav extends Component {
             </ul>
 
             <ul
-              className={this.state.onmouse_tealife}
+              className={onmouse_tealife ? "idx1_list2" : "idx1_list"}
               onMouseEnter={this.enter_tealife}
               onMouseLeave={this.leave_tealife}
             >
@@ -295,7 +294,7 @@ class Nav extends Component {
             </ul>
 
             <ul
-              className={this.state.onmouse_event}
+              className={onmouse_event ? "idx2_list2" : "idx2_list"}
               onMouseEnter={this.enter_event}
               onMouseLeave={this.leave_event}
             >
@@ -304,20 +303,14 @@ class Nav extends Component {
               <li className="idx2_list_detail">온라인 쇼핑혜택</li>
               <li className="idx2_list_detail">인스타그램</li>
               <li className="idx2_list_detail">About Tea</li>
-              <li className="idx2_list_detail">&nbsp;</li>
             </ul>
 
             <ul
-              className={this.state.onmouse_about}
+              className={onmouse_about ? "idx3_list2" : "idx3_list"}
               onMouseEnter={this.enter_about}
               onMouseLeave={this.leave_about}
             >
-              <li
-                className="idx3_list_detail"
-                // onClick={() => this.props.history.push("/")}
-              >
-                Brand Story
-              </li>
+              <li className="idx3_list_detail">Brand Story</li>
               <li className="idx3_list_detail">Since 1979</li>
               <li className="idx3_list_detail">오설록 차밭 이야기</li>
               <li className="idx3_list_detail">숫자로 보는 오설록</li>
@@ -326,66 +319,74 @@ class Nav extends Component {
             </ul>
 
             <ul
-              className={this.state.onmouse_jeju}
+              className={onmouse_jeju ? "idx4_list2" : "idx4_list"}
               onMouseEnter={this.enter_jeju}
               onMouseLeave={this.leave_jeju}
             >
               <li className="idx4_list_detail">티뮤지엄 소개</li>
               <li className="idx4_list_detail">티스톤 예약</li>
               <li className="idx4_list_detail">제주 오설록 맵</li>
-              <li className="idx4_list_detail">&nbsp;</li>
-              <li className="idx4_list_detail">&nbsp;</li>
-              <li className="idx4_list_detail">&nbsp;</li>
             </ul>
-          </div>
-
-          <div className={this.state.sub_tea_hover}>
-            <ul className="tea_1">
-              <li className="tea_1_title">전체보기</li>
-              <li className="tea_1_sub">Tea</li>
-              <li>명차</li>
-              <li>녹차/발효차/홍차</li>
-              <li>허브티/무카페인</li>
-              <li>블렌디드티</li>
-              <li>웰니스티</li>
-              <li>파우더</li>
-              <li>세트</li>
-            </ul>
-            <ul className="tea_2">
-              <li className="tea_2_title">&nbsp;</li>
-              <li className="tea_2_sub">Tea Food</li>
-              <li>베이커리</li>
-              <li>초콜릿/잼</li>
-            </ul>
-            <ul className="tea_3">
-              <li className="tea_3_title">&nbsp;</li>
-              <li className="tea_3_sub">테마샵</li>
-              <li>기프트몰</li>
-              <li>라이프스타일몰</li>
-              <li>오피스몰</li>
-            </ul>
-          </div>
-
-          <div className={this.state.sub_teaware_hover}>
-            <ul className="tea_1">
-              <li className="tea_1_title">전체보기</li>
-              <li className="tea_1_sub">용도별</li>
-              <li>찻잔</li>
-              <li>티팟</li>
-              <li>소도구</li>
-              <li>티푸드플레이트</li>
-            </ul>
-            <ul className="tea_2">
-              <li className="tea_2_title">&nbsp;</li>
-              <li className="tea_2_sub">브랜드별</li>
-              <li>오설록</li>
-              <li>광주요</li>
-              <li>소일베이커</li>
-              <li>서울번드</li>
-              <li>토림도예</li>
-              <li>소로시</li>
-              <li>킨토</li>
-            </ul>
+            <div
+              className={
+                sub_tea_hover
+                  ? "sub_menu_tea_container_active"
+                  : "sub_menu_tea_container"
+              }
+            >
+              <ul className="tea">
+                <li className="tea_title">전체보기</li>
+                <li className="tea_sub">Tea</li>
+                <li>명차</li>
+                <li>녹차/발효차/홍차</li>
+                <li>허브티/무카페인</li>
+                <li>블렌디드티</li>
+                <li>웰니스티</li>
+                <li>파우더</li>
+                <li>세트</li>
+              </ul>
+              <ul className="tea">
+                <li className="tea_title">&nbsp;</li>
+                <li className="tea_sub">Tea Food</li>
+                <li>베이커리</li>
+                <li>초콜릿/잼</li>
+              </ul>
+              <ul className="tea">
+                <li className="tea_title">&nbsp;</li>
+                <li className="tea_sub">테마샵</li>
+                <li>기프트몰</li>
+                <li>라이프스타일몰</li>
+                <li>오피스몰</li>
+              </ul>
+              git
+            </div>
+            <div
+              className={
+                sub_teaware_hover
+                  ? "sub_menu_teaware_container_active"
+                  : "sub_menu_teaware_container"
+              }
+            >
+              <ul className="tea">
+                <li className="tea_title">전체보기</li>
+                <li className="tea_sub">용도별</li>
+                <li>찻잔</li>
+                <li>티팟</li>
+                <li>소도구</li>
+                <li>티푸드플레이트</li>
+              </ul>
+              <ul className="tea">
+                <li className="tea_title">&nbsp;</li>
+                <li className="tea_sub">브랜드별</li>
+                <li>오설록</li>
+                <li>광주요</li>
+                <li>소일베이커</li>
+                <li>서울번드</li>
+                <li>토림도예</li>
+                <li>소로시</li>
+                <li>킨토</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

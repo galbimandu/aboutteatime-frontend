@@ -58,17 +58,21 @@ class SignupTop extends Component {
       hide_password: "user_password_wrap2",
     });
   };
-
+  // onClick
   password_notice = (e) => {
     if (e.target.value.length === 0) {
       this.setState({ password_notice: "password_notice_active" });
     }
   };
-
-  password_notice_off = () => {
-    this.setState({ password_notice: "password_notice" });
+  // onChange
+  password_notice_off = (e) => {
+    if (e.target.value.length == 0) {
+      this.setState({ password_notice: "password_notice_active" });
+    } else {
+      this.setState({ password_notice: "password_notice" });
+    }
   };
-
+  // onClick
   confirm_password_notice = (e) => {
     if (e.target.value.length === 0) {
       this.setState({
@@ -76,9 +80,15 @@ class SignupTop extends Component {
       });
     }
   };
-
-  confirm_password_notice_off = () => {
-    this.setState({ confirm_password_notice: "confirm_password_notice" });
+  // onChange
+  confirm_password_notice_off = (e) => {
+    if (e.target.value.length === 0) {
+      this.setState({
+        confirm_password_notice: "confirm_password_notice_active",
+      });
+    } else {
+      this.setState({ confirm_password_notice: "confirm_password_notice" });
+    }
   };
 
   render() {

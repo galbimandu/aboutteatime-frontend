@@ -4,6 +4,7 @@
   width: 100%;
   z-index: 1000;
   background-color: white;
+  border-bottom: 1px solid #e4e4e4;
   .header_top_container {
     height: 90px;
     display: flex;
@@ -249,7 +250,6 @@
   }
 
   // Hidden - menu_container
-
   .menu_hide_container {
     position: relative;
     width: 750px;
@@ -288,14 +288,6 @@
 
       .idx0_list {
         width: 20%;
-        .idx0_list_detail_tea {
-          margin-bottom: 20px;
-          cursor: pointer;
-        }
-        .idx0_list_detail_teaware {
-          margin-bottom: 20px;
-          cursor: pointer;
-        }
         .idx0_list_detail {
           margin-bottom: 20px;
           cursor: pointer;
@@ -343,6 +335,7 @@
     line-height: 1.5;
     font-family: "notokr-regular", "Noto Sans CJK";
     display: block;
+
     .banner_hide_wrap {
       position: absolute;
       display: flex;
@@ -475,7 +468,7 @@
     padding-left: 17px;
     background-color: #f9f9f9;
     display: none;
-    .tea_1 {
+    .tea {
       width: 220px;
       height: 100%;
       padding: 39px 20px 0;
@@ -485,48 +478,11 @@
         margin: 0 0 10px;
         cursor: pointer;
       }
-      .tea_1_title {
+      .tea_title {
         color: #464646;
         margin: 0 0 20px;
       }
-      .tea_1_sub {
-        color: #464646;
-        margin: 0 0 10px;
-      }
-    }
-    .tea_2 {
-      width: 220px;
-      height: 100%;
-      padding: 39px 20px 0;
-      border-right: 1px solid #e4e4e4;
-      li {
-        color: #727272;
-        margin: 0 0 10px;
-        cursor: pointer;
-      }
-      .tea_2_title {
-        color: #464646;
-        margin: 0 0 20px;
-      }
-      .tea_2_sub {
-        color: #464646;
-        margin: 0 0 10px;
-      }
-    }
-    .tea_3 {
-      width: 220px;
-      height: 100%;
-      padding: 39px 20px 0;
-      li {
-        color: #727272;
-        margin: 0 0 10px;
-        cursor: pointer;
-      }
-      .tea_3_title {
-        color: #464646;
-        margin: 0 0 20px;
-      }
-      .tea_3_sub {
+      .tea_sub {
         color: #464646;
         margin: 0 0 10px;
       }
@@ -548,7 +504,7 @@
     height: 370px;
     padding-left: 17px;
     background-color: #f9f9f9;
-    .tea_1 {
+    .tea {
       width: 220px;
       height: 100%;
       padding: 39px 20px 0;
@@ -558,48 +514,11 @@
         margin: 0 0 10px;
         cursor: pointer;
       }
-      .tea_1_title {
+      .tea_title {
         color: #464646;
         margin: 0 0 20px;
       }
-      .tea_1_sub {
-        color: #464646;
-        margin: 0 0 10px;
-      }
-    }
-    .tea_2 {
-      width: 220px;
-      height: 100%;
-      padding: 39px 20px 0;
-      border-right: 1px solid #e4e4e4;
-      li {
-        color: #727272;
-        margin: 0 0 10px;
-        cursor: pointer;
-      }
-      .tea_2_title {
-        color: #464646;
-        margin: 0 0 20px;
-      }
-      .tea_2_sub {
-        color: #464646;
-        margin: 0 0 10px;
-      }
-    }
-    .tea_3 {
-      width: 220px;
-      height: 100%;
-      padding: 39px 20px 0;
-      li {
-        color: #727272;
-        margin: 0 0 10px;
-        cursor: pointer;
-      }
-      .tea_3_title {
-        color: #464646;
-        margin: 0 0 20px;
-      }
-      .tea_3_sub {
+      .tea_sub {
         color: #464646;
         margin: 0 0 10px;
       }
@@ -623,7 +542,7 @@
   padding-left: 17px;
   background-color: #f9f9f9;
   display: none;
-  .tea_1 {
+  .tea {
     width: 220px;
     height: 100%;
     padding: 39px 20px 0;
@@ -633,48 +552,11 @@
       margin: 0 0 10px;
       cursor: pointer;
     }
-    .tea_1_title {
+    .tea_title {
       color: #464646;
       margin: 0 0 20px;
     }
-    .tea_1_sub {
-      color: #464646;
-      margin: 0 0 10px;
-    }
-  }
-  .tea_2 {
-    width: 220px;
-    height: 100%;
-    padding: 39px 20px 0;
-    border-right: 1px solid #e4e4e4;
-    li {
-      color: #727272;
-      margin: 0 0 10px;
-      cursor: pointer;
-    }
-    .tea_2_title {
-      color: #464646;
-      margin: 0 0 20px;
-    }
-    .tea_2_sub {
-      color: #464646;
-      margin: 0 0 10px;
-    }
-  }
-  .tea_3 {
-    width: 220px;
-    height: 100%;
-    padding: 39px 20px 0;
-    li {
-      color: #727272;
-      margin: 0 0 10px;
-      cursor: pointer;
-    }
-    .tea_3_title {
-      color: #464646;
-      margin: 0 0 20px;
-    }
-    .tea_3_sub {
+    .tea_sub {
       color: #464646;
       margin: 0 0 10px;
     }
@@ -696,7 +578,7 @@
   height: 370px;
   padding-left: 17px;
   background-color: #f9f9f9;
-  .tea_1 {
+  .tea {
     width: 220px;
     height: 100%;
     padding: 39px 20px 0;
@@ -706,29 +588,11 @@
       margin: 0 0 10px;
       cursor: pointer;
     }
-    .tea_1_title {
+    .tea_title {
       color: #464646;
       margin: 0 0 20px;
     }
-    .tea_1_sub {
-      color: #464646;
-      margin: 0 0 10px;
-    }
-  }
-  .tea_2 {
-    width: 220px;
-    height: 100%;
-    padding: 39px 20px 0;
-    li {
-      color: #727272;
-      margin: 0 0 10px;
-      cursor: pointer;
-    }
-    .tea_2_title {
-      color: #464646;
-      margin: 0 0 20px;
-    }
-    .tea_2_sub {
+    .tea_sub {
       color: #464646;
       margin: 0 0 10px;
     }

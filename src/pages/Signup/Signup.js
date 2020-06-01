@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./Signup.scss";
 import { withRouter } from "react-router-dom";
 import SignupTop from "../../components/SignupTop/SignupTop";
 import SignupBottom from "../../components/SignupBottom/SignupBottom";
+import "./Signup.scss";
 
 class Signup extends Component {
   constructor() {
@@ -33,6 +33,15 @@ class Signup extends Component {
   };
 
   render() {
+    const {
+      realname,
+      username,
+      birthday,
+      gender,
+      provider,
+      phone,
+      password,
+    } = this.state;
     return (
       <div className="Signup">
         <div className="header">
@@ -47,14 +56,13 @@ class Signup extends Component {
           gender_change={this.gender_change}
         />
         <SignupBottom
-          realname={this.state.realname}
-          username={this.state.username}
-          birthday={this.state.birthday}
-          gender={this.state.gender}
-          provider={this.state.provider}
-          phone={this.state.phone}
-          password={this.state.password}
-          history={this.props.history}
+          realname={realname}
+          username={username}
+          birthday={birthday}
+          gender={gender}
+          provider={provider}
+          phone={phone}
+          password={password}
         />
       </div>
     );
