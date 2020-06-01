@@ -2,12 +2,15 @@ import React, { Component } from "react";
 import "./ActiveMainBackground.scss";
 
 class ActiveMainBackground extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
-    return <div className="activeMainBackground"></div>;
+    return (
+      <div className="activeMainBackground">
+        <img
+          src={require(`../../images/activeMain/active${this.props.imgIndex}.jpg`)}
+          alt="sample"
+        />
+      </div>
+    );
   }
 }
 
