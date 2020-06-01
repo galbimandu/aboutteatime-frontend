@@ -16,6 +16,9 @@ class Basket extends Component {
   render() {
     return (
       <div className="Basket">
+        <div>
+          <Nav />
+        </div>
         <main className="main_container">
           <section className="section_wrap">
             <header className="basic_header">
@@ -23,11 +26,11 @@ class Basket extends Component {
                 장바구니
               </h1>
             </header>
-            <div className="tab_container">
-              <ul className="tab_wrap">
-                <li className="tab">
-                  <div className="tab_text">
-                    일반상품&nbsp;
+            <div className="tab_header_container">
+              <ul className="tab_header_wrap">
+                <li className="tab_header">
+                  <div className="tab_header_text">
+                    {`일반상품 `}
                     <i className="n_wrap">
                       (
                       <b id="n">0</b>
@@ -38,7 +41,22 @@ class Basket extends Component {
               </ul>              
             </div>
             <section>
-              
+              <form>
+                <div className="tab_header_container">
+                  <div className="order_table_wrap">
+                    
+                  </div>
+                  <div className="notification_box">
+
+                  </div>
+                  <div className="bill">
+                    
+                  </div>
+                </div>
+                <div className="tab_footer">
+
+                </div>
+              </form>
             </section>
 
 

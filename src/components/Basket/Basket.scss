@@ -27,26 +27,26 @@
         }
       }
 
-      .tab_container {
+      .tab_header_container {
         padding: 0 30px;
         margin: 0 auto;
         max-width: 1120px;
         font-family: 'Noto_M', '본고딕', 'Noto Sans CJK kR Medium', 'Noto Sans CJK kR Medium';
-        .tab_wrap {
+        .tab_header_wrap {
           margin-bottom: 1px;
           background-color: #e2dcd3;
-          .tab {
+          .tab_header {
             font-size: 18px;
             text-align: center;
             line-height: 1.5;
-            cursor: pointer;
-            .tab_text {
+            .tab_header_text {
               background-color: #fff;
               border-top: 3px solid #d5761b;
               border-right: 1px solid #ccc;
               color: #222;
               padding: 13px 0 14px;
               width: 280px;
+              cursor: pointer;
               .n_wrap {
                 color: #d75100;
               }
