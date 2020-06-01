@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./LoginPage.scss";
 import { Link } from "react-router-dom";
-import { url } from "../../config";
+import url from "../../config";
 import Nav from "../../components/Nav/Nav";
 import Footer from "../../components/Footer/Footer";
 class LoginPage extends Component {
