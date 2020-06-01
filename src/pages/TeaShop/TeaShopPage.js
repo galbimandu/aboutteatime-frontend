@@ -10,11 +10,12 @@ class TeaShopPage extends Component {
   }
 
   render() {
+    
     return (
       <div className="TeaShopPage">
         <Nav />
         <VideoLayer />
-        <TeaShopList />
+        <TeaShopList history={this.props.history}/>
       </div>
     );
   }
