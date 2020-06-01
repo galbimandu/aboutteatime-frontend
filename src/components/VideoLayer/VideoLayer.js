@@ -85,7 +85,7 @@ class VideoLayer extends Component {
   };
 
   componentDidMount() {
-    setInterval(this.autoVideoChangeFunc, 15000);
+    setInterval(this.autoVideoChangeFunc, 5000);
   }
 
   render() {

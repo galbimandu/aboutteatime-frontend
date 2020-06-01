@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./ActiveMain.scss";
 import ActiveMainBackground from "../ActiveMainBackground/ActiveMainBackground";
 import ActiveMainSlide from "../ActiveMainSlide/ActiveMainSlide";
 import ActiveMainNav from "../ActiveMainNav/ActiveMainNav";
+import "./ActiveMain.scss";
 
 class ActiveMain extends Component {
   constructor() {
@@ -59,23 +59,9 @@ class ActiveMain extends Component {
   // 추가: 자동 스크롤 이벤트 중 다른 이벤트로 이벤트 중지, 재실행 함수  //
   // 무빙 턴키 확인 후 스위치 켜있으면 스크롤 이벤트 진행시킬 함수 //
   scrollAutoMovingFunc() {
-    if (this.state.moveTurnKey === true) {
+    if (this.state.moveTurnKey) {
       this.scrollPointAddFunc();
     }
-  }
-
-  // 클릭 발생시 무빙 턴키("this.state.moveTurnKey") 껏다, 켰다 함수 //
-  clickOnOffFunc() {
-    if (this.state.moveTurnKey === true) {
-      this.setState({ moveTurnKey: false });
-    } else {
-      this.setState({ moveTurnKey: true });
-    }
-  }
-
-  // 휠이동 발생시 무빙 턴키("this.state.moveTurnKey") 끄기만 할 함수 //
-  wheelOffFunc() {
-    this.setState({ moveTurnKey: false });
   }
 
   // 스크롤 좌표값에 이미지 변하는 고정slide 함수 //
@@ -143,13 +129,16 @@ class ActiveMain extends Component {
   }
 
   render() {
-    // console.log(this.state);
     return (
       <div className="activeMain">
         <div
           className="activeMainContents"
-          onClick={this.clickOnOffFunc.bind(this)}
-          onWheel={this.wheelOffFunc.bind(this)}
+          onClick={() => {
+            this.setState({ moveTurnKey: !this.state.moveTurnKey });
+          }}
+          onWheel={() => {
+            this.setState({ moveTurnKey: false });
+          }}
         >
           <ActiveMainBackground imgIndex={this.state.imgIndex} />
           <ActiveMainSlide

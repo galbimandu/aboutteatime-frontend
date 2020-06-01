@@ -23,14 +23,11 @@ class ActiveMainNav extends Component {
   }
 
   render() {
-    // console.log(this.state.part1);
     return (
       <div className="activeMainNav">
         <div className="navButton">
           <div
-            className={
-              this.state.part1 ? "navCommon part1 active" : "navCommon part1"
-            }
+            className={"navCommon part1"}
             onClick={this.navPart1Func.bind(this)}
             onMouseOver={() => this.setState({ part1: true })}
             onMouseLeave={() => this.setState({ part1: false })}
@@ -46,9 +43,7 @@ class ActiveMainNav extends Component {
             </div>
           </div>
           <div
-            className={
-              this.state.part2 ? "navCommon part2 active" : "navCommon part2"
-            }
+            className={"navCommon part2"}
             onClick={this.navPart2Func.bind(this)}
             onMouseOver={() => this.setState({ part2: true })}
             onMouseLeave={() => this.setState({ part2: false })}
@@ -64,9 +59,7 @@ class ActiveMainNav extends Component {
             </div>
           </div>
           <div
-            className={
-              this.state.part3 ? "navCommon part3 active" : "navCommon part3"
-            }
+            className={"navCommon part3"}
             onClick={this.navPart3Func.bind(this)}
             onMouseOver={() => this.setState({ part3: true })}
             onMouseLeave={() => this.setState({ part3: false })}
