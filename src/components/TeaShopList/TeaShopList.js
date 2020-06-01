@@ -7,13 +7,14 @@ import TeaShopContensTitle from "../TeaShopContensTitle/TeaShopContensTitle";
 
 class TeaShopList extends Component {
   render() {
+    
     return (
       <div className="teaShopList">
         <div className="teaShopListwrap">
           <TeaShopSubMenu />
           <div className="contents">
             <TeaShopContensTitle />
-            <TeaShopItemList />
+            <TeaShopItemList history={this.props.history}/>
           </div>
         </div>
         <TeaShopGoTopButton />

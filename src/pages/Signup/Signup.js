@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./Signup.scss";
 import { withRouter } from "react-router-dom";
-import SignupTop from "../../components/SignupTop/SignupTop"
-import SignupBottom from "../../components/SignupBottom/SignupBottom"
+import SignupTop from "../../components/SignupTop/SignupTop";
+import SignupBottom from "../../components/SignupBottom/SignupBottom";
 
 class Signup extends Component {
   constructor() {
@@ -17,17 +17,16 @@ class Signup extends Component {
       phone: "",
       password: "",
       password_confirm: "",
-    }
+    };
   }
 
-  handle_change = e => {
-    this.setState({ [e.target.name] : e.target.value })
-  }
+  handle_change = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
-  gender_change = e => {
-    this.setState({ gender: e})
-  }
-
+  gender_change = (e) => {
+    this.setState({ gender: e });
+  };
 
   render() {
     return (
@@ -39,10 +38,22 @@ class Signup extends Component {
             <span className="text1">회원가입</span>
           </h1>
         </div>
-        <SignupTop handle_change={this.handle_change} gender_change={this.gender_change}/>
-        <SignupBottom realname={this.state.realname} username={this.state.username} birthday={this.state.birthday} gender={this.state.gender} provider={this.state.provider} phone={this.state.phone} password={this.state.password} />
+        <SignupTop
+          handle_change={this.handle_change}
+          gender_change={this.gender_change}
+        />
+        <SignupBottom
+          realname={this.state.realname}
+          username={this.state.username}
+          birthday={this.state.birthday}
+          gender={this.state.gender}
+          provider={this.state.provider}
+          phone={this.state.phone}
+          password={this.state.password}
+          history={this.props.history}
+        />
       </div>
-    )
+    );
   }
 }
 

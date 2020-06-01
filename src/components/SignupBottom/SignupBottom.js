@@ -198,7 +198,7 @@ class SignupBottom extends Component {
                   />
                 </button>
                 <span>[필수] 뷰티포인트 서비스 이용약관</span>
-                <img src={arrowright} alt="arrowright"/>
+                <img src={arrowright} alt="arrowright" />
               </li>
               <li>
                 <button
@@ -206,10 +206,13 @@ class SignupBottom extends Component {
                   type="checkbox"
                   className="checkbox"
                 >
-                  <img src={this.state.two === false ? click : clicked} />
+                  <img
+                    src={this.state.two === false ? click : clicked}
+                    alt="clicked"
+                  />
                 </button>
                 <span>[필수] 개인정보 이용 및 수집에 대한 동의</span>
-                <img src={arrowright} />
+                <img src={arrowright} alt="arrow right" />
               </li>
               <li>
                 <button
@@ -217,13 +220,16 @@ class SignupBottom extends Component {
                   type="checkbox"
                   className="checkbox"
                 >
-                  <img src={this.state.three === false ? click : clicked} />
+                  <img
+                    src={this.state.three === false ? click : clicked}
+                    alt="click"
+                  />
                 </button>
                 <div>
                   <span>[선택] 개인정보 제3자 제공 동의</span>
                   <span>※ 외부 컨텐츠 마케팅 활용</span>
                 </div>
-                <img src={arrowright} />
+                <img src={arrowright} alt="arrowright" />
               </li>
               <li>
                 <button
@@ -231,10 +237,13 @@ class SignupBottom extends Component {
                   type="checkbox"
                   className="checkbox"
                 >
-                  <img src={this.state.four === false ? click : clicked} />
+                  <img
+                    src={this.state.four === false ? click : clicked}
+                    alt="click"
+                  />
                 </button>
                 <span>[선택] 국외이전동의</span>
-                <img src={arrowright} />
+                <img src={arrowright} alt="arrowright" />
               </li>
             </ul>
           </div>
@@ -248,7 +257,10 @@ class SignupBottom extends Component {
                   type="checkbox"
                   className="checkbox"
                 >
-                  <img src={this.state.five === false ? click : clicked} />
+                  <img
+                    src={this.state.five === false ? click : clicked}
+                    alt="click"
+                  />
                 </button>
                 <span>[선택] 뷰티포인트 문자 수신 동의</span>
               </li>
@@ -258,7 +270,10 @@ class SignupBottom extends Component {
                   type="checkbox"
                   className="checkbox"
                 >
-                  <img src={this.state.six === false ? click : clicked} />
+                  <img
+                    src={this.state.six === false ? click : clicked}
+                    alt="click"
+                  />
                 </button>
                 <span>[선택] 온라인 사이트 문자 수신 동의</span>
               </li>
@@ -287,7 +302,9 @@ class SignupBottom extends Component {
           </button>
         </div>
         <div className="foreign_btn">
-          <button>외국인 회원가입></button>
+          <button onClick={() => this.props.history.push("/login")}>
+            외국인 회원가입>
+          </button>
         </div>
       </div>
     );

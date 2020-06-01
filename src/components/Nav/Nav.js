@@ -180,6 +180,7 @@ class Nav extends Component {
                 <div
                   className={this.state.color_shop}
                   onMouseEnter={this.enter_shop}
+                  onClick={() => this.props.history.push("/teashop")}
                 >
                   Shop
                 </div>
@@ -256,6 +257,7 @@ class Nav extends Component {
               <li
                 className="idx0_list_detail"
                 onMouseEnter={this.enter_teashop}
+                onClick={() => this.props.history.push("/teashop")}
               >
                 Tea Shop
               </li>

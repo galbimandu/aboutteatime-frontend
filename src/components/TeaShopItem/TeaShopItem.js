@@ -1,6 +1,6 @@
 import "./TeaShopItem.scss";
 import React, { Component } from "react";
-
+import { withRouter, Link } from "react-router-dom";
 import heart from "../../images/itemheart.gif";
 import comment from "../../images/itemcomment.gif";
 
@@ -30,6 +30,7 @@ class TeaShopItem extends Component {
             }
             onMouseOver={() => this.changeImage("image")}
             onMouseLeave={() => this.changeImage("image")}
+            onClick={() => this.props.history.push("/detail")}
             alt="item"
           />
           <img
