@@ -1,0 +1,510 @@
+@font-face {
+  font-family: "Noto_M";
+  src: url(../../styles/fonts/notokr-regular.woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: AritaBuriSB;
+  src: url(../../styles/fonts/Arita-buriM-subset.woff);
+}
+.Pager {
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto_M";
+  .ItemDetail {
+    width: 1220px;
+    height: 680px;
+
+    display: flex;
+    justify-content: space-between;
+    .leftWrap {
+      position: relative;
+      height: 100%;
+      .left {
+        background: #f8f9fb;
+        width: 580px;
+        height: 615px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        .topTag {
+          display: flex;
+          margin-left: auto;
+          position: absolute;
+          right: 0;
+          .none {
+            display: none;
+          }
+        }
+        .item {
+          height: 474px;
+          width: 474px;
+        }
+        .bottomTag {
+          position: absolute;
+          bottom: 0;
+          ul {
+            margin-left: 10px;
+            width: 100%;
+            height: 86px;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+              display: flex;
+              align-items: center;
+              span {
+                padding-left: 30px;
+                font-family: "Noto_M";
+                color: #505051;
+                font-size: 15px;
+              }
+            }
+
+            .ic01 {
+              background: URL("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_ico1.png?quality=80")
+                0 0 no-repeat;
+              height: 21px;
+              width: 38%;
+            }
+            .ic02 {
+              background: URL("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_ico1.png?quality=80")
+                0 -30px no-repeat;
+              height: 21px;
+              width: 28%;
+            }
+            .ic03 {
+              background: URL("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_ico1.png?quality=80")
+                0 -60px no-repeat;
+              height: 21px;
+              span {
+                padding-left: 33px;
+              }
+            }
+            .ic04 {
+              background: URL("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_ico1.png?quality=80")
+                0 -90px no-repeat;
+              height: 21px;
+              width: 38%;
+            }
+            .ic05 {
+              background: URL("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_ico1.png?quality=80")
+                0 -120px no-repeat;
+              height: 21px;
+            }
+          }
+        }
+      }
+      .review {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 590px;
+        .revLeft {
+          display: flex;
+
+          .leftBox {
+            .txt {
+              font-size: 30px;
+              margin: 0 15px 0 0;
+              color: #555555;
+            }
+            .score {
+              color: #6c801a;
+              font-size: 40px;
+              font-weight: bold;
+            }
+          }
+          .stars {
+            margin-top: auto;
+            margin-bottom: 1px;
+            margin-left: 10px;
+            height: 25px;
+            width: 116.5px;
+            position: relative;
+            background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+              0 0 no-repeat;
+            overflow: hidden;
+            .bar0 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 0%;
+            }
+            .bar5 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 8.83%;
+            }
+            .bar10 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 20%;
+            }
+            .bar15 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 29.5%;
+            }
+            .bar20 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 40%;
+            }
+            .bar25 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 50%;
+            }
+            .bar30 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 60%;
+            }
+            .bar35 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 70.7%;
+            }
+            .bar40 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 81%;
+            }
+            .bar45 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 91.4%;
+            }
+            .bar50 {
+              overflow: hidden;
+              height: 25px;
+              position: absolute;
+              bottom: 0;
+              background: url("https://www.osulloc.com/kr/ko/static_renew/images/item_detail/bg_m_stars.png?quality=80")
+                0 -30px no-repeat;
+              width: 100%;
+            }
+          }
+        }
+        .revRight {
+          height: 30px;
+          display: flex;
+          align-items: center;
+          margin-top: auto;
+          span:first-child {
+            color: #9e9e9e;
+            font-size: 20px;
+          }
+          span:nth-child(2) {
+            color: #2f2f2f;
+            font-size: 20px;
+            margin-left: 3px;
+          }
+          img {
+            margin-left: 10px;
+            height: 14px;
+            width: 10px;
+          }
+        }
+      }
+    }
+    .rightWrap {
+      height: 100%;
+      .right {
+        width: 580px;
+        .category {
+          display: flex;
+          align-items: center;
+          span {
+            color: #9d9d9d;
+            font-size: 16px;
+          }
+          img {
+            width: 6px;
+            height: 10px;
+            margin: 0 7px;
+          }
+        }
+        .itemName {
+          color: #000000;
+          font-family: "AritaBuriSB";
+          font-size: 36px;
+          margin-top: 15px;
+        }
+        .description {
+          color: #656565;
+          font-size: 20px;
+          margin-top: 10px;
+          line-height: 1.5;
+        }
+        .middleBox {
+          margin-top: 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding-bottom: 20px;
+          border-bottom: 1px #ececec solid;
+          margin-bottom: 17px;
+          .icons {
+            width: 210px;
+            height: 44px;
+            display: flex;
+            justify-content: space-between;
+            img {
+              height: 44px;
+              width: 44px;
+              border-radius: 50px;
+            }
+          }
+          .price {
+            .priceTop {
+              color: #b8b8b8;
+              font-size: 20px;
+              text-decoration: line-through;
+              text-align: right;
+            }
+            .priceBottom {
+              display: flex;
+              margin-top: 5px;
+              .finalPrice {
+                color: #000000;
+                font-weight: bold;
+                font-size: 28px;
+                span {
+                  color: #7b7b7b;
+                  font-size: 28px;
+                  font-weight: 400;
+                }
+              }
+              .percent {
+                color: #fd5c5c;
+                font-size: 26px;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+        .choice {
+          height: 203px;
+          padding: 10px;
+          min-height: 61px;
+          font-size: 18px;
+          color: #505051;
+          background: #f8f9fb;
+          border: 1px solid #efefef;
+          .purchaseNum {
+            display: flex;
+            justify-content: space-between;
+            height: 61px;
+            align-items: center;
+            .chooseText {
+              margin-left: 7px;
+              font-size: 18px;
+              color: #505051;
+            }
+            .chooser {
+              display: flex;
+              align-items: center;
+              button {
+                border: none;
+                background-color: #f8f9fb;
+                font-size: 25px;
+                text-align: center;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+              }
+              button:focus {
+                outline: none;
+              }
+              button:first-child {
+                padding: 0;
+                .btnBorder {
+                  width: 14px;
+                  border-bottom: solid black 2px;
+                  margin-left: auto;
+                  margin-top: 2px;
+                  margin-right: 7px;
+                }
+              }
+              .number {
+                margin: 0 2px;
+                color: #000000;
+                font-size: 24px;
+              }
+            }
+          }
+          .shoppingBag {
+            margin-top: 10px;
+            height: 50px;
+            border: 1px #e0e0e0 solid;
+            background: #ffffff;
+            width: 100%;
+            padding: 0 20px 0 20px;
+            font-size: 16px;
+            color: #505051;
+            .topSec {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              height: 50px;
+              div {
+                font-size: 16px;
+                color: #505051;
+              }
+              button:focus {
+                outline: none;
+              }
+              .show {
+                box-sizing: content-box;
+                background-color: white;
+                border-width: 2px 2px 0px 0px;
+                border-color: #505051;
+                transform: rotate(-45deg);
+                width: 10px;
+                height: 10px;
+                padding: 0;
+                margin-top: 10px;
+                margin-right: 5px;
+                white-space: nowrap;
+                text-decoration: none;
+              }
+              .hide {
+                box-sizing: content-box;
+                background-color: white;
+                border-width: 0px 0px 2px 2px;
+                border-color: #505051;
+                transform: rotate(-45deg);
+                width: 10px;
+                height: 10px;
+                padding: 0;
+                margin-bottom: 5px;
+                margin-right: 5px;
+                white-space: nowrap;
+                text-decoration: none;
+              }
+            }
+          }
+          .noPackage {
+            height: 50px;
+            background: #f2f4f7;
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            div {
+              margin-left: 20px;
+              font-size: 16px;
+              color: #505051;
+            }
+          }
+        }
+        .total {
+          margin-top: 60px;
+          height: 50px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          .text {
+            color: #6c801a;
+            font-size: 24px;
+          }
+          .totalPrice {
+            display: flex;
+            align-items: flex-end;
+            .cost {
+              font-size: 46px;
+              font-weight: bold;
+              color: #6c801a;
+              margin-bottom: -3px;
+            }
+            .won {
+              margin-left: 7px;
+              color: #6c801a;
+              font-size: 24px;
+            }
+          }
+        }
+        .checkout {
+          margin-top: 20px;
+          display: flex;
+          height: 60px;
+          width: 100%;
+          .gift {
+            width: 32%;
+            height: 100%;
+            border: 1px solid #313131;
+            color: #313131;
+            font-size: 20px;
+            text-align: center;
+            line-height: 60px;
+            margin-right: 5px;
+          }
+          .basket {
+            height: 60px;
+            line-height: 60px;
+            color: #ffffff;
+            font-size: 20px;
+            text-align: center;
+            width: 35%;
+            background: #313131;
+          }
+          .buy {
+            height: 60px;
+            line-height: 60px;
+            color: #ffffff;
+            font-size: 20px;
+            text-align: center;
+            width: 65%;
+            background: #6c801a;
+          }
+        }
+      }
+    }
+  }
+}

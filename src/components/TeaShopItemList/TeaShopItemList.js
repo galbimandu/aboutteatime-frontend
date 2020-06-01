@@ -23,12 +23,12 @@ class TeaShopItemList extends Component {
     console.log(this.state.data[0]);
     return (
       <div className="TeaShopItemList">
-        <TeaShopItem data={this.state.data[0]} />
-        <TeaShopItem data={this.state.data[1]} />
-        <TeaShopItem data={this.state.data[2]} />
-        <TeaShopItem data={this.state.data[0]} />
-        <TeaShopItem data={this.state.data[1]} />
-        <TeaShopItem data={this.state.data[2]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[0]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[1]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[2]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[0]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[1]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[2]} />
         <div className="ShopItem">test</div>
         <div className="ShopItem">test</div>
         <div className="ShopItem">test</div>

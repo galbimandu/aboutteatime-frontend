@@ -81,7 +81,7 @@ class Nav extends Component {
     this.setState({ sub_tea_hover: false, sub_teaware_hover: false })
   }
 
-// mouse leave 초기화
+  // mouse leave 초기화
   menu_leave = () => {
     this.setState({ hover: false,
     onmouse_shop: false,
@@ -93,7 +93,6 @@ class Nav extends Component {
     sub_teaware_hover: false,
     })
   }
-
 
   render() {
     const { color_shop, color_tealife, color_event, color_about, color_jeju, hover, onmouse_shop, onmouse_tealife, onmouse_event, onmouse_about, onmouse_jeju, sub_tea_hover, sub_teaware_hover } = this.state;
@@ -122,7 +121,11 @@ class Nav extends Component {
                   <div className="language">한국어</div>
                 </div>
                 <div className="icon_arrowdown_wrap">
-                  <img className="icon_arrowdown" src={icon_arrowdown} alt="icon_arrowdown" />
+                  <img
+                    className="icon_arrowdown"
+                    src={icon_arrowdown}
+                    alt="icon_arrowdown"
+                  />
                 </div>
               </div>
             </div>
@@ -149,10 +152,18 @@ class Nav extends Component {
             </ul>
             <div className="nav_icon">
               <div className="search">
-                <img className="icon_search" src={icon_search} alt="icon_search" />
+                <img
+                  className="icon_search"
+                  src={icon_search}
+                  alt="icon_search"
+                />
               </div>
               <div className="bucket">
-                <img className="icon_bucket" src={icon_bucket} alt="icon_bucket" />
+                <img
+                  className="icon_bucket"
+                  src={icon_bucket}
+                  alt="icon_bucket"
+                />
               </div>
               <div className="more">
                 <img className="icon_more" src={icon_more} alt="icon_more" />
@@ -160,7 +171,6 @@ class Nav extends Component {
             </div>
           </div>
         </div>
-
         <div className={ hover ? "menu_hide_container_active": "menu_hide_container" }>
           <div className="banner_hide_wrap">
             <span className="banner_text1">오늘만 이 가격</span>
@@ -171,11 +181,13 @@ class Nav extends Component {
           <div className="menu_hide_wrap">
             {/* idx0_list */}
             <ul className={ onmouse_shop ? "idx0_list2" : "idx0_list" } onMouseEnter={this.enter_shop} onMouseLeave={this.leave_shop}>
-
-              <li className="idx0_list_detail" onMouseEnter={this.enter_teashop}>
-                Tea Shop
-              </li>
-              <li className="idx0_list_detail" onMouseEnter={this.enter_teaware}>
+                <li className="idx0_list_detail" onMouseEnter={this.enter_teashop} onClick={() => this.props.history.push("/teashop")}>
+                    Tea Shop
+                </li>
+              <li
+                className="idx0_list_detail"
+                onMouseEnter={this.enter_teaware}
+              >
                 Tea ware Shop
               </li>
               <li className="idx0_list_detail" onMouseEnter={this.leave_sub}>
@@ -232,9 +244,8 @@ class Nav extends Component {
               <li className="idx2_list_detail">
                 About Tea
               </li>
-
             </ul>
-                
+  
             <ul className={ onmouse_about ? "idx3_list2" : "idx3_list" } onMouseEnter={this.enter_about} onMouseLeave={this.leave_about}>
 
               <li className="idx3_list_detail">
@@ -255,9 +266,8 @@ class Nav extends Component {
               <li className="idx3_list_detail">
                 매거진
               </li>
-
             </ul>
-                
+ 
             <ul className={ onmouse_jeju ? "idx4_list2" : "idx4_list" } onMouseEnter={this.enter_jeju} onMouseLeave={this.leave_jeju}>
 
               <li className="idx4_list_detail">
@@ -269,11 +279,7 @@ class Nav extends Component {
               <li className="idx4_list_detail">
                 제주 오설록 맵
               </li>
-
             </ul>
-            
-          </div>
-
           <div className={ sub_tea_hover ? "sub_menu_tea_container_active" : "sub_menu_tea_container" }>
               <ul className="tea">
                 <li className="tea_title">전체보기</li>
@@ -298,9 +304,8 @@ class Nav extends Component {
                 <li>기프트몰</li>
                 <li>라이프스타일몰</li>
                 <li>오피스몰</li>
-              </ul>
+              </ul>git
           </div>
-
           <div className={ sub_teaware_hover ? "sub_menu_teaware_container_active" : "sub_menu_teaware_container" }>
               <ul className="tea">
                 <li className="tea_title">전체보기</li>
@@ -321,11 +326,11 @@ class Nav extends Component {
                 <li>소로시</li>
                 <li>킨토</li>
               </ul>
-
+            </div>  
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

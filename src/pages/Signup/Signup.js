@@ -17,8 +17,9 @@ class Signup extends Component {
       phone: "",
       password: "",
       password_confirm: "",
-    }
+    };
   }
+
 
   handle_change = e => {
     this.setState({ [e.target.name] : e.target.value })
@@ -27,7 +28,6 @@ class Signup extends Component {
   gender_change = e => {
     this.setState({ gender: e })
   }
-
 
   render() {
     const { realname, username, birthday, gender, provider, phone, password } = this.state;
@@ -43,7 +43,7 @@ class Signup extends Component {
         <SignupTop handle_change={this.handle_change} gender_change={this.gender_change}/>
         <SignupBottom realname={realname} username={username} birthday={birthday} gender={gender} provider={provider} phone={phone} password={password} />
       </div>
-    )
+    );
   }
 }
 
