@@ -20,6 +20,10 @@ class Signup extends Component {
     };
   }
 
+  componentDidMount() {
+    document.documentElement.scrollTop = 0;
+  }
+
   handle_change = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };

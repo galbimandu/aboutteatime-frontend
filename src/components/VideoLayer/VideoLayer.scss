@@ -1,4 +1,6 @@
 .videoLayer {
+  margin-top: 153px;
+  width: 100%;
   overflow-x: hidden;
   background-color: black;
   display: flex;
@@ -31,8 +33,9 @@
             align-items: flex-end;
             &:hover {
               animation-name: colorchange;
-              animation-duration: 5s;
+              animation-duration: 2.5s;
               animation-iteration-count: 1;
+              animation-fill-mode: forwards;
               @keyframes colorchange {
                 from {
                   color: white;

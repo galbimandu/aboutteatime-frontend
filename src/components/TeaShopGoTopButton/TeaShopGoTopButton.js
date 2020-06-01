@@ -16,7 +16,7 @@ class TeaShopGoTopButton extends Component {
 
   onScroll = (event) => {
     const scrolling = ("scroll", event.srcElement.scrollingElement.scrollTop);
-    this.setState({ scrolling }, console.log(this.state.scrolling));
+    this.setState({ scrolling });
   };
 
   scrollingFunc() {

@@ -22,19 +22,27 @@ class LoginPage extends Component {
     };
   }
 
+  componentDidMount() {
+    document.documentElement.scrollTop = 0;
+  }
+
   // 회원,비회원 탭 메뉴 //
   liFunc() {
     if (this.state.memCheck === true) {
-      this.setState(
-        { memCheck: false, nonmemCheck: true, id: "", password: "" },
-        console.log(this.state)
-      );
+      this.setState({
+        memCheck: false,
+        nonmemCheck: true,
+        id: "",
+        password: "",
+      });
     }
     if (this.state.memCheck === false) {
-      this.setState(
-        { memCheck: true, nonmemCheck: false, orderNum: "", orderTel: "" },
-        console.log(this.state)
-      );
+      this.setState({
+        memCheck: true,
+        nonmemCheck: false,
+        orderNum: "",
+        orderTel: "",
+      });
     }
   }
 
@@ -42,7 +50,6 @@ class LoginPage extends Component {
   inputHandler(event) {
     this.setState({ [event.target.name]: event.target.value }, () => {
       this.validate();
-      console.log(this.state);
     });
   }
 
@@ -66,30 +73,22 @@ class LoginPage extends Component {
       this.setState({ orderTelRed: false });
     }
     if ((this.state.id.length !== 0) & (this.state.password.length !== 0)) {
-      this.setState({ validation: true }, () =>
-        console.log(this.state.validation)
-      );
+      this.setState({ validation: true });
     } else if (
       (this.state.orderNum.length !== 0) &
       (this.state.orderTel.length !== 0)
     ) {
-      this.setState({ validation: true }, () =>
-        console.log(this.state.validation)
-      );
+      this.setState({ validation: true });
     } else if (
       (this.state.id.length === 0) &
       (this.state.password.length === 0)
     ) {
-      this.setState({ validation: false }, () =>
-        console.log(this.state.validation)
-      );
+      this.setState({ validation: false });
     } else if (
       (this.state.orderNum.length === 0) &
       (this.state.orderTel.length === 0)
     ) {
-      this.setState({ validation: false }, () =>
-        console.log(this.state.validation)
-      );
+      this.setState({ validation: false });
     }
   }
 
@@ -116,7 +115,6 @@ class LoginPage extends Component {
 
   // 페이지 이동 함수 //
   goToMain() {
-    console.log(this.state);
     const token = localStorage.getItem("token");
     fetch(url + "/main", {
       method: "POST",

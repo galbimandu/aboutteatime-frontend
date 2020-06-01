@@ -312,7 +312,12 @@ class Nav extends Component {
               onMouseEnter={this.enter_about}
               onMouseLeave={this.leave_about}
             >
-              <li className="idx3_list_detail">Brand Story</li>
+              <li
+                className="idx3_list_detail"
+                // onClick={() => this.props.history.push("/")}
+              >
+                Brand Story
+              </li>
               <li className="idx3_list_detail">Since 1979</li>
               <li className="idx3_list_detail">오설록 차밭 이야기</li>
               <li className="idx3_list_detail">숫자로 보는 오설록</li>
