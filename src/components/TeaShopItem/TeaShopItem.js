@@ -26,11 +26,13 @@ class TeaShopItem extends Component {
           <img
             src={
               this.props.data &&
-              (image ? this.props.data.front : this.props.data.back)
+              (image ? this.props.data.front : this.props.data.hover)
             }
             onMouseOver={() => this.changeImage("image")}
             onMouseLeave={() => this.changeImage("image")}
-            onClick={() => this.props.history.push("/detail/1")}
+            onClick={() =>
+              this.props.history.push(`/detail/${this.props.data.id}`)
+            }
             alt="item"
           />
           <img

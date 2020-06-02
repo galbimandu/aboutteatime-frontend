@@ -8,7 +8,8 @@
       "name": "녹차밀크스프레드 200 g",
       "price": "8,500",
       "likes": 18,
-      "comments": 556
+      "comments": 556,
+      "id": 1
     },
     {
       "back": "https://www.osulloc.com/upload/kr/ko/item_overImg/5041.png?quality=80&shrink=304:340",
@@ -18,7 +19,8 @@
       "name": "테스트2 200 g",
       "price": "9,000",
       "likes": 2,
-      "comments": 100
+      "comments": 100,
+      "id": 2
     },
     {
       "back": "https://www.osulloc.com/upload/kr/ko/item_overImg/5041.png?quality=80&shrink=304:340",
@@ -28,7 +30,8 @@
       "name": "테스트3 200 g",
       "price": "1,000",
       "likes": 3,
-      "comments": 16
+      "comments": 16,
+      "id": 3
     }
   ]
 }

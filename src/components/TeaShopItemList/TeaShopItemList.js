@@ -12,10 +12,11 @@ class TeaShopItemList extends Component {
   }
 
   componentDidMount = () => {
-    fetch(url + "/data/TeaItem.json", {})
+    //fetch(`${url}item/teashop/list`, {})
+    fetch("http://localhost:3000/data/itemlist.json", {})
       .then((response) => response.json())
       .then((response) => {
-        this.setState({ data: response.data });
+        this.setState({ data: response.items });
       });
   };
 
@@ -26,15 +27,15 @@ class TeaShopItemList extends Component {
         <TeaShopItem history={this.props.history} data={this.state.data[0]} />
         <TeaShopItem history={this.props.history} data={this.state.data[1]} />
         <TeaShopItem history={this.props.history} data={this.state.data[2]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[0]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[1]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[2]} />
-        <div className="ShopItem">test</div>
-        <div className="ShopItem">test</div>
-        <div className="ShopItem">test</div>
-        <div className="ShopItem">test</div>
-        <div className="ShopItem">test</div>
-        <div className="ShopItem">test</div>
+        <TeaShopItem history={this.props.history} data={this.state.data[3]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[4]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[5]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[6]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[7]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[8]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[9]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[10]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[11]} />
       </div>
     );
   }

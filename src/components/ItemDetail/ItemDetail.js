@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import "./ItemDetail.scss";
-import url from "../../config";
+import urlset from "../../config";
 class ItemDetail extends Component {
   constructor() {
     super();
@@ -17,7 +17,7 @@ class ItemDetail extends Component {
       best: null,
       bonus: null,
       gift: null,
-      new: null,
+      neww: null,
       on_sale: null,
       sold_out: null,
       sub_category: "",
@@ -41,6 +41,7 @@ class ItemDetail extends Component {
       sb_text: "",
       rateClass: 0,
       sb_orig: true,
+      discount_percent: 0,
     };
   }
   changeImage = (key) => {
@@ -49,7 +50,7 @@ class ItemDetail extends Component {
 
   total = () => {
     let tmp;
-    if (this.state.discount_percent !== 1) {
+    if (Math.floor(this.state.discount_percent) !== 1) {
       tmp =
         this.state.num *
         this.state.price *
@@ -63,7 +64,7 @@ class ItemDetail extends Component {
   componentDidUpdate = (prevProps) => {
     if (prevProps.match.params.id !== this.props.match.params.id) {
       //fetch(url+"endpoint/"+this.props.match.params.id, {})
-      fetch(`${url}/data/itemDetail${this.props.match.params.id}.json`, {})
+      fetch(`${urlset}/data/itemDetail${this.props.match.params.id}.json`, {})
         .then((response) => response.json())
         .then((response) => {
           this.setState({
@@ -71,7 +72,7 @@ class ItemDetail extends Component {
             best: response.item.best,
             bonus: response.item.bonus,
             gift: response.item.gift,
-            new: response.item.new,
+            neww: response.item.new,
             on_sale: response.item.on_sale,
             sold_out: response.item.sold_out,
             sub_category: response.item.sub_category,
@@ -91,8 +92,11 @@ class ItemDetail extends Component {
     }
   };
   componentDidMount = () => {
-    //fetch(url+"endpoint/"+this.props.match.params.id, {})
-    fetch(`${url}/data/itemDetail${this.props.match.params.id}.json`, {})
+    //fetch(url+"/item/teashop/detail/"+this.props.match.params.id, {})
+    fetch(
+      `${urlset}/item/teashop/detail/${this.props.match.params.minchang}`,
+      {}
+    )
       .then((response) => response.json())
       .then((response) => {
         this.setState({
@@ -100,16 +104,16 @@ class ItemDetail extends Component {
           best: response.item.best,
           bonus: response.item.bonus,
           gift: response.item.gift,
-          new: response.item.new,
+          neww: response.item.new,
           on_sale: response.item.on_sale,
           sold_out: response.item.sold_out,
           sub_category: response.item.sub_category,
           fourth_category: response.item.fourth_category,
           description: response.item.description,
           main_image: response.item.main_image,
-          price: response.item.price,
+          price: Math.floor(response.item.price),
           num_reviews: response.item.num_reviews,
-          rating: response.item.rating,
+          rating: response.item.rating.overall_rating__avg,
           title: response.item.title,
           item: response.item,
           discount_percent: response.item.discount_percent,
@@ -126,7 +130,7 @@ class ItemDetail extends Component {
   };
 
   finalPrice = () => {
-    if (this.state.discount_percent !== 1) {
+    if (Math.floor(this.state.discount_percent) !== 1) {
       let str = this.state.price * (1 - this.state.item.discount_percent);
       return str.toLocaleString();
     } else {
@@ -136,7 +140,7 @@ class ItemDetail extends Component {
   };
 
   discount_percent = () => {
-    if (this.state.discount_percent !== 1) {
+    if (this.state.discount_percent !== 1.0) {
       return this.state.item.discount_percent * 100 + "%";
     }
   };
@@ -187,6 +191,45 @@ class ItemDetail extends Component {
   };
 
   render() {
+    const {
+      url,
+      fb,
+      kakao,
+      like,
+      num,
+      foldUp,
+      view,
+      benefits,
+      best,
+      bonus,
+      gift,
+      neww,
+      on_sale,
+      sold_out,
+      sub_category,
+      fourth_category,
+      description,
+      main_image,
+      price,
+      num_reviews,
+      rating,
+      title,
+      item,
+      bp,
+      bp_text,
+      tl,
+      tl_text,
+      fd,
+      fd_text,
+      fp,
+      fp_text,
+      sb,
+      sb_text,
+      rateClass,
+      sb_orig,
+      discount_percent,
+    } = this.state;
+    console.log(discount_percent);
     return (
       <div className="Pager">
         <div className="ItemDetail">
@@ -219,7 +262,7 @@ class ItemDetail extends Component {
                   alt="soldout"
                 />
                 <img
-                  className={this.state.new ? "" : "none"}
+                  className={this.state.neww ? "" : "none"}
                   src="https://www.osulloc.com/kr/ko/static_renew/images/label_new.gif"
                   alt="new"
                 />
@@ -341,15 +384,19 @@ class ItemDetail extends Component {
                   />
                 </div>
                 <div className="price">
-                  <div className="priceTop">
-                    <span>{this.priceTop()}</span>
-                  </div>
+                  {Math.floor(discount_percent) !== 1 && (
+                    <div className="priceTop">
+                      <span>{this.priceTop()}</span>
+                    </div>
+                  )}
                   <div className="priceBottom">
                     <div className="finalPrice">
                       {this.finalPrice()}
                       <span>원</span>
                     </div>
-                    <div className="percent">{this.discount_percent()}</div>
+                    {Math.floor(discount_percent) !== 1 && (
+                      <div className="percent">{this.discount_percent()}</div>
+                    )}
                   </div>
                 </div>
               </div>

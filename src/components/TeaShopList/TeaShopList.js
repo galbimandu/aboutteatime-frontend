@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./TeaShopList.scss";
 import TeaShopItemList from "../TeaShopItemList/TeaShopItemList";
 import TeaShopSubMenu from "../TeaShopSubMenu/TeaShopSubMenu";
-import TeaShopGoTopButton from "../TeaShopGoTopButton/TeaShopGoTopButton";
+
 import TeaShopContensTitle from "../TeaShopContensTitle/TeaShopContensTitle";
 
 class TeaShopList extends Component {
@@ -17,7 +17,6 @@ class TeaShopList extends Component {
             <TeaShopItemList history={this.props.history}/>
           </div>
         </div>
-        <TeaShopGoTopButton />
       </div>
     );
   }

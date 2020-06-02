@@ -7,7 +7,6 @@ import Login from "./pages/Login/LoginPage";
 import Basket from "./components/Basket/Basket";
 import TeaShopPage from "./pages/TeaShop/TeaShopPage";
 import ItemDetial from "./components/ItemDetail/ItemDetail";
-import Active from "./components/ActiveMain/ActiveMain";
 import ItemDetailPage from "./pages/ItemDetailPage/ItemDetailPage";
 
 class Routes extends Component {
@@ -21,8 +20,7 @@ class Routes extends Component {
           <Route exact path="/login" component={Login} />
           <Route exact path="/basket" component={Basket} />
           <Route exact path="/teashop" component={TeaShopPage} />
-          <Route exact path="/active" component={Active} />
-          <Route exact path="/detail/:id" component={ItemDetailPage} />
+          <Route exact path="/detail/:minchang" component={ItemDetailPage} />
         </Switch>
       </Router>
     );
