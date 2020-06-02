@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-import Main from "./pages/Main/Main";
+import Main from "./pages/MainPage/MainPage";
 import Signup from "./pages/Signup/Signup";
-import Login from "./pages/Login/LoginPage";
+import Login from "./pages/LoginPage/LoginPage";
 import Basket from "./components/Basket/Basket";
 import TeaShopPage from "./pages/TeaShop/TeaShopPage";
 import ItemDetial from "./components/ItemDetail/ItemDetail";

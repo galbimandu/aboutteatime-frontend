@@ -2,19 +2,17 @@ import React, { Component } from "react";
 import "./TeaShopList.scss";
 import TeaShopItemList from "../TeaShopItemList/TeaShopItemList";
 import TeaShopSubMenu from "../TeaShopSubMenu/TeaShopSubMenu";
-
 import TeaShopContensTitle from "../TeaShopContensTitle/TeaShopContensTitle";
 
 class TeaShopList extends Component {
   render() {
-    
     return (
       <div className="teaShopList">
         <div className="teaShopListwrap">
           <TeaShopSubMenu />
           <div className="contents">
             <TeaShopContensTitle />
-            <TeaShopItemList history={this.props.history}/>
+            <TeaShopItemList history={this.props.history} />
           </div>
         </div>
       </div>

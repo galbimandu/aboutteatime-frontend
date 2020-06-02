@@ -21,46 +21,61 @@ class TeaShopContensTitle extends Component {
 
   reviewSortFunc() {
     if (this.state.review === false) {
-      this.setState(
-        { review: true, sale: false, new: false, high: false, row: false },
-        () => console.log(this.state)
-      );
+      this.setState({
+        review: true,
+        sale: false,
+        new: false,
+        high: false,
+        row: false,
+      });
     }
   }
 
   saleSortFunc() {
     if (this.state.sale === false) {
-      this.setState(
-        { review: false, sale: true, new: false, high: false, row: false },
-        () => console.log(this.state)
-      );
+      this.setState({
+        review: false,
+        sale: true,
+        new: false,
+        high: false,
+        row: false,
+      });
     }
   }
 
   newSortFunc() {
     if (this.state.new === false) {
-      this.setState(
-        { review: false, sale: false, new: true, high: false, row: false },
-        () => console.log(this.state)
-      );
+      this.setState({
+        review: false,
+        sale: false,
+        new: true,
+        high: false,
+        row: false,
+      });
     }
   }
 
   highSortFunc() {
     if (this.state.high === false) {
-      this.setState(
-        { review: false, sale: false, new: false, high: true, row: false },
-        () => console.log(this.state)
-      );
+      this.setState({
+        review: false,
+        sale: false,
+        new: false,
+        high: true,
+        row: false,
+      });
     }
   }
 
   rowSortFunc() {
     if (this.state.row === false) {
-      this.setState(
-        { review: false, sale: false, new: false, high: false, row: true },
-        () => console.log(this.state)
-      );
+      this.setState({
+        review: false,
+        sale: false,
+        new: false,
+        high: false,
+        row: true,
+      });
     }
   }
 
@@ -79,77 +94,53 @@ class TeaShopContensTitle extends Component {
 
   categoryLeaf() {
     if (this.state.categoryLeaf === false) {
-      this.setState(
-        {
-          categoryAll: false,
-          categoryLeaf: true,
-        },
-        () => console.log(this.state.categoryLeaf)
-      );
+      this.setState({
+        categoryAll: false,
+        categoryLeaf: true,
+      });
     } else {
-      this.setState(
-        {
-          categoryLeaf: false,
-        },
-        () => console.log(this.state.categoryLeaf)
-      );
+      this.setState({
+        categoryLeaf: false,
+      });
     }
   }
 
   categoryPyramid() {
     if (this.state.categoryPyramid === false) {
-      this.setState(
-        {
-          categoryAll: false,
-          categoryPyramid: true,
-        },
-        () => console.log(this.state.categoryPyramid)
-      );
+      this.setState({
+        categoryAll: false,
+        categoryPyramid: true,
+      });
     } else {
-      this.setState(
-        {
-          categoryPyramid: false,
-        },
-        () => console.log(this.state.categoryPyramid)
-      );
+      this.setState({
+        categoryPyramid: false,
+      });
     }
   }
 
   categoryTeabag() {
     if (this.state.categoryTeabag === false) {
-      this.setState(
-        {
-          categoryAll: false,
-          categoryTeabag: true,
-        },
-        () => console.log(this.state.categoryTeabag)
-      );
+      this.setState({
+        categoryAll: false,
+        categoryTeabag: true,
+      });
     } else {
-      this.setState(
-        {
-          categoryTeabag: false,
-        },
-        () => console.log(this.state.categoryTeabag)
-      );
+      this.setState({
+        categoryTeabag: false,
+      });
     }
   }
 
   categoryPowder() {
     if (this.state.categoryPowder === false) {
-      this.setState(
-        {
-          categoryAll: false,
-          categoryPowder: true,
-        },
-        () => console.log(this.state.categoryPowder)
-      );
+      this.setState({
+        categoryAll: false,
+        categoryPowder: true,
+      });
     } else {
-      this.setState(
-        {
-          categoryPowder: false,
-        },
-        () => console.log(this.state.categoryPowder)
-      );
+      this.setState({
+        categoryPowder: false,
+      });
     }
   }
 

@@ -21,7 +21,6 @@ class TeaShopItemList extends Component {
   };
 
   render() {
-    console.log(this.state.data[0]);
     return (
       <div className="TeaShopItemList">
         <TeaShopItem history={this.props.history} data={this.state.data[0]} />

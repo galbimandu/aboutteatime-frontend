@@ -1,33 +1,43 @@
 import React, { Component } from "react";
-import "./TeaShopGoTopButton.scss";
+import "./TopGoButton.scss";
 
-class TeaShopGoTopButton extends Component {
+class TopGoButton extends Component {
   constructor() {
     super();
 
     this.state = {
       scrolling: 0,
+      turnkey: false,
     };
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.onScroll);
+    window.addEventListener("scroll", this.actScroll);
   }
 
-  onScroll = (event) => {
+  actScroll = (event) => {
     const scrolling = ("scroll", event.srcElement.scrollingElement.scrollTop);
-    this.setState({ scrolling }, console.log(this.state.scrolling));
+    this.setState({ scrolling }, this.onFunc.bind(this));
   };
+
+  onFunc() {
+    if (this.state.scrolling > 100) {
+      this.setState({ turnkey: true });
+    } else {
+      this.setState({ turnkey: false });
+    }
+  }
 
   scrollingFunc() {
     document.documentElement.scrollTop = 0;
   }
 
   render() {
+    console.log(this.state);
     return (
       <div
         className={
-          this.state.scrolling ? "goTop goTopVisible" : "goTop goTopInvisible"
+          this.state.turnkey ? "goTop goTopVisible" : "goTop goTopInvisible"
         }
         onClick={this.scrollingFunc.bind(this)}
       >
@@ -37,4 +47,4 @@ class TeaShopGoTopButton extends Component {
   }
 }
 
-export default TeaShopGoTopButton;
+export default TopGoButton;

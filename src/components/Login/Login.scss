@@ -1,19 +1,10 @@
-@font-face {
-  font-family: Buri;
-  src: url(../../styles/fonts/Arita-buriM-subset.woff);
-}
-@font-face {
-  font-family: Noto Sans KR;
-  src: url(../../styles/fonts/NotoSansKR-Regular.woff2);
-}
-
 .LoginPage {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   .LoginPage-wrap {
+    margin: 100px 0 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +174,7 @@
       }
     }
     .snsButton {
-      margin-top: 100px;
+      margin: 100px 0 50px 0;
       display: flex;
       flex-direction: column;
       justify-content: center;

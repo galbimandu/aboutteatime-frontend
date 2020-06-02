@@ -17,9 +17,25 @@ class VideoLayer extends Component {
       bTea: false,
       transformStay: 0,
       autoPlayIndex: 2,
+      movingTurnKey: true,
     };
   }
 
+  intervalNum = 5000; // 비디오 로테이션 시간
+  timer; // 비디오 변수선언: 정지, 재실을 위한 변수 저장 //
+  componentDidMount() {
+    this.timer = setInterval(
+      this.autoVideoChangeFunc.bind(this),
+      this.intervalNum
+    );
+  }
+
+  // 언마운트시 interval해제:지속적으로 코드 때리는 타이머함수는 언마운트시 제거 //
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  // 버튼 클릭 핸들러 함수 //
   mTeaFunc() {
     if (this.state.mTea === false) {
       this.setState({
@@ -33,6 +49,7 @@ class VideoLayer extends Component {
     }
   }
 
+  // 버튼 클릭 핸들러 함수 //
   gTeaFunc() {
     if (this.state.gTea === false) {
       this.setState({
@@ -46,6 +63,7 @@ class VideoLayer extends Component {
     }
   }
 
+  // 버튼 클릭 핸들러 함수 //
   hTeaFunc() {
     if (this.state.hTea === false) {
       this.setState({
@@ -59,6 +77,7 @@ class VideoLayer extends Component {
     }
   }
 
+  // 버튼 클릭 핸들러 함수 //
   bTeaFunc() {
     if (this.state.bTea === false) {
       this.setState({
@@ -72,20 +91,38 @@ class VideoLayer extends Component {
     }
   }
 
-  autoVideoChangeFunc = () => {
-    if (this.state.autoPlayIndex === 1) {
+  // 비디오 로테이션 돌릴 함수 //
+  autoVideoChangeFunc() {
+    if (this.state.movingTurnKey === true && this.state.autoPlayIndex === 1) {
       this.mTeaFunc();
-    } else if (this.state.autoPlayIndex === 2) {
+    } else if (
+      this.state.movingTurnKey === true &&
+      this.state.autoPlayIndex === 2
+    ) {
       this.gTeaFunc();
-    } else if (this.state.autoPlayIndex === 3) {
+    } else if (
+      this.state.movingTurnKey === true &&
+      this.state.autoPlayIndex === 3
+    ) {
       this.hTeaFunc();
-    } else if (this.state.autoPlayIndex === 4) {
+    } else if (
+      this.state.movingTurnKey === true &&
+      this.state.autoPlayIndex === 4
+    ) {
       this.bTeaFunc();
     }
-  };
+  }
 
-  componentDidMount() {
-    setInterval(this.autoVideoChangeFunc, 5000);
+  // 비디오 정지, 그리고 다시 재시작 시킬 함수 //
+  pauseFunc() {
+    clearInterval(this.timer);
+    setTimeout(
+      (this.timer = setInterval(
+        this.autoVideoChangeFunc.bind(this),
+        this.intervalNum
+      )),
+      this.intervalNum / 2 // 클릭 발생시 로테이션시간의 반을 기다렸다가 다시 인터벌 돌려라 //
+    );
   }
 
   render() {
@@ -130,6 +167,9 @@ class VideoLayer extends Component {
                 <source src={mTeaVideo} type="video/mp4" />
               </video>
               <div
+                // 비디오 일시 정지 함수
+                onMouseOver={() => this.setState({ movingTurnKey: false })}
+                onMouseLeave={() => this.setState({ movingTurnKey: true })}
                 className={this.state.mTea ? "teaText teaTextOn" : "teaText"}
               >
                 <Link to="/">
@@ -160,6 +200,9 @@ class VideoLayer extends Component {
                 <source src={gTeaVideo} type="video/mp4" />
               </video>
               <div
+                // 비디오 일시 정지 함수
+                onMouseOver={() => this.setState({ movingTurnKey: false })}
+                onMouseLeave={() => this.setState({ movingTurnKey: true })}
                 className={this.state.gTea ? "teaText teaTextOn" : "teaText"}
               >
                 <Link to="/">
@@ -190,6 +233,9 @@ class VideoLayer extends Component {
                 <source src={hTeaVideo} type="video/mp4" />
               </video>
               <div
+                // 비디오 일시 정지 함수
+                onMouseOver={() => this.setState({ movingTurnKey: false })}
+                onMouseLeave={() => this.setState({ movingTurnKey: true })}
                 className={this.state.hTea ? "teaText teaTextOn" : "teaText"}
               >
                 <Link to="/">
@@ -220,6 +266,9 @@ class VideoLayer extends Component {
                 <source src={bTeaVideo} type="video/mp4" />
               </video>
               <div
+                // 비디오 일시 정지 함수
+                onMouseOver={() => this.setState({ movingTurnKey: false })}
+                onMouseLeave={() => this.setState({ movingTurnKey: true })}
                 className={this.state.bTea ? "teaText teaTextOn" : "teaText"}
               >
                 <Link to="/">
@@ -249,7 +298,7 @@ class VideoLayer extends Component {
         </div>
         <div className="videoBottomButtun">
           <div className="videoBottomButtunContents">
-            <ul>
+            <ul onClick={this.pauseFunc.bind(this)}>
               <li
                 onClick={this.mTeaFunc.bind(this)}
                 className={this.state.mTea ? "activate" : ""}

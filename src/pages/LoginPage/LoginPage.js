@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import "./TeaShopPage.scss";
-import TeaShopList from "../../components/TeaShopList/TeaShopList";
-import VideoLayer from "../../components/VideoLayer/VideoLayer";
-import Footer from "../../components/Footer/Footer";
 import NavMove from "../../components/NavMove/NavMove";
+import "./LoginPage.scss";
+import Login from "../../components/Login/Login";
+import Footer from "../../components/Footer/Footer";
 import TopGoButton from "../../components/TopGoButton/TopGoButton";
 
-class TeaShopPage extends Component {
+class LoginPage extends Component {
   constructor() {
     super();
     this.state = {
@@ -20,7 +19,7 @@ class TeaShopPage extends Component {
 
   render() {
     return (
-      <div className="TeaShopPage">
+      <div className="loginPage">
         <NavMove />
         <div
           className={
@@ -29,8 +28,7 @@ class TeaShopPage extends Component {
               : "contents contentsOff"
           }
         >
-          <VideoLayer />
-          <TeaShopList history={this.props.history} />
+          <Login />
           <Footer />
         </div>
         <TopGoButton />
@@ -39,4 +37,4 @@ class TeaShopPage extends Component {
   }
 }
 
-export default TeaShopPage;
+export default LoginPage;
