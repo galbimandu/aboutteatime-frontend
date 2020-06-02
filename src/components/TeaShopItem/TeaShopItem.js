@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import heart from "../../images/itemheart.gif";
 import comment from "../../images/itemcomment.gif";
+// 삭제 예정
 
 class TeaShopItem extends Component {
   constructor() {
