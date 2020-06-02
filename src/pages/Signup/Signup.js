@@ -1,7 +1,7 @@
-import React, { Component } from "react"
-import { withRouter } from "react-router-dom"
-import SignupTop from "../../components/SignupTop/SignupTop"
-import SignupBottom from "../../components/SignupBottom/SignupBottom"
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import SignupTop from "../../components/SignupTop/SignupTop";
+import SignupBottom from "../../components/SignupBottom/SignupBottom";
 import "./Signup.scss";
 
 class Signup extends Component {
@@ -20,17 +20,28 @@ class Signup extends Component {
     };
   }
 
-
-  handle_change = e => {
-    this.setState({ [e.target.name] : e.target.value })
+  componentDidMount() {
+    document.documentElement.scrollTop = 0;
   }
 
-  gender_change = e => {
-    this.setState({ gender: e })
-  }
+  handle_change = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  gender_change = (e) => {
+    this.setState({ gender: e });
+  };
 
   render() {
-    const { realname, username, birthday, gender, provider, phone, password } = this.state;
+    const {
+      realname,
+      username,
+      birthday,
+      gender,
+      provider,
+      phone,
+      password,
+    } = this.state;
     return (
       <div className="Signup">
         <div className="header">
@@ -40,8 +51,19 @@ class Signup extends Component {
             <span className="text1">회원가입</span>
           </h1>
         </div>
-        <SignupTop handle_change={this.handle_change} gender_change={this.gender_change}/>
-        <SignupBottom realname={realname} username={username} birthday={birthday} gender={gender} provider={provider} phone={phone} password={password} />
+        <SignupTop
+          handle_change={this.handle_change}
+          gender_change={this.gender_change}
+        />
+        <SignupBottom
+          realname={realname}
+          username={username}
+          birthday={birthday}
+          gender={gender}
+          provider={provider}
+          phone={phone}
+          password={password}
+        />
       </div>
     );
   }

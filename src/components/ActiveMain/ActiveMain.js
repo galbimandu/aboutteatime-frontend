@@ -18,12 +18,24 @@ class ActiveMain extends Component {
   }
 
   intervalNum = 50; // 변수관리 : 자동 스크롤 이벤트 setInterval용 시간(단위:ms)
+  timer; // setInterval 제거시 사용을 위한 고정 변수 //
   componentDidMount() {
     // Step1. scroll 이벤트 add //
     // javascript 윈도우 객체의 scroll 이벤트 가져와서 준비 //
     window.addEventListener("scroll", this.addScrollFunc.bind(this)); //"scroll"이 내장이벤트 default이름임
     // Step End. 자동 스크롤 이벤트 계속 요청할 함수 //
-    setInterval(this.scrollAutoMovingFunc.bind(this), this.intervalNum);
+    // 2초 딜레이 후 시작 //
+    setTimeout(() => {
+      this.timer = setInterval(
+        this.scrollAutoMovingFunc.bind(this),
+        this.intervalNum
+      );
+    }, 1500);
+  }
+
+  // 다른 페이지로 이동시 setInterval을 제거해야 스크롤 마우스가 멈춤 //
+  componentWillUnmount() {
+    clearInterval(this.timer); // setInterval 제거를 하기 위한 메소드
   }
 
   // Step2. scroll 좌표값 출력되는지 확인 //
@@ -52,7 +64,6 @@ class ActiveMain extends Component {
     } else {
       this.setState({ moveTurnKey: false });
     }
-
     this.scrollMoveFunc();
   }
 

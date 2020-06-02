@@ -20,21 +20,20 @@ class TeaShopItemList extends Component {
   };
 
   render() {
-    console.log(this.state.data[0]);
     return (
       <div className="TeaShopItemList">
         <TeaShopItem history={this.props.history} data={this.state.data[0]} />
         <TeaShopItem history={this.props.history} data={this.state.data[1]} />
         <TeaShopItem history={this.props.history} data={this.state.data[2]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[3]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[1]} />
         <TeaShopItem history={this.props.history} data={this.state.data[0]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[2]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[3]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[0]} />
+        <TeaShopItem history={this.props.history} data={this.state.data[2]} />
         <TeaShopItem history={this.props.history} data={this.state.data[1]} />
         <TeaShopItem history={this.props.history} data={this.state.data[2]} />
-        <div className="ShopItem">test</div>
-        <div className="ShopItem">test</div>
-        <div className="ShopItem">test</div>
-        <div className="ShopItem">test</div>
-        <div className="ShopItem">test</div>
-        <div className="ShopItem">test</div>
       </div>
     );
   }
