@@ -158,13 +158,15 @@ class Nav extends Component {
                   alt="icon_search"
                 />
               </div>
-              <div className="bucket">
-                <img
-                  className="icon_bucket"
-                  src={icon_bucket}
-                  alt="icon_bucket"
-                />
-              </div>
+              <Link to="/basket">
+                <div className="bucket">
+                  <img
+                    className="icon_bucket"
+                    src={icon_bucket}
+                    alt="icon_bucket"
+                  />
+                </div>
+              </Link>
               <div className="more">
                 <img className="icon_more" src={icon_more} alt="icon_more" />
               </div>
@@ -304,7 +306,7 @@ class Nav extends Component {
                 <li>기프트몰</li>
                 <li>라이프스타일몰</li>
                 <li>오피스몰</li>
-              </ul>git
+              </ul>
           </div>
           <div className={ sub_teaware_hover ? "sub_menu_teaware_container_active" : "sub_menu_teaware_container" }>
               <ul className="tea">

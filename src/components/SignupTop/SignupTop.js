@@ -48,7 +48,7 @@ class SignupTop extends Component {
   }
 // onChange
   password_notice_off = (e) => {
-    if (e.target.value.length == 0) {
+    if (e.target.value.length === 0) {
       this.setState({ password_notice: "password_notice_active"})
     } else {
       this.setState({ password_notice: "password_notice"})
