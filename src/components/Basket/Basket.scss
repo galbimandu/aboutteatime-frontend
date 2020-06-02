@@ -1,0 +1,59 @@
+@font-face {
+  font-family: AritaBuriSB;
+  src: url(../../styles/fonts/Arita-buriM-subset.woff);
+}
+@font-face {
+  font-family: Noto_M;
+  src: url(../../styles/fonts/notokr-regular.woff2);
+}
+
+
+.Basket {
+  .main_container {
+    min-height: 480px;
+    .section_wrap {
+      background-color: #f6f4f2;
+      padding-bottom: 60px;
+      min-height: 50vh;
+      .basic_header {
+        padding: 58px 0 39px 0;
+        text-align: center;
+        .header_text {
+          font-size: 32px;
+          line-height: 1.5;
+          letter-spacing: -0.04em;
+          font-family: AritaBuriSB, serif;
+          color: #222;
+        }
+      }
+
+      .tab_header_container {
+        padding: 0 30px;
+        margin: 0 auto;
+        max-width: 1120px;
+        font-family: 'Noto_M', '본고딕', 'Noto Sans CJK kR Medium', 'Noto Sans CJK kR Medium';
+        .tab_header_wrap {
+          margin-bottom: 1px;
+          background-color: #e2dcd3;
+          .tab_header {
+            font-size: 18px;
+            text-align: center;
+            line-height: 1.5;
+            .tab_header_text {
+              background-color: #fff;
+              border-top: 3px solid #d5761b;
+              border-right: 1px solid #ccc;
+              color: #222;
+              padding: 13px 0 14px;
+              width: 280px;
+              cursor: pointer;
+              .n_wrap {
+                color: #d75100;
+              }
+            }
+          }
+        }
+      } 
+    }
+  }
+}

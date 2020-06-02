@@ -1,16 +1,60 @@
 .activeMainSlide {
   width: 700px;
   z-index: 2;
-  background-color: red;
-  height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  .test {
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
-    margin: 50px;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+  .brandImg {
+    width: 1920px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    .brandLogo {
+      position: absolute;
+      top: 130px;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    .brandImgTop {
+      width: 100%;
+    }
+    .brandImgBottom {
+      width: 100%;
+      margin-top: -15%;
+      z-index: 10;
+    }
+  }
+  .brandStory {
+    display: flex;
+    min-height: 1500px;
+    flex-direction: column;
+    color: white;
+    font-family: "Buri";
+    line-height: 300%;
+    .brandStoryTitle {
+      align-self: center;
+      margin: 2em 1em 0 1em;
+      font-size: 46.8px;
+    }
+    .brandStorySubTitle {
+      margin: 2em 1em 1em 1em;
+      font-size: 34.32px;
+    }
+    .brandStoryContent {
+      margin: 1em;
+      font-size: 26px;
+    }
+    .from {
+      margin: 1em;
+      font-size: 20px;
+    }
   }
 }
