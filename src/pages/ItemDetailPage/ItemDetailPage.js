@@ -4,6 +4,10 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail";
 import Footer from "../../components/Footer/Footer";
 import "./ItemDetailPage.scss";
 class ItemDetailPage extends Component {
+  componentDidMount() {
+    document.documentElement.scrollTop = 0;
+  }
+
   render() {
     return (
       <div className="ItemDetailPage">

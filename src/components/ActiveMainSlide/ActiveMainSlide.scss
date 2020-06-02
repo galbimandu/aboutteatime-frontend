@@ -1,4 +1,5 @@
 .activeMainSlide {
+  margin-top: -7em;
   width: 700px;
   z-index: 2;
   display: flex;
@@ -14,17 +15,19 @@
     align-items: center;
     .brandLogo {
       position: absolute;
-      top: 130px;
+      top: 200px;
       width: 30%;
       display: flex;
       flex-direction: column;
       align-items: center;
       img {
+        margin-top: 2em;
         width: 100%;
       }
     }
     .brandImgTop {
       width: 100%;
+      margin-top: 6em;
     }
     .brandImgBottom {
       width: 100%;

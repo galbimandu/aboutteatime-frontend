@@ -153,7 +153,6 @@ class SignupBottom extends Component {
     }
   };
   render() {
-    console.log(this.state.btnColor);
     return (
       <div className="SignupBottom">
         <div className="topBar">
