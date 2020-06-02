@@ -4,9 +4,10 @@
   align-items: center;
   position: fixed;
   cursor: pointer;
-  bottom: 20px;
-  right: -130px;
+  bottom: 3vh;
+  right: 1vh;
   z-index: 3;
+  height: 40px;
   width: 40px;
   img {
     overflow: hidden;
@@ -15,13 +16,11 @@
   }
 }
 .goTopVisible {
-  opacity: 1;
   transition: all 0.7s ease-in-out;
-  transform: translateX(-150px);
+  transform: translateX(-2vh);
 }
 .goTopInvisible {
-  opacity: 0;
-  transform: translateX(-400px);
+  transform: translateX(8vh);
   transition: all 0.5s ease-in-out;
   pointer-events: none;
 }

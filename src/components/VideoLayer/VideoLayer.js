@@ -30,7 +30,7 @@ class VideoLayer extends Component {
     );
   }
 
-  // 언마운트시 interval해제:지속적으로 코드 때리는 타이머함수는 언마운트시 빼니 좋은듯 //
+  // 언마운트시 interval해제:지속적으로 코드 때리는 타이머함수는 언마운트시 제거 //
   componentWillUnmount() {
     clearInterval(this.timer);
   }

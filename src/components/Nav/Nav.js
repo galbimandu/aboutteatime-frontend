@@ -120,6 +120,7 @@ class Nav extends Component {
   };
 
   render() {
+    console.log(this.state.navHidden);
     const {
       color_shop,
       color_tealife,
@@ -137,7 +138,13 @@ class Nav extends Component {
     } = this.state;
     return (
       <div className="Nav" onMouseLeave={this.menu_leave}>
-        <div className="header_top_container">
+        <div
+          className={
+            this.state.navHidden
+              ? "header_top_container navHiddenOn"
+              : "header_top_container navHiddenOff"
+          }
+        >
           <div className="header_top">
             <div className="logo">
               <Link to="/">
@@ -170,7 +177,13 @@ class Nav extends Component {
             </div>
           </div>
         </div>
-        <div className="header_bottom_container">
+        <div
+          className={
+            this.state.navHidden
+              ? "header_bottom_container navChangeOn"
+              : "header_bottom_container navChangeOff"
+          }
+        >
           <div className="header_bottom">
             <ul className="menu_wrap">
               <li className="idx0_wrap" onMouseLeave={this.leave_shop}>
@@ -235,157 +248,161 @@ class Nav extends Component {
             </div>
           </div>
         </div>
-        <div
-          className={
-            hover ? "menu_hide_container_active" : "menu_hide_container"
-          }
-        >
-          <div className="banner_hide_wrap">
-            <span className="banner_text1">오늘만 이 가격</span>
-            <span className="banner_text2">30% 할인된 가격에 구매할 기회!</span>
-            <span className="banner_text2">놓치지 마세요~</span>
-            <img className="banner_img" src={banner_img} alt="banner_img" />
-          </div>
-          <div className="menu_hide_wrap">
-            {/* idx0_list */}
-            <ul
-              className={onmouse_shop ? "idx0_list2" : "idx0_list"}
-              onMouseEnter={this.enter_shop}
-              onMouseLeave={this.leave_shop}
-            >
-              <li
-                className="idx0_list_detail"
-                onMouseEnter={this.enter_teashop}
-                onClick={() => this.props.history.push("/teashop")}
-              >
-                Tea Shop
-              </li>
-              <li
-                className="idx0_list_detail"
-                onMouseEnter={this.enter_teaware}
-              >
-                Tea ware Shop
-              </li>
-              <li className="idx0_list_detail" onMouseEnter={this.leave_sub}>
-                Gift Shop
-              </li>
-              <li className="idx0_list_detail" onMouseEnter={this.leave_sub}>
-                Weekly Best
-              </li>
-              <li className="idx0_list_detail" onMouseEnter={this.leave_sub}>
-                공동구매
-              </li>
-              <li className="idx0_list_detail" onMouseEnter={this.leave_sub}>
-                오설록 라운지
-              </li>
-            </ul>
-
-            <ul
-              className={onmouse_tealife ? "idx1_list2" : "idx1_list"}
-              onMouseEnter={this.enter_tealife}
-              onMouseLeave={this.leave_tealife}
-            >
-              <li className="idx1_list_detail">상품 구매후기</li>
-              <li className="idx1_list_detail">선물하기</li>
-              <li className="idx1_list_detail">다다일상(정기구독)</li>
-              <li className="idx1_list_detail">맞춤추천</li>
-              <li className="idx1_list_detail">MD's PICK</li>
-              <li className="idx1_list_detail">매장 방문기</li>
-            </ul>
-
-            <ul
-              className={onmouse_event ? "idx2_list2" : "idx2_list"}
-              onMouseEnter={this.enter_event}
-              onMouseLeave={this.leave_event}
-            >
-              <li className="idx2_list_detail">2020 GOLDEN PICK</li>
-              <li className="idx2_list_detail">이벤트</li>
-              <li className="idx2_list_detail">온라인 쇼핑혜택</li>
-              <li className="idx2_list_detail">인스타그램</li>
-              <li className="idx2_list_detail">About Tea</li>
-            </ul>
-
-            <ul
-              className={onmouse_about ? "idx3_list2" : "idx3_list"}
-              onMouseEnter={this.enter_about}
-              onMouseLeave={this.leave_about}
-            >
-              <li className="idx3_list_detail">Brand Story</li>
-              <li className="idx3_list_detail">Since 1979</li>
-              <li className="idx3_list_detail">오설록 차밭 이야기</li>
-              <li className="idx3_list_detail">숫자로 보는 오설록</li>
-              <li className="idx3_list_detail">티하우스 메뉴</li>
-              <li className="idx3_list_detail">매거진</li>
-            </ul>
-
-            <ul
-              className={onmouse_jeju ? "idx4_list2" : "idx4_list"}
-              onMouseEnter={this.enter_jeju}
-              onMouseLeave={this.leave_jeju}
-            >
-              <li className="idx4_list_detail">티뮤지엄 소개</li>
-              <li className="idx4_list_detail">티스톤 예약</li>
-              <li className="idx4_list_detail">제주 오설록 맵</li>
-            </ul>
-            <div
-              className={
-                sub_tea_hover
-                  ? "sub_menu_tea_container_active"
-                  : "sub_menu_tea_container"
-              }
-            >
-              <ul className="tea">
-                <li className="tea_title">전체보기</li>
-                <li className="tea_sub">Tea</li>
-                <li>명차</li>
-                <li>녹차/발효차/홍차</li>
-                <li>허브티/무카페인</li>
-                <li>블렌디드티</li>
-                <li>웰니스티</li>
-                <li>파우더</li>
-                <li>세트</li>
-              </ul>
-              <ul className="tea">
-                <li className="tea_title">&nbsp;</li>
-                <li className="tea_sub">Tea Food</li>
-                <li>베이커리</li>
-                <li>초콜릿/잼</li>
-              </ul>
-              <ul className="tea">
-                <li className="tea_title">&nbsp;</li>
-                <li className="tea_sub">테마샵</li>
-                <li>기프트몰</li>
-                <li>라이프스타일몰</li>
-                <li>오피스몰</li>
-              </ul>
-              git
+        <div className="hideCover">
+          <div
+            className={
+              hover ? "menu_hide_container_active" : "menu_hide_container"
+            }
+          >
+            <div className="banner_hide_wrap">
+              <span className="banner_text1">오늘만 이 가격</span>
+              <span className="banner_text2">
+                30% 할인된 가격에 구매할 기회!
+              </span>
+              <span className="banner_text2">놓치지 마세요~</span>
+              <img className="banner_img" src={banner_img} alt="banner_img" />
             </div>
-            <div
-              className={
-                sub_teaware_hover
-                  ? "sub_menu_teaware_container_active"
-                  : "sub_menu_teaware_container"
-              }
-            >
-              <ul className="tea">
-                <li className="tea_title">전체보기</li>
-                <li className="tea_sub">용도별</li>
-                <li>찻잔</li>
-                <li>티팟</li>
-                <li>소도구</li>
-                <li>티푸드플레이트</li>
+            <div className="menu_hide_wrap">
+              {/* idx0_list */}
+              <ul
+                className={onmouse_shop ? "idx0_list2" : "idx0_list"}
+                onMouseEnter={this.enter_shop}
+                onMouseLeave={this.leave_shop}
+              >
+                <li
+                  className="idx0_list_detail"
+                  onMouseEnter={this.enter_teashop}
+                  onClick={() => this.props.history.push("/teashop")}
+                >
+                  Tea Shop
+                </li>
+                <li
+                  className="idx0_list_detail"
+                  onMouseEnter={this.enter_teaware}
+                >
+                  Tea ware Shop
+                </li>
+                <li className="idx0_list_detail" onMouseEnter={this.leave_sub}>
+                  Gift Shop
+                </li>
+                <li className="idx0_list_detail" onMouseEnter={this.leave_sub}>
+                  Weekly Best
+                </li>
+                <li className="idx0_list_detail" onMouseEnter={this.leave_sub}>
+                  공동구매
+                </li>
+                <li className="idx0_list_detail" onMouseEnter={this.leave_sub}>
+                  오설록 라운지
+                </li>
               </ul>
-              <ul className="tea">
-                <li className="tea_title">&nbsp;</li>
-                <li className="tea_sub">브랜드별</li>
-                <li>오설록</li>
-                <li>광주요</li>
-                <li>소일베이커</li>
-                <li>서울번드</li>
-                <li>토림도예</li>
-                <li>소로시</li>
-                <li>킨토</li>
+
+              <ul
+                className={onmouse_tealife ? "idx1_list2" : "idx1_list"}
+                onMouseEnter={this.enter_tealife}
+                onMouseLeave={this.leave_tealife}
+              >
+                <li className="idx1_list_detail">상품 구매후기</li>
+                <li className="idx1_list_detail">선물하기</li>
+                <li className="idx1_list_detail">다다일상(정기구독)</li>
+                <li className="idx1_list_detail">맞춤추천</li>
+                <li className="idx1_list_detail">MD's PICK</li>
+                <li className="idx1_list_detail">매장 방문기</li>
               </ul>
+
+              <ul
+                className={onmouse_event ? "idx2_list2" : "idx2_list"}
+                onMouseEnter={this.enter_event}
+                onMouseLeave={this.leave_event}
+              >
+                <li className="idx2_list_detail">2020 GOLDEN PICK</li>
+                <li className="idx2_list_detail">이벤트</li>
+                <li className="idx2_list_detail">온라인 쇼핑혜택</li>
+                <li className="idx2_list_detail">인스타그램</li>
+                <li className="idx2_list_detail">About Tea</li>
+              </ul>
+
+              <ul
+                className={onmouse_about ? "idx3_list2" : "idx3_list"}
+                onMouseEnter={this.enter_about}
+                onMouseLeave={this.leave_about}
+              >
+                <li className="idx3_list_detail">Brand Story</li>
+                <li className="idx3_list_detail">Since 1979</li>
+                <li className="idx3_list_detail">오설록 차밭 이야기</li>
+                <li className="idx3_list_detail">숫자로 보는 오설록</li>
+                <li className="idx3_list_detail">티하우스 메뉴</li>
+                <li className="idx3_list_detail">매거진</li>
+              </ul>
+
+              <ul
+                className={onmouse_jeju ? "idx4_list2" : "idx4_list"}
+                onMouseEnter={this.enter_jeju}
+                onMouseLeave={this.leave_jeju}
+              >
+                <li className="idx4_list_detail">티뮤지엄 소개</li>
+                <li className="idx4_list_detail">티스톤 예약</li>
+                <li className="idx4_list_detail">제주 오설록 맵</li>
+              </ul>
+              <div
+                className={
+                  sub_tea_hover
+                    ? "sub_menu_tea_container_active"
+                    : "sub_menu_tea_container"
+                }
+              >
+                <ul className="tea">
+                  <li className="tea_title">전체보기</li>
+                  <li className="tea_sub">Tea</li>
+                  <li>명차</li>
+                  <li>녹차/발효차/홍차</li>
+                  <li>허브티/무카페인</li>
+                  <li>블렌디드티</li>
+                  <li>웰니스티</li>
+                  <li>파우더</li>
+                  <li>세트</li>
+                </ul>
+                <ul className="tea">
+                  <li className="tea_title">&nbsp;</li>
+                  <li className="tea_sub">Tea Food</li>
+                  <li>베이커리</li>
+                  <li>초콜릿/잼</li>
+                </ul>
+                <ul className="tea">
+                  <li className="tea_title">&nbsp;</li>
+                  <li className="tea_sub">테마샵</li>
+                  <li>기프트몰</li>
+                  <li>라이프스타일몰</li>
+                  <li>오피스몰</li>
+                </ul>
+                git
+              </div>
+              <div
+                className={
+                  sub_teaware_hover
+                    ? "sub_menu_teaware_container_active"
+                    : "sub_menu_teaware_container"
+                }
+              >
+                <ul className="tea">
+                  <li className="tea_title">전체보기</li>
+                  <li className="tea_sub">용도별</li>
+                  <li>찻잔</li>
+                  <li>티팟</li>
+                  <li>소도구</li>
+                  <li>티푸드플레이트</li>
+                </ul>
+                <ul className="tea">
+                  <li className="tea_title">&nbsp;</li>
+                  <li className="tea_sub">브랜드별</li>
+                  <li>오설록</li>
+                  <li>광주요</li>
+                  <li>소일베이커</li>
+                  <li>서울번드</li>
+                  <li>토림도예</li>
+                  <li>소로시</li>
+                  <li>킨토</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

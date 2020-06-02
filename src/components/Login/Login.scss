@@ -1,20 +1,10 @@
-@font-face {
-  font-family: Buri;
-  src: url(../../styles/fonts/Arita-buriM-subset.woff);
-}
-@font-face {
-  font-family: Noto Sans KR;
-  src: url(../../styles/fonts/NotoSansKR-Regular.woff2);
-}
-
 .LoginPage {
-  margin-top: 153px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   .LoginPage-wrap {
-    margin: 50px 0 0 0;
+    margin: 100px 0 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;

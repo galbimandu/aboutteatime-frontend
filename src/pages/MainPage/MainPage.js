@@ -1,17 +1,10 @@
 import React, { Component } from "react";
-import "./Main.scss";
-import Nav from "../../components/Nav/Nav";
+import NavMove from "../../components/NavMove/NavMove";
 import Footer from "../../components/Footer/Footer";
-import { withRouter } from "react-router-dom";
 import ActiveMain from "../../components/ActiveMain/ActiveMain";
+import "./MainPage.scss";
 
-class Main extends Component {
-  constructor() {
-    super();
-
-    this.state = {};
-  }
-
+class MainPage extends Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
   }
@@ -19,7 +12,7 @@ class Main extends Component {
   render() {
     return (
       <div className="Main">
-        <Nav />
+        <NavMove />
         <ActiveMain />
         <Footer />
       </div>
@@ -27,4 +20,4 @@ class Main extends Component {
   }
 }
 
-export default withRouter(Main);
+export default MainPage;
