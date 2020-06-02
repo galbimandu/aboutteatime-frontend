@@ -30,7 +30,7 @@ class TeaShopItem extends Component {
             }
             onMouseOver={() => this.changeImage("image")}
             onMouseLeave={() => this.changeImage("image")}
-            onClick={() => this.props.history.push("/detail")}
+            onClick={() => this.props.history.push("/detail/1")}
             alt="item"
           />
           <img

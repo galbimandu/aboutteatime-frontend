@@ -1,0 +1,26 @@
+{
+  "item": {
+    "sub_category": "Tea Shop",
+    "fourth_category": "세트",
+    "title": "러블리티박스",
+    "description": "즐겁고 행복한 티타임을 선사하는 달콤하고 향긋한 오설록만의 특별한 블렌디드 티 선물세트 입니다.",
+    "price": 20000,
+    "discount_percent": 1,
+    "best": false,
+    "gift": true,
+    "sold_out": false,
+    "on_sale": false,
+    "bonus": false,
+    "new": false,
+    "benefits": [
+      "뷰티포인트 200P 적립",
+      "찻잎 200P 적립",
+      "3만원 이상 무료배송",
+      "(유료)포장가능",
+      "쇼핑백동봉"
+    ],
+    "rating": 3.9,
+    "num_reviews": 505,
+    "main_image": "https://www.osulloc.com/upload/kr/ko/adminImage/PM/FK/20180510132548266RY.png?quality=80"
+  }
+}

@@ -20,7 +20,7 @@ class Routes extends Component {
           <Route exact path="/login" component={Login} />
           <Route exact path="/teashop" component={TeaShopPage} />
           <Route exact path="/active" component={Active} />
-          <Route exact path="/detail" component={ItemDetailPage} />
+          <Route exact path="/detail/:id" component={ItemDetailPage} />
         </Switch>
       </Router>
     );

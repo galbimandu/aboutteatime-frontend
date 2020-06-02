@@ -1,13 +1,13 @@
 {
-  "Item": {
+  "item": {
     "sub_category": "Tea Food",
     "fourth_category": "초콜릿/잼",
     "title": "녹차밀크스프레드 200 g",
     "description": "오설록의 최고급 가루 녹차를 함유한 고급스러운 풍미의 녹차 스프레드입니다. 빵에발라 먹거나, 간편하게 밀크티를 만들어 드세요.",
     "price": 8500,
-    "discount_percent": 0.3,
+    "discount_percent": 0.2,
     "best": true,
-    "gift": false,
+    "gift": true,
     "sold_out": false,
     "on_sale": false,
     "bonus": false,
