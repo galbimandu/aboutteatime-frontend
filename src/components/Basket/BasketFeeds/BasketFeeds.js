@@ -14,48 +14,19 @@ class BasketFeeds extends Component {
   }
 
   componentDidMount = () => {
+    const token = localStorage.getItem("token")
     this.setState({ num: this.props.quantity })
     console.log(this.props.match)
-    fetch(
-      `${url}/order/cart/${this.props.match.params.id}`,
-      {
-        method: "GET",
-        headers: {
-          'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.DzVrBr5Gx2hj3rUgc6DWn_RoJuAVPDSeY21fOXiwTVE'
-        }
-      }
-    )
-    .then(res => res.json())
-    .then(res => console.log(res))
   }
 
-
-  // componentDidUpdate(prevProps) {
-  //   console.log("prevProps:: ", prevProps.quantity);
-  //   console.log("this.props:: ", this.state.num);
-
-  //   if (prevProps.quantity !== this.state.num) {
-  //     fetch(url + "/order/cart",
-  //     {
-  //       method: "GET",
-  //       headers:
-  //       {
-  //         'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.DzVrBr5Gx2hj3rUgc6DWn_RoJuAVPDSeY21fOXiwTVE'
-  //       }
-  //     })
-  //     .then((res) => res.json())
-  //     .then((res) => console.log(res))
-  //   }
-  // }
-
   btn_handler = (number) => {
-    // const token = localStorage.getItem("token")
+    const token = localStorage.getItem("token")
     fetch(url + "/order/cart",
     {
       method: "PATCH",
       headers:
       {
-        'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.DzVrBr5Gx2hj3rUgc6DWn_RoJuAVPDSeY21fOXiwTVE'
+        'Authorization': token
       },
       body: JSON.stringify
       (
@@ -68,16 +39,6 @@ class BasketFeeds extends Component {
     .then( res => {
       if (res.status === 200) {
         this.props.handleData();
-        // fetch(url + "/order/cart",
-        // {
-        //   method: "GET",
-        //   headers:
-        //   {
-        //     'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.DzVrBr5Gx2hj3rUgc6DWn_RoJuAVPDSeY21fOXiwTVE'
-        //   }
-        // })
-        //   .then((res) => res.json())
-        //   .then((res) => console.log(res))
       }
     })
   }
@@ -98,12 +59,13 @@ class BasketFeeds extends Component {
   }
 
   remove_item = () => {
+    const token = localStorage.getItem("token")
     fetch(`${url}/order/cart`,
     {
       method: "DELETE",
       headers:
       {
-        'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.DzVrBr5Gx2hj3rUgc6DWn_RoJuAVPDSeY21fOXiwTVE'
+        'Authorization': token
       },
       body: JSON.stringify
       (
@@ -119,22 +81,23 @@ class BasketFeeds extends Component {
   }
 
   render() {
+
+    const { checkbox_each, checkbox_each_checked, image, title, benefits, price, sub_total, id }= this.props
+
     return (
       <tr className="BasketFeeds">
         <td className="checkbox_container">
-          <div className={this.props.checkbox_each ? "checkbox_wrap_checked" : "checkbox_wrap"} onClick={this.props.checkbox_each_checked}>
+          <div className={checkbox_each ? "checkbox_wrap_checked" : "checkbox_wrap"} onClick={checkbox_each_checked}>
             <input className="checkbox" type="checkbox"></input>
             <span className="checkbox_custom"></span>
           </div>
         </td>
         <td className="info_container">
           <div className="info_wrap">
-            <img className="mock_img" src={this.props.image} alt="mock_image" />
+            <img className="mock_img" src={image} alt="mock_image" />
             <div className="info_text_wrap">
-              <Link to = {`/detail/${this.props.item_id}`}>
-              <div className="product_name">{this.props.title}</div>
-              </Link>
-              <p className="product_detail">{this.props.benefits}</p>
+              <div className="product_name" onClick={() => this.props.history.push(`/teashop/detail/${id}`)}>{title}</div>
+              <p className="product_detail">{benefits}</p>
             </div>
           </div>
         </td>
@@ -147,13 +110,13 @@ class BasketFeeds extends Component {
         </td>
         <td className="price_container">
           <span className="price">
-            <span className="num">{this.props.price.toLocaleString()}</span>
+            <span className="num">{price.toLocaleString()}</span>
             <i className="unit">원</i>
           </span>
         </td>
         <td className="selling_price_container">
           <span className="price">
-            <span className="num">{this.props.sub_total.toLocaleString()}</span>
+            <span className="num">{sub_total.toLocaleString()}</span>
             <i className="unit">원</i>
           </span>
         </td>

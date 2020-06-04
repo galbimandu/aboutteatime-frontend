@@ -172,12 +172,12 @@ class NavMove extends Component {
               <div className="buttons">
                 <div className="login_wrap">
                   <div className="login">
-                    <Link to="/login">로그인</Link>
+                    <Link to="/user/sign-in">로그인</Link>
                   </div>
                 </div>
                 <div className="signup_wrap">
                   <div className="signup">
-                    <Link to="/signup">회원가입</Link>
+                    <Link to="/user/sign-up">회원가입</Link>
                   </div>
                 </div>
                 <div className="language_container">
@@ -261,6 +261,7 @@ class NavMove extends Component {
                     alt="icon_search"
                   />
                 </div>
+                <Link to="/order/cart">
                 <div className="bucket">
                   <img
                     className="icon_bucket"
@@ -268,6 +269,7 @@ class NavMove extends Component {
                     alt="icon_bucket"
                   />
                 </div>
+                </Link>
                 <div className="more">
                   <img className="icon_more" src={icon_more} alt="icon_more" />
                 </div>

@@ -123,7 +123,7 @@ class SignupTop extends Component {
           <div className="birth_gender_wrap">
             <input
               onChange={this.props.handle_change}
-              type="text"
+              type="date"
               maxLength="8"
               id="user_birth"
               name="birthday"

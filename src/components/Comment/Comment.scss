@@ -1,0 +1,41 @@
+.commentCotentsTitle {
+  .title {
+    width: 100%;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px #f6f6f6 solid;
+    .titleInner {
+      display: flex;
+      justify-content: space-around;
+      margin: auto;
+      width: 45em;
+      height: 100%;
+      letter-spacing: 0.1px;
+      li {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        cursor: pointer;
+        font-size: 20px;
+        font-family: "Noto_M";
+        font-weight: bold;
+        b {
+          margin-left: 0.8em;
+          color: red;
+        }
+      }
+      li:hover {
+        color: #6c801a;
+      }
+      .choiceSpan {
+        color: #6c801a;
+        height: 107%;
+        border-bottom: 3px #6c801a solid;
+      }
+    }
+  }
+  .activeTap {
+    width: 100%;
+  }
+}

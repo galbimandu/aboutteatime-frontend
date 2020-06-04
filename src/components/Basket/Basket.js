@@ -6,8 +6,6 @@ import BasketFeeds from "../Basket/BasketFeeds/BasketFeeds"
 import url from "../../config"
 import "./Basket.scss";
 
-
-
 class Basket extends Component {
   constructor() {
     super();
@@ -26,13 +24,14 @@ class Basket extends Component {
   };
 
   getData = () => {
+    const token = localStorage.getItem("token")
     console.log("getData 실행")
     fetch(url + "/order/cart",
     {
       method: "GET",
       headers:
       {
-        'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.DzVrBr5Gx2hj3rUgc6DWn_RoJuAVPDSeY21fOXiwTVE'
+        'Authorization': token
       }
     })
       .then((res) => res.json())
@@ -91,12 +90,10 @@ class Basket extends Component {
     }
   }
 
-  
-
   render() {
 
     const basket_feeds = this.state.feeds_arr.map((element, i) => {return <BasketFeeds handleData={this.getData} cart_id = {element.cart_id} id = {element.id} feeds_arr = {this.state.feeds_arr} price_arr = {this.state.price_arr} empty_feed = {this.state.empty_feed} title = {element.title} price = {element.price} image = {element.image} benefits = {element.benefits} quantity = {element.quantity} sub_total = {element.sub_total} checkbox_each={this.state.checkbox_each} checkbox_each_checked={this.checkbox_each_checked} num={this.state.num} key = {i} />})
-    const {  } = this.state;
+    const { price_arr, empty_feed, checkbox_all } = this.state;
 
     return (
       <div className="Basket">
@@ -117,7 +114,7 @@ class Basket extends Component {
                     {`일반상품 `}
                     <i className="n_wrap">
                       (
-                      <b id="n">{this.state.price_arr.num_items}</b>
+                      <b id="n">{price_arr.num_items}</b>
                       )
                     </i>
                   </div>
@@ -132,7 +129,7 @@ class Basket extends Component {
                       <thead>
                         <tr>
                           <th className="t_check">
-                            <div className={ this.state.checkbox_all ? "checkbox_wrap_checked" : "checkbox_wrap"} onClick={ this.checkbox_all_checked }>
+                            <div className={ checkbox_all ? "checkbox_wrap_checked" : "checkbox_wrap"} onClick={ this.checkbox_all_checked }>
                               <input className="checkbox" type="checkbox"></input>
                               <span className="checkbox_custom"></span>
                             </div>
@@ -154,7 +151,7 @@ class Basket extends Component {
                       </thead>
                       <tbody>
                         {/* empty_body */}
-                        <tr className={ this.state.empty_feed ? "empty_body" : "empty_body_active" }>
+                        <tr className={ empty_feed ? "empty_body" : "empty_body_active" }>
                           <td colSpan='6'>장바구니에 담긴 상품이 없습니다.</td>
                         </tr>
                         {basket_feeds}
