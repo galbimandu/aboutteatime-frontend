@@ -1,0 +1,219 @@
+@font-face {
+  font-family: AritaBuriSB;
+  src: url(../../../styles/fonts/Arita-buriM-subset.woff);
+}
+@font-face {
+  font-family: Noto_M;
+  src: url(../../../styles/fonts/notokr-regular.woff2);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input, button {
+  outline-style: none;
+}
+
+  // data_body (display: table-cell) -> none
+
+  .BasketFeeds {
+    height: 52px;
+    display: table-cell;
+    border-top: 1px solid #ccc;
+    .checkbox_container {
+      vertical-align: middle;
+      padding: 12px;
+      height: 52px;
+
+      // checkbox 체크되기 전
+      .checkbox_wrap {
+        position: relative;
+        height: 15px;
+        width: 15px;
+        border: 1px solid #888;
+        background-color: #fff;
+        cursor: pointer;
+
+        .checkbox {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+        
+        .checkbox_custom {
+          position: absolute;
+          transform: rotate(0deg) scale(1);
+        }
+      }
+
+      // checkbox 체크되었을 때
+      .checkbox_wrap_checked {
+        position: relative;
+        height: 15px;
+        width: 15px;
+        border: 1px solid #888;
+        background-color: #fff;
+        cursor: pointer;
+
+        .checkbox {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+
+        .checkbox_custom {
+          position: absolute;
+          content: "";
+          width: 7px;
+          height: 11px;
+          border: 1px solid #888;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg) scale(1);
+          left: 3px;
+          top: -1px;
+        }
+      }
+    }
+    .info_container {
+      color: #888;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 14px 4px;
+      width: 43%;
+      vertical-align: middle;
+      .info_wrap {
+        display: flex;
+        align-items: center;
+        .mock_img {
+          width: 100px;
+        }
+        .info_text_wrap {
+          margin-left: 10px;
+          .product_name {
+            color: #333;
+            cursor: pointer;
+            font-size: 15px;
+          }
+          .product_detail {
+            color: #6e8530;
+            font-size: 13px;
+            margin: .4em 0;
+          }
+        }
+      }
+    }
+    .qty_container {
+      color: #888;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 14px 4px;
+      width: 12%;
+      height: 140px;
+      vertical-align: middle;
+      
+      .qty_box {
+        position: relative;
+        width: 36px;
+        height: 30px;
+        margin: 0 auto;
+
+        .qty_input {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          color: #555;
+          background-color: #f6f6f6;
+          font-size: 12px;
+          text-align: center;
+        }
+        .qty_subtract {
+          position: absolute;
+          left: -30px;
+          background-color: #f2f2f2;
+          width: 30px;
+          height: 100%;
+          color: #888;
+          border: 0 none;
+        }
+        .qty_add {
+          position: absolute;
+          background-color: #e5e5e5;
+          width: 30px;
+          height: 100%;
+          border: 0 none;
+        }
+      }
+    }
+    .price_container {
+      width: 15%;
+      vertical-align: middle;
+      text-align: right;
+      .price {
+        color: #888;
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 14px 4px;
+        text-align: right;
+        color: #727272;
+        
+      }
+    }
+    .selling_price_container {
+      width: 15%;
+      vertical-align: middle;
+      text-align: right;
+      .price {
+        color: #888;
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 14px 4px;
+        text-align: right;
+        color: #333
+      }
+    }
+    .func_container {
+      color: #888;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 14px 4px 14px 30px;
+      width: 15%;
+      vertical-align: middle;
+      
+      .btn_group {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 88px;
+        .buy_direct {
+          font-size: 13px;
+          border: 1px solid transparent;
+          color: #fff;
+          background-color: #74824c;
+          height: 30px;
+          padding: 6px 0;
+          margin: 3px 0;
+        }
+        .add_wish {
+          font-size: 13px;
+          height: 30px;
+          padding: 6px 0;
+          margin: 3px 0;
+          border: 1px solid #ddd;
+          color: #727272;
+        }
+        .remove {
+          font-size: 13px;
+          height: 30px;
+          padding: 6px 0;
+          margin: 3px 0;
+          border: 1px solid #ddd;
+          color: #727272;
+        }
+      }
+    }
+  }

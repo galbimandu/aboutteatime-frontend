@@ -235,13 +235,15 @@ class Nav extends Component {
                   alt="icon_search"
                 />
               </div>
-              <div className="bucket">
-                <img
-                  className="icon_bucket"
-                  src={icon_bucket}
-                  alt="icon_bucket"
-                />
-              </div>
+              <Link to="/basket">
+                <div className="bucket">
+                  <img
+                    className="icon_bucket"
+                    src={icon_bucket}
+                    alt="icon_bucket"
+                  />
+                </div>
+              </Link>
               <div className="more">
                 <img className="icon_more" src={icon_more} alt="icon_more" />
               </div>
