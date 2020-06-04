@@ -1,79 +1,98 @@
 import React, { Component } from "react";
 import "./CommentTap2.scss";
-import url from "../../config";
+// import url from "../../config";
 import CommentStar from "../CommentStar/CommentStar";
+import CommentOutput from "../CommentOutput/CommentOutput";
 
 class CommentTap2 extends Component {
   constructor() {
     super();
 
     this.state = {
-      comment: [
-        {
-          commentUser: "1",
-          commentDate: "1",
-          commentScore: "1",
-          commentText: "1",
-        },
-        {
-          commentUser: "2",
-          commentDate: "2",
-          commentScore: "2",
-          commentText: "2",
-        },
-      ],
-
       score: 0.5,
       inputText: "",
+      validate: false,
     };
   }
 
-  componentDidMount() {
-    // this.firstGetFunc.bind(this);
-  }
-
-  firstGetFunc() {
+  fectFunc() {
     const token = localStorage.getItem("token");
-    fetch(`http://${url}:8000/user/sign-in`, {
+    fetch(`http://10.58.4.25:8000/review/write`, {
+      method: "POST",
       headers: {
         Authorization: token,
+        "Content-Type": "application/json",
       },
-    })
-      .then((response) => response.json())
-      .then((res) => console.log(res));
+      body: JSON.stringify({
+        overall_rating: this.state.score,
+        content: this.state.inputText,
+        item_id_from_front: "1",
+        user_id_from_front: "1",
+      }),
+    }).then((res) => {
+      if (res.status === 200) {
+        this.setState({ inputText: "", score: 0.5, validate: false }, () =>
+          this.props.getFunc()
+        );
+      }
+    });
   }
 
-  clickToGoFunc() {
-    console.log("보냈다");
+  validateFunc() {
+    if (this.state.inputText.length > 0) {
+      this.setState({ validate: true });
+    } else {
+      this.setState({ validate: false });
+    }
   }
 
-  // 댓글 별점핸들러 //
-  scoreHandler(input) {
-    this.setState({ score: input });
+  goBeforeFectFunc() {
+    if (this.state.validate) {
+      this.fectFunc();
+    } else {
+      alert("내용을 입력해주세요.");
+    }
   }
 
-  // 댓글 텍스트핸들러 //
-  textHandler(event) {
-    this.setState({ text: event.target.value });
+  enterToGoFunc(input) {
+    if (input.keyCode === 13) {
+      this.goBeforeFectFunc();
+    }
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="CommentTap2">
-        <div className="outputZone">이미 적힌 댓글 출력용</div>
+        <div className="outputZone">
+          <div className="outputZoneWrap">
+            <CommentOutput commentList={this.props.commentList} />
+          </div>
+        </div>
         <div className="inputZone">
           <div className="inputZoneLeft">
             <CommentStar
               score={this.state.score}
-              scoreHandler={this.scoreHandler.bind(this)}
+              scoreHandler={(input) => this.setState({ score: input })}
             />
           </div>
           <div className="inputZoneRight">
-            <div className="inputBoxInner">
-              <input type="text" onChange={this.textHandler.bind(this)} />
-              <button onClick={this.clickToGoFunc.bind(this)}>
-                <span>확인</span>
+            <div
+              className="inputBoxInner"
+              onKeyDown={this.enterToGoFunc.bind(this)}
+            >
+              <input
+                type="text"
+                onChange={(input) =>
+                  this.setState({ inputText: input.target.value }, () =>
+                    this.validateFunc()
+                  )
+                }
+                value={this.state.inputText}
+              />
+              <button onClick={this.goBeforeFectFunc.bind(this)}>
+                <span className={this.state.validate ? "validate" : ""}>
+                  확인
+                </span>
               </button>
             </div>
           </div>

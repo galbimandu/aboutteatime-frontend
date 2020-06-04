@@ -2,88 +2,68 @@ import React, { Component } from "react";
 import Tap1 from "../CommentTap1/CommentTap1";
 import Tap2 from "../CommentTap2/CommentTap2";
 import Tap3 from "../CommentTap3/CommentTap3";
+// import url from "../../config";
 import "./Comment.scss";
 
-const Tap = {
-  0: <Tap1 />,
-  1: <Tap2 />,
-  2: <Tap3 />,
-};
-
 class Comment extends Component {
-  constructor() {
-    super();
+  state = {
+    tapInx: 2,
+    commentList: [],
+  };
 
-    this.state = {
-      review: false,
-      sale: true,
-      new: false,
-      tapInx: 1,
-    };
+  componentDidMount() {
+    this.getFunc();
   }
 
-  reviewSortFunc() {
-    if (this.state.review === false) {
-      this.setState({
-        review: true,
-        sale: false,
-        new: false,
-        tapInx: 0,
-      });
-    }
-  }
-
-  saleSortFunc() {
-    if (this.state.sale === false) {
-      this.setState({
-        review: false,
-        sale: true,
-        new: false,
-        tapInx: 1,
-      });
-    }
-  }
-
-  newSortFunc() {
-    if (this.state.new === false) {
-      this.setState({
-        review: false,
-        sale: false,
-        new: true,
-        tapInx: 2,
-      });
-    }
+  getFunc() {
+    const token = localStorage.getItem("token");
+    fetch(`http://10.58.4.25:8000/review?item_id_from_front=1`, {
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then((response) => response.json())
+      .then((res) => this.setState({ commentList: res.reviews }));
   }
 
   render() {
+    const TapObj = {
+      1: <Tap1 />,
+      2: (
+        <Tap2
+          commentList={this.state.commentList}
+          getFunc={this.getFunc.bind(this)}
+        />
+      ),
+      3: <Tap3 />,
+    };
+    const { tapInx, commentList } = this.state;
     return (
       <div className="commentCotentsTitle">
         <div className="title">
           <div className="titleInner">
             <li
-              className={this.state.review ? "choiceSpan" : ""}
-              name="review"
-              onClick={this.reviewSortFunc.bind(this)}
+              className={tapInx === 1 ? "choiceSpan" : ""}
+              onClick={() => this.setState({ tapInx: 1 })}
             >
               제품상세
             </li>
             <li
-              className={this.state.sale ? "choiceSpan" : ""}
-              name="sale"
-              onClick={this.saleSortFunc.bind(this)}
+              className={tapInx === 2 ? "choiceSpan" : ""}
+              onClick={() => this.setState({ tapInx: 2 })}
             >
-              고객리뷰 <b>559개</b>
+              고객리뷰
+              <b>{commentList.length}개</b>
             </li>
             <li
-              className={this.state.new ? "choiceSpan" : ""}
-              name="new"
-              onClick={this.newSortFunc.bind(this)}
+              className={tapInx === 3 ? "choiceSpan" : ""}
+              onClick={() => this.setState({ tapInx: 3 })}
             >
               제품고시정보
             </li>
           </div>
         </div>
-        <div className="activeTap">{Tap[this.state.tapInx]}</div>
+        <div className="activeTap">{TapObj[tapInx]}</div>
       </div>
     );
   }

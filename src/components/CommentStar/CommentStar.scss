@@ -16,9 +16,13 @@
       }
     }
     .tipOn {
+      opacity: 0;
+      transition: ease 1s;
       visibility: hidden;
     }
     .tipOff {
+      opacity: 1;
+      transition: ease 1s;
       visibility: visible;
     }
   }
@@ -45,15 +49,18 @@
       }
       .scoreTextAction {
         animation-name: colorchange;
-        animation-duration: 1.5s;
+        animation-duration: 2s;
         animation-iteration-count: infinite;
         animation-fill-mode: forwards;
         @keyframes colorchange {
           from {
             background-color: #6c801a;
+            opacity: 1;
           }
           to {
-            background-color: #9bb143;
+            // background-color: #9bb143;
+            background-color: #6c801a;
+            opacity: 0.5;
           }
         }
       }
