@@ -187,6 +187,7 @@ class TeaShopContensTitle extends Component {
             </li>
           </div>
         </div>
+
         <div className="cotentsTitleBottom">
           <div className="cotentsTitleBottomLeft">
             <span>총 220개의 상품이 있습니다.</span>
