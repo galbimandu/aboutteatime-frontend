@@ -66,6 +66,7 @@ class SignupTop extends Component {
   };
   // onChange
   password_notice_off = (e) => {
+    this.props.handle_change(e)
     if (e.target.value.length === 0) {
       this.setState({ password_notice: "password_notice_active"})
     } else {
@@ -239,7 +240,7 @@ class SignupTop extends Component {
                 이상의 문자조합 6-16자로 입력해주세요
               </span>
               <input
-                onChange={(this.props.handle_change, this.password_notice_off)}
+                onChange={this.password_notice_off}
                 onClick={this.password_notice}
                 id="user_password"
                 maxLength="16"

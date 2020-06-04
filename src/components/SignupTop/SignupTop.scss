@@ -98,6 +98,7 @@ input::placeholder {
           height: 54px;
           width: 82.56px;
           border: 1px solid rgb(218, 218, 218);
+          position: relative;
           .gender_male {
             cursor: default;
             color: #929292;
@@ -105,7 +106,7 @@ input::placeholder {
 
           .check_img {
             position: absolute;
-            margin-left: -28px;
+            left: 0;
             width: 25px;
             visibility: hidden;
           }    
@@ -117,16 +118,19 @@ input::placeholder {
           height: 54px;
           width: 82.56px;
           border: 1px solid #6c801d;
+          position: relative;
           .gender_male {
             cursor: default;
             color: #6c801d;
+            
           }
 
           .check_img {
             position: absolute;
-            margin-left: -28px;
+            left: 0;
             width: 25px;
             visibility: visible;
+ 
           }   
         }
         .gender_female_wrap {
@@ -136,6 +140,7 @@ input::placeholder {
           width: 82.56px;
           height: 54px;
           border: 1px solid rgb(218, 218, 218);
+          position: relative;
           .gender_female {
             cursor: default;
             color: #929292
@@ -143,7 +148,7 @@ input::placeholder {
 
           .check_img {
             position: absolute;
-            margin-left: -28px;
+            left: 0;
             width: 25px;
             visibility: hidden;
           }
@@ -155,6 +160,7 @@ input::placeholder {
           width: 82.56px;
           height: 54px;
           border: 1px solid #6c801d;
+          position: relative;
           .gender_female {
             cursor: default;
             color: #6c801d;
@@ -162,7 +168,7 @@ input::placeholder {
 
           .check_img {
             position: absolute;
-            margin-left: -28px;
+            left: 0;
             width: 25px;
             visibility: visible;
           }
