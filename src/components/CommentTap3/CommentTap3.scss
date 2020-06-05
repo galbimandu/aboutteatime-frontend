@@ -1,0 +1,15 @@
+.CommentTap3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .CommentTap3Wrap {
+    margin: 2vh;
+    width: 70%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

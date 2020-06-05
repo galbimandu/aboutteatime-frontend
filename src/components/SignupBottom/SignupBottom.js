@@ -1,9 +1,10 @@
-import "./SignupBottom.scss";
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import click from "../../images/click.jpg";
 import clicked from "../../images/clicked.jpg";
 import arrowright from "../../images/arrowright.png";
-import React, { Component } from "react";
 import url from "../../config";
+import "./SignupBottom.scss";
 
 class SignupBottom extends Component {
   constructor() {
@@ -24,26 +25,27 @@ class SignupBottom extends Component {
     };
   }
   signUp = () => {
-    // if (this.state.one === true && this.state.two === true) {
-    //   fetch(url.url + "/signup", {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //       realname: this.props.realname,
-    //       username: this.props.username,
-    //       birthday: this.props.birthday,
-    //       gender: this.props.gender,
-    //       provider: this.props.provider,
-    //       phone: this.props.phone,
-    //       password: this.props.password,
-    //     }),
-    //   }).then((response) => {
-    //     if (response.status === 400) alert("fail");
-    //     if (response.status === 200) {
-    //       this.props.history.push("/login");
-    //     }
-    //   });
-    // }
-    console.log("oqo===sdfsdfsadfsdfsdfsdf")
+    if (this.state.one === true && this.state.two === true) {
+      fetch(url + "/user/sign-up", {
+        method: "POST",
+        body: JSON.stringify({
+          realname: this.props.realname,
+          username: this.props.username,
+          birthday: this.props.birthday,
+          gender: this.props.gender,
+          provider: this.props.provider,
+          phone: this.props.phone,
+          password: this.props.password,
+        }),
+      }).then((response) => {
+        console.log(response);
+        if (response.status === 400) alert("fail");
+        if (response.status === 200) {
+          this.props.history.push("/login");
+        }
+      });
+    }
+    console.log("oqo===sdfsdfsadfsdfsdfsdf");
   };
   changeShape = (num) => {
     if (num === "zero") {
@@ -295,7 +297,7 @@ class SignupBottom extends Component {
         </div>
         <div className="final_btn">
           <button
-            onClick={()=>this.signUp()}
+            onClick={() => this.signUp()}
             className={this.state.btnColor.toString()}
           >
             본인인증 및 회원가입
@@ -311,4 +313,4 @@ class SignupBottom extends Component {
   }
 }
 
-export default SignupBottom;
+export default withRouter(SignupBottom);

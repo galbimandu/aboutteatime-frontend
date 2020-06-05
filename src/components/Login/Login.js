@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Login.scss";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import url from "../../config";
 
 class Login extends Component {
@@ -10,14 +10,14 @@ class Login extends Component {
     this.state = {
       memCheck: true,
       nonmemCheck: false,
-      id: "",
-      password: "",
-      orderNum: "",
-      orderTel: "",
       idRed: false,
       passwordRed: false,
       orderNumRed: false,
       orderTelRed: false,
+      id: "",
+      password: "",
+      orderNum: "",
+      orderTel: "",
     };
   }
 
@@ -104,35 +104,35 @@ class Login extends Component {
     if (this.state.validation === true) {
       this.goToMain();
     } else {
-      alert("입력하신 내용이 없습니다");
+      alert("내용을 입력해주세요.");
     }
   }
 
   // 페이지 이동 함수 //
   goToMain() {
     const token = localStorage.getItem("token");
-    fetch(url + "/main", {
+    fetch(`${url}/user/sign-in`, {
       method: "POST",
       headers: {
         Authorization: token,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        id: this.state.id,
+        username: this.state.id,
         password: this.state.password,
       }),
-    })
-      // .then((res) => console.log(res))
-      .then((res) => {
-        if (res.status === 200) {
-          this.props.history.push("/Main");
-        }
-        if (res.status === 400 || res.status === 401) {
-          alert("일시적으로 오류가 발생하였습니다.");
-        } else {
-          alert("서버에 일시적으로 오류가 발생하였습니다.");
-        }
-      });
+    }).then((response) => {
+      if (response.status === 401) {
+        alert("아이디 혹은 비밀번호가 일치하지 않습니다.");
+      }
+      if (response.status === 400) {
+        alert("서버에 일시적으로 오류가 발생하였습니다.");
+      }
+      if (response.status === 200) {
+        response.json().then((res) => localStorage.setItem("token", res.token));
+        this.props.history.push("/");
+      }
+    });
   }
 
   render() {
@@ -257,7 +257,7 @@ class Login extends Component {
             <hr />
           </div>
           <div className="directButton">
-            <Link to="/">회원가입</Link>
+            <Link to="/signup">회원가입</Link>
             <i></i>
             <Link to="/">아이디 찾기</Link>
             <i></i>
@@ -301,4 +301,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);

@@ -1,15 +1,46 @@
 {
-  "data": [
+  "reviews": [
     {
-
-
-      "name": "n",
-      "age": "1"
+      "commentUser": "이름1",
+      "commentDate": "날짜1",
+      "commentScore": 5,
+      "commentText": "내용1",
+      "commentImg": "이미지1"
     },
     {
-      "name": "b",
-      "age": "2"
+      "commentUser": "이름2",
+      "commentDate": "날짜1",
+      "commentScore": 3.5,
+      "commentText": "내용2",
+      "commentImg": "이미지1"
+    },
+    {
+      "commentUser": "이름3",
+      "commentDate": "날짜1",
+      "commentScore": 2,
+      "commentText": "내용3",
+      "commentImg": "이미지1"
+    },
+    {
+      "commentUser": "이름4",
+      "commentDate": "날짜1",
+      "commentScore": 4.5,
+      "commentText": "내용4",
+      "commentImg": "이미지1"
+    },
+    {
+      "commentUser": "이름4",
+      "commentDate": "날짜1",
+      "commentScore": 4.5,
+      "commentText": "내용4",
+      "commentImg": "이미지1"
+    },
+    {
+      "commentUser": "이름4",
+      "commentDate": "날짜1",
+      "commentScore": 4.5,
+      "commentText": "내용4",
+      "commentImg": "이미지1"
     }
   ]
 }
-

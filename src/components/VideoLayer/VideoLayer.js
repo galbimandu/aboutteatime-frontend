@@ -172,7 +172,7 @@ class VideoLayer extends Component {
                 onMouseLeave={() => this.setState({ movingTurnKey: true })}
                 className={this.state.mTea ? "teaText teaTextOn" : "teaText"}
               >
-                <Link to="/">
+                <Link to="/" className="min">
                   <b>명차</b>
                   <br />
                   <p>고귀하고 품격 있는 티 라이프를 위한</p>
@@ -205,7 +205,7 @@ class VideoLayer extends Component {
                 onMouseLeave={() => this.setState({ movingTurnKey: true })}
                 className={this.state.gTea ? "teaText teaTextOn" : "teaText"}
               >
-                <Link to="/">
+                <Link to="/" className="min">
                   <b>녹차/발효차/홍차</b>
                   <br />
                   <p>유기농 제주 차밭에서 자란</p>
@@ -238,7 +238,7 @@ class VideoLayer extends Component {
                 onMouseLeave={() => this.setState({ movingTurnKey: true })}
                 className={this.state.hTea ? "teaText teaTextOn" : "teaText"}
               >
-                <Link to="/">
+                <Link to="/" className="min">
                   <b>허브티</b>
                   <br />
                   <p>꽃잎,과일향이 가득한</p>
@@ -271,7 +271,7 @@ class VideoLayer extends Component {
                 onMouseLeave={() => this.setState({ movingTurnKey: true })}
                 className={this.state.bTea ? "teaText teaTextOn" : "teaText"}
               >
-                <Link to="/">
+                <Link to="/" className="min">
                   <b>블렌디드티</b>
                   <br />
                   <p>차와 함께</p>

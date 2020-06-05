@@ -77,6 +77,8 @@ class TeaShopList extends Component {
     } else {
       if (key === "category") {
         data = {};
+      } else if (qs.includes(value)) {
+        return;
       }
       data[key] = value;
     }

@@ -4,6 +4,8 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail";
 import Footer from "../../components/Footer/Footer";
 import "./ItemDetailPage.scss";
 import TopGoButton from "../../components/TopGoButton/TopGoButton";
+import Comment from "../../components/Comment/Comment";
+
 class ItemDetailPage extends Component {
   constructor() {
     super();
@@ -27,6 +29,7 @@ class ItemDetailPage extends Component {
           }
         >
           <ItemDetail className="ItemDetail" />
+          <Comment />
           <Footer className="Footer" />
         </div>
         <TopGoButton />

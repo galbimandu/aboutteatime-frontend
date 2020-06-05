@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import "./ItemDetail.scss";
 import urlset from "../../config";
+
 class ItemDetail extends Component {
   constructor() {
     super();
@@ -60,7 +61,35 @@ class ItemDetail extends Component {
     }
     return tmp.toLocaleString();
   };
-
+  addtobasket = () => {
+    const token = localStorage.getItem("token");
+    console.log(this.props);
+    fetch(urlset + "/order/cart", {
+      method: "POST",
+      headers: {
+        Authorization: token,
+      },
+      body: JSON.stringify({
+        item_id: this.props.match.params.minchang,
+        quantity: this.state.num,
+        add_bag: !this.state.fb,
+      }),
+    });
+  };
+  gotobasket = () => {
+    const token = localStorage.getItem("token");
+    fetch(urlset + "/order/cart", {
+      method: "POST",
+      headers: {
+        Authorization: token,
+      },
+      body: JSON.stringify({
+        item_id: this.props.match.params.minchang,
+        quantity: this.state.num,
+        add_bag: !this.state.fb,
+      }),
+    }).then(() => this.props.history.push(`/basket`));
+  };
   componentDidUpdate = (prevProps) => {
     if (prevProps.match.params.id !== this.props.match.params.id) {
       //fetch(url+"endpoint/"+this.props.match.params.id, {})
@@ -467,8 +496,12 @@ class ItemDetail extends Component {
               </div>
               <div className="checkout">
                 <div className="gift">선물하기</div>
-                <div className="basket">장바구니 담기</div>
-                <div className="buy">바로구매</div>
+                <div className="basket" onClick={() => this.addtobasket()}>
+                  장바구니 담기
+                </div>
+                <div className="buy" onClick={() => this.gotobasket()}>
+                  바로구매
+                </div>
               </div>
             </div>
           </div>

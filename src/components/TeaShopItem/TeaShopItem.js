@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import heart from "../../images/itemheart.gif";
 import comment from "../../images/itemcomment.gif";
+import url from "../../config";
 
 class TeaShopItem extends Component {
   constructor() {
@@ -38,8 +39,20 @@ class TeaShopItem extends Component {
     this.setState({ [val]: !this.state[val] });
   };
 
-  
-  
+  order = () => {
+    const token = localStorage.getItem("token");
+    fetch(url + "/order/cart", {
+      method: "POST",
+      headers: {
+        Authorization: token,
+      },
+      body: JSON.stringify({
+        item_id: this.props.data.id,
+        quantity: 1,
+        add_bag: false,
+      }),
+    }).then(() => this.props.history.push(`/basket`));
+  };
   render() {
     const { image } = this.state;
 
@@ -73,6 +86,7 @@ class TeaShopItem extends Component {
               this.changeImage("basket");
               this.changeImage("image");
             }}
+            onClick={() => this.order()}
             alt="basket"
           />
         </div>
@@ -110,7 +124,14 @@ class TeaShopItem extends Component {
             alt="new"
           />
         </div>
-        <p className="name">{this.props.data && this.props.data.title}</p>
+        <p
+          onClick={() =>
+            this.props.history.push(`/detail/${this.props.data.id}`)
+          }
+          className="name"
+        >
+          {this.props.data && this.props.data.title}
+        </p>
         {this.props.data && (
           <p className="price">
             <div className="finalPrice">

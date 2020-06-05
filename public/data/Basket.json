@@ -1,0 +1,41 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "녹차밀크스프레드 200 g",
+      "price": 8500,
+      "image": "http://localhost:3000/static/media/mock_image.fa8f7f20.png",
+      "benefits": "포장불가",
+      "quantity": 2,
+      "sub_total": 8500,
+      "discount": 0,
+      "bag_price": 0,
+      "shipping_cost": 2500,
+      "total": 28500,
+      "final_cost": 31000
+    },
+    {
+      "id": 2,
+      "title": "러블리티박스",
+      "price": 20000,
+      "image": "https://www.osulloc.com/upload/kr/ko/adminImage/PM/FK/200_20180510132548266RY.png?quality=80",
+      "benefits": "쇼핑백동봉/포장가능",
+      "quantity": 1,
+      "sub_total": 20000,
+      "discount": 0,
+      "bag_price": 0,
+      "shipping_cost": 2500,
+      "total": 28500,
+      "final_cost": 31000
+    }
+  ],
+  "summaries":
+    {
+      "num_items": 2,
+      "total": 28500,
+      "discount": 0,
+      "bag_price": 0,
+      "shipping_cost": 2500,
+      "final_cost": 31000
+    }
+}

@@ -171,8 +171,13 @@ class NavMove extends Component {
               </div>
               <div className="buttons">
                 <div className="login_wrap">
-                  <div className="login">
-                    <Link to="/login">로그인</Link>
+                  <div
+                    onClick={() => localStorage.removeItem("token")}
+                    className="login"
+                  >
+                    <Link to="/login">
+                      {localStorage.getItem("token") ? "로그아웃" : "로그인"}
+                    </Link>
                   </div>
                 </div>
                 <div className="signup_wrap">
@@ -261,13 +266,15 @@ class NavMove extends Component {
                     alt="icon_search"
                   />
                 </div>
-                <div className="bucket">
-                  <img
-                    className="icon_bucket"
-                    src={icon_bucket}
-                    alt="icon_bucket"
-                  />
-                </div>
+                <Link to="/basket">
+                  <div className="bucket">
+                    <img
+                      className="icon_bucket"
+                      src={icon_bucket}
+                      alt="icon_bucket"
+                    />
+                  </div>
+                </Link>
                 <div className="more">
                   <img className="icon_more" src={icon_more} alt="icon_more" />
                 </div>
