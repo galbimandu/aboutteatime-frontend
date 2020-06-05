@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./CommentTap3.scss";
 
 class CommentTap3 extends Component {
   constructor() {
@@ -6,7 +7,13 @@ class CommentTap3 extends Component {
   }
 
   render() {
-    return <div>3</div>;
+    return (
+      <div className="CommentTap3">
+        <div className="CommentTap3Wrap">
+          <img src={require(`../../images/productDesc.PNG`)} alt="sample" />
+        </div>
+      </div>
+    );
   }
 }
 
