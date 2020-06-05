@@ -111,7 +111,7 @@ class Login extends Component {
   // 페이지 이동 함수 //
   goToMain() {
     const token = localStorage.getItem("token");
-    fetch(`http://${url}:8000/user/sign-in`, {
+    fetch(`${url}/user/sign-in`, {
       method: "POST",
       headers: {
         Authorization: token,

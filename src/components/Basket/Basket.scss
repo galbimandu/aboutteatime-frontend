@@ -36,7 +36,6 @@ input, button {
           color: #222;
         }
       }
-
       .tab_header_container {
         margin: 0 auto;
         max-width: 1120px;
@@ -72,18 +71,13 @@ input, button {
           .order_table_container {
             .order_table_wrap {
               background-color: #fff;
-              text-align: left;
               font-size: 1.4em;
               .order_table {
                 font-size: 14px;
                 width: 100%;
-                border-spacing: 0;
-                display: table;
-                font-size: 14px;
                 thead {
                   tr {
                     height: 52px;
-                    display: table-cell;
                     .t_check {
                       vertical-align: middle;
                       padding: 12px;
@@ -191,10 +185,22 @@ input, button {
                 tbody {
                   // empty_body (display: none) -> 없애기
                   .empty_body {
+                    
                     td {
                       display: none;
                       color: #727272;
                       border-top: 1px solid #ccc;
+                      text-align: center;
+                      padding: 5em 0;
+                    }
+                  }
+
+                  .empty_body_active {
+                    height: 52px;
+                    border-top: 1px solid #ccc;
+                    
+                    td {
+                      color: #727272;
                       text-align: center;
                       padding: 5em 0;
                     }

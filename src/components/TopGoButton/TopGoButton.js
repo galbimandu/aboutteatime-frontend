@@ -15,6 +15,12 @@ class TopGoButton extends Component {
     window.addEventListener("scroll", this.actScroll);
   }
 
+  componentWillUnmount() {
+    window.addEventListener("scroll", this.actScroll);
+  }
+
+
+
   actScroll = (event) => {
     const scrolling = ("scroll", event.srcElement.scrollingElement.scrollTop);
     this.setState({ scrolling }, this.onFunc.bind(this));
