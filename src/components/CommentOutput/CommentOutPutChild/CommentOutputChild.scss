@@ -1,0 +1,71 @@
+.commentOutputChild {
+  margin: 1.5em;
+  display: flex;
+  width: 40em;
+  .commentOutputChildWrap {
+    border-bottom: 1px #eaeaea solid;
+    width: 100%;
+    display: flex;
+    .commentOutputChildLeft {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      // 날짜 //
+      span {
+        color: #b0b0b0;
+        height: 3em;
+        font-size: 15px;
+        font-family: "Noto_M";
+      }
+      // 점수 //
+      .starScore {
+        position: relative;
+        height: 1.8em;
+        width: 7em;
+        .background {
+          position: absolute;
+          left: 0px;
+          height: 100%;
+          width: 100%;
+          background: URL("../../../images/bg_stars_black.png") 0px -17px no-repeat;
+          background-size: 100%;
+        }
+        .starSize {
+          position: absolute;
+          right: 0px;
+          height: 100%;
+          width: 100%;
+          background-color: white;
+          opacity: 0.9;
+        }
+      }
+    }
+    .commentOutputChildRigth {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      // 이름 //
+      .user {
+        b {
+          margin-right: 1em;
+          height: 3em;
+          font-size: 15px;
+          font-weight: bold;
+          font-family: "Noto_M";
+          color: #6c801a;
+        }
+        height: 3em;
+        font-size: 15px;
+        font-family: "Noto_M";
+        color: #8b8b8b;
+      }
+      // 내용 //
+      .text {
+        height: 3em;
+        font-size: 17px;
+        font-family: "Noto_M";
+        color: #7e7e7e;
+      }
+    }
+  }
+}
