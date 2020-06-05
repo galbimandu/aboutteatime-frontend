@@ -42,6 +42,7 @@ class Signup extends Component {
       phone,
       password,
     } = this.state;
+    console.log(this.state);
     return (
       <div className="Signup">
         <div className="header">

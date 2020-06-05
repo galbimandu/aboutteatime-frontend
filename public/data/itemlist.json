@@ -3,8 +3,8 @@
     {
       "id": 21,
       "title": "덖음차 50 g(잎차)",
-      "price": "15000.00",
-      "discount_percent": "1.000",
+      "price": 15000.0,
+      "discount_percent": 0.2,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": true,
@@ -19,8 +19,8 @@
     {
       "id": 90,
       "title": "억수진 80g(잎차)",
-      "price": "30000.00",
-      "discount_percent": "1.000",
+      "price": 30000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -35,8 +35,8 @@
     {
       "id": 150,
       "title": "모로칸민트티 16g(잎차)",
-      "price": "20000.00",
-      "discount_percent": "1.000",
+      "price": 20000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -51,8 +51,8 @@
     {
       "id": 23,
       "title": "국화차 40g(잎차)",
-      "price": "40000.00",
-      "discount_percent": "1.000",
+      "price": 40000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -67,8 +67,8 @@
     {
       "id": 96,
       "title": "제주화산암차 30 g(잎차)",
-      "price": "15000.00",
-      "discount_percent": "1.000",
+      "price": 15000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -83,8 +83,8 @@
     {
       "id": 166,
       "title": "청우롱 50g(잎차)",
-      "price": "35000.00",
-      "discount_percent": "1.000",
+      "price": 35000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -99,8 +99,8 @@
     {
       "id": 35,
       "title": "도라지차 80g(잎차)",
-      "price": "35000.00",
-      "discount_percent": "1.000",
+      "price": 35000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -115,8 +115,8 @@
     {
       "id": 110,
       "title": "삼다연 80g(잎차)",
-      "price": "40000.00",
-      "discount_percent": "1.000",
+      "price": 40000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -131,8 +131,8 @@
     {
       "id": 174,
       "title": "월출향 60 g(잎차)",
-      "price": "90000.00",
-      "discount_percent": "1.000",
+      "price": 90000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -147,8 +147,8 @@
     {
       "id": 49,
       "title": "삼다연제주영귤 30 g(잎차)",
-      "price": "15000.00",
-      "discount_percent": "1.000",
+      "price": 15000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -163,8 +163,8 @@
     {
       "id": 116,
       "title": "일로향 60 g(잎차)",
-      "price": "170000.00",
-      "discount_percent": "1.000",
+      "price": 170000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -179,8 +179,8 @@
     {
       "id": 180,
       "title": "홍우전 60 g(잎차)",
-      "price": "90000.00",
-      "discount_percent": "1.000",
+      "price": 90000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -195,8 +195,8 @@
     {
       "id": 70,
       "title": "달빛걷기 35 g(잎차)",
-      "price": "15000.00",
-      "discount_percent": "1.000",
+      "price": 15000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -211,8 +211,8 @@
     {
       "id": 119,
       "title": "동백이피는곶자왈 35g(잎차)",
-      "price": "15000.00",
-      "discount_percent": "1.000",
+      "price": 15000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -227,8 +227,8 @@
     {
       "id": 79,
       "title": "제주숲홍차 80g(잎차)",
-      "price": "40000.00",
-      "discount_percent": "1.000",
+      "price": 40000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -243,8 +243,8 @@
     {
       "id": 121,
       "title": "제주난꽃향그린티 35 g(잎차)",
-      "price": "15000.00",
-      "discount_percent": "1.000",
+      "price": 15000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -259,8 +259,8 @@
     {
       "id": 12,
       "title": "세작 40 g(잎차)",
-      "price": "17000.00",
-      "discount_percent": "1.000",
+      "price": 17000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": true,
@@ -275,8 +275,8 @@
     {
       "id": 84,
       "title": "우전 60 g(잎차)",
-      "price": "70000.00",
-      "discount_percent": "1.000",
+      "price": 70000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -291,8 +291,8 @@
     {
       "id": 127,
       "title": "제주화산암차 50g(잎차)",
-      "price": "35000.00",
-      "discount_percent": "1.000",
+      "price": 35000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -307,8 +307,8 @@
     {
       "id": 19,
       "title": "세작 80g(잎차)",
-      "price": "40000.00",
-      "discount_percent": "1.000",
+      "price": 40000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -323,8 +323,8 @@
     {
       "id": 87,
       "title": "벚꽃향가득한올레 35 g(잎차)",
-      "price": "15000.00",
-      "discount_percent": "1.000",
+      "price": 15000.0,
+      "discount_percent": 1.0,
       "num_reviews": 0,
       "num_wishlist": 0,
       "best": false,
@@ -336,5 +336,6 @@
       "front": "https://www.osulloc.com/upload/kr/ko/adminImage/ZB/OO/304_20200103140634384GE.png?quality=80",
       "hover": "https://www.osulloc.com/upload/kr/ko/adminImage/RL/BA/20200103140619719UQ.png?quality=80&shrink=304:340"
     }
-  ]
+  ],
+  "num_pages": 1
 }

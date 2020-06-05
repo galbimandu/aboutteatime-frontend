@@ -29,6 +29,7 @@ class ItemDetail extends Component {
       rating: 0,
       title: "",
       item: {},
+      discount_percent: 0,
       bp: false,
       bp_text: "",
       tl: false,
@@ -41,7 +42,6 @@ class ItemDetail extends Component {
       sb_text: "",
       rateClass: 0,
       sb_orig: true,
-      discount_percent: 0,
     };
   }
   changeImage = (key) => {
@@ -467,7 +467,7 @@ class ItemDetail extends Component {
               </div>
               <div className="checkout">
                 <div className="gift">선물하기</div>
-                <div className="basket">장바구니</div>
+                <div className="basket">장바구니 담기</div>
                 <div className="buy">바로구매</div>
               </div>
             </div>

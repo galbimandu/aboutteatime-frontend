@@ -29,6 +29,7 @@ class TeaShopContensTitle extends Component {
         row: false,
       });
     }
+    this.props.createPush("sort", "review");
   }
 
   saleSortFunc() {
@@ -41,6 +42,7 @@ class TeaShopContensTitle extends Component {
         row: false,
       });
     }
+    this.props.createPush("sort", "popular");
   }
 
   newSortFunc() {
@@ -53,6 +55,7 @@ class TeaShopContensTitle extends Component {
         row: false,
       });
     }
+    this.props.createPush("sort", "new_arrival");
   }
 
   highSortFunc() {
@@ -65,6 +68,7 @@ class TeaShopContensTitle extends Component {
         row: false,
       });
     }
+    this.props.createPush("sort", "price_desc");
   }
 
   rowSortFunc() {
@@ -77,6 +81,7 @@ class TeaShopContensTitle extends Component {
         row: true,
       });
     }
+    this.props.createPush("sort", "price_asc");
   }
 
   categoryAll() {
@@ -90,6 +95,7 @@ class TeaShopContensTitle extends Component {
         scrollTop: 0,
       });
     }
+    this.props.createPush("pack", "all");
   }
 
   categoryLeaf() {
@@ -103,6 +109,7 @@ class TeaShopContensTitle extends Component {
         categoryLeaf: false,
       });
     }
+    this.props.createPush("pack", "잎차");
   }
 
   categoryPyramid() {
@@ -116,6 +123,7 @@ class TeaShopContensTitle extends Component {
         categoryPyramid: false,
       });
     }
+    this.props.createPush("pack", "피라미드");
   }
 
   categoryTeabag() {
@@ -129,6 +137,7 @@ class TeaShopContensTitle extends Component {
         categoryTeabag: false,
       });
     }
+    this.props.createPush("pack", "티백");
   }
 
   categoryPowder() {
@@ -142,6 +151,7 @@ class TeaShopContensTitle extends Component {
         categoryPowder: false,
       });
     }
+    this.props.createPush("pack", "파우더");
   }
 
   render() {
