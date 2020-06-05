@@ -257,7 +257,7 @@ class Login extends Component {
             <hr />
           </div>
           <div className="directButton">
-            <Link to="/">회원가입</Link>
+            <Link to="/signup">회원가입</Link>
             <i></i>
             <Link to="/">아이디 찾기</Link>
             <i></i>

@@ -48,6 +48,7 @@ class TeaShopSubMenu extends Component {
             <li
               onMouseOver={this.teaOnFunc.bind(this)}
               onMouseLeave={this.teaOffFunc.bind(this)}
+              onClick={() => this.props.createPush("category", "Tea")}
             >
               Tea
               <div
@@ -94,6 +95,7 @@ class TeaShopSubMenu extends Component {
             <li
               onMouseOver={this.teaFoodOnFunc.bind(this)}
               onMouseLeave={this.teaFoodOffFunc.bind(this)}
+              onClick={() => this.props.createPush("category", "Tea Food")}
             >
               Tea Food
               <div
@@ -125,6 +127,7 @@ class TeaShopSubMenu extends Component {
             <li
               onMouseOver={this.themaOnFunc.bind(this)}
               onMouseLeave={this.themaOffFunc.bind(this)}
+              onClick={() => this.props.createPush("category", "테마샵")}
             >
               테마샵
               <div

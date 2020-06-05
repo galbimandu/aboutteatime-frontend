@@ -38,14 +38,14 @@ class SignupBottom extends Component {
           password: this.props.password,
         }),
       }).then((response) => {
-        console.log(response)
+        console.log(response);
         if (response.status === 400) alert("fail");
         if (response.status === 200) {
-          this.props.history.push("/user/sign-in");
+          this.props.history.push("/login");
         }
       });
     }
-    console.log("oqo===sdfsdfsadfsdfsdfsdf")
+    console.log("oqo===sdfsdfsadfsdfsdfsdf");
   };
   changeShape = (num) => {
     if (num === "zero") {
@@ -297,7 +297,7 @@ class SignupBottom extends Component {
         </div>
         <div className="final_btn">
           <button
-            onClick={()=>this.signUp()}
+            onClick={() => this.signUp()}
             className={this.state.btnColor.toString()}
           >
             본인인증 및 회원가입

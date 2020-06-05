@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TeaShopItem from "../TeaShopItem/TeaShopItem";
 import "./TeaShopItemList.scss";
+import { withRouter } from "react-router-dom";
 import url from "../../config";
 
 class TeaShopItemList extends Component {
@@ -12,31 +13,16 @@ class TeaShopItemList extends Component {
   }
 
   componentDidMount = () => {
-    fetch(url + "/data/TeaItem.json", {})
-      .then((response) => response.json())
-      .then((response) => {
-        this.setState({ data: response.data });
-      });
+    this.setState({ data: this.props.data });
   };
 
   render() {
-    return (
-      <div className="TeaShopItemList">
-        <TeaShopItem history={this.props.history} data={this.state.data[0]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[1]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[2]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[3]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[1]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[0]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[2]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[3]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[0]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[2]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[1]} />
-        <TeaShopItem history={this.props.history} data={this.state.data[2]} />
-      </div>
-    );
+    const items = this.state.data.map((el, i) => {
+      return <TeaShopItem data={el} />;
+    });
+
+    return <div className="TeaShopItemList">{items}</div>;
   }
 }
 
-export default TeaShopItemList;
+export default withRouter(TeaShopItemList);

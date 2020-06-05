@@ -1,9 +1,10 @@
 .ShopItem {
   // width: 320px;
-  height: 537px;
+  height: 500px;
   padding: 0 22px 70px;
   border-right: 2px #f6f6f6 solid;
   .image {
+    cursor: pointer;
     width: 100%;
     display: flex;
     position: relative;
@@ -34,6 +35,7 @@
     }
   }
   .name {
+    cursor: pointer;
     height: 48px;
     margin: 0 0 5px;
     line-height: 1;
@@ -45,7 +47,31 @@
   .price {
     height: 50px;
     font-family: "notokr-regular", "Noto Sans CJK";
-    font-size: 20px;
+    .finalPrice {
+      color: #000000;
+
+      font-size: 20px;
+      span {
+        color: #626262;
+        font-size: 20px;
+        font-weight: 400;
+      }
+    }
+    .priceBottom {
+      display: flex;
+      margin-top: 5px;
+      .priceTop {
+        color: #b8b8b8;
+        font-size: 16px;
+        text-decoration: line-through;
+        text-align: right;
+      }
+      .percent {
+        color: #fd5c5c;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
   }
   .likecomment {
     height: 27px;

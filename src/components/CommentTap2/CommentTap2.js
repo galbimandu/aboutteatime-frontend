@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./CommentTap2.scss";
-// import url from "../../config";
+import url from "../../config";
 import CommentStar from "../CommentStar/CommentStar";
 import CommentOutput from "../CommentOutput/CommentOutput";
+import {withRouter} from "react-router-dom";
 
 class CommentTap2 extends Component {
   constructor() {
@@ -17,7 +18,7 @@ class CommentTap2 extends Component {
 
   fectFunc() {
     const token = localStorage.getItem("token");
-    fetch(`http://10.58.4.25:8000/review/write`, {
+    fetch(`${url}/review/`, {
       method: "POST",
       headers: {
         Authorization: token,
@@ -26,8 +27,7 @@ class CommentTap2 extends Component {
       body: JSON.stringify({
         overall_rating: this.state.score,
         content: this.state.inputText,
-        item_id_from_front: "1",
-        user_id_from_front: "1",
+        item_id_from_front: 1,
       }),
     }).then((res) => {
       if (res.status === 200) {
@@ -102,4 +102,4 @@ class CommentTap2 extends Component {
   }
 }
 
-export default CommentTap2;
+export default withRouter(CommentTap2);

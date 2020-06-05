@@ -23,7 +23,7 @@
           position: absolute;
           bottom: 25%;
           right: 3%;
-          a {
+          .min {
             height: 10%;
             color: white;
             width: 100%;
@@ -31,16 +31,16 @@
             flex-direction: column;
             align-items: flex-end;
             &:hover {
-              animation-name: colorchange;
-              animation-duration: 2.5s;
+              animation-name: colorchanges;
+              animation-duration: 1s;
               animation-iteration-count: 1;
               animation-fill-mode: forwards;
-              @keyframes colorchange {
+              @keyframes colorchanges {
                 from {
                   color: white;
                 }
                 to {
-                  color: #e9ff91;
+                  color: #d4e789;
                 }
               }
             }

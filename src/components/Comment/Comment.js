@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import Tap1 from "../CommentTap1/CommentTap1";
 import Tap2 from "../CommentTap2/CommentTap2";
 import Tap3 from "../CommentTap3/CommentTap3";
-// import url from "../../config";
+import url from "../../config";
 import "./Comment.scss";
 
 class Comment extends Component {
@@ -17,11 +18,14 @@ class Comment extends Component {
 
   getFunc() {
     const token = localStorage.getItem("token");
-    fetch(`http://10.58.4.25:8000/review?item_id_from_front=1`, {
-      headers: {
-        Authorization: token,
-      },
-    })
+    fetch(
+      `${url}/review?item_id_from_front=${this.props.match.params.id}`,
+      {
+        headers: {
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => response.json())
       .then((res) => this.setState({ commentList: res.reviews }));
   }
@@ -33,6 +37,7 @@ class Comment extends Component {
         <Tap2
           commentList={this.state.commentList}
           getFunc={this.getFunc.bind(this)}
+          id= {this.props.match.params.id}
         />
       ),
       3: <Tap3 />,
@@ -69,4 +74,4 @@ class Comment extends Component {
   }
 }
 
-export default Comment;
+export default withRouter(Comment);
