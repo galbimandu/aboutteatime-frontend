@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 :  https://www.osulloc.com/  Clone Coding
 
-## Available Scripts
+- 코딩 1개월차 WeCode 8기 수강생들의 2주 클론 프로젝트입니다.
+- 프론트엔드 3명과 백엔드 2명이 팀을 이뤄 개발했습니다.
 
-In the project directory, you can run:
+## 목표
 
-### `npm start`
+- 학습한 React를 활용하여 실제 웹사이트처럼 구현하기.
+- React의 꽃인 component와 state, props. 그리고 동일 component는 map메소드를 활용하여 구현하기.
+- 실제 Back-End API를 통해 원하는 데이터를 POST / GET 해보기.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 사용된 기술
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Front-End: **ReactJS**, **Sass**
+- Back-End: **Django**, **MySQL** ([Back-End Repository 주소](https://github.com/wecode-bootcamp-korea/WelonMusk_backend))
+- Deployment: **AWS**
 
-### `npm test`
+## 기능
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 회원가입 및 로그인(Token값이 오면 localStorage에 저장하고 사용하기)
+- Token값을 이용한 로그인 유지 및 로그아웃 구현
+- 상품리스트 및 디테일페이지에서 백엔드에 (GET, POST)로 데이터를 받아 구현하기
+- 추가로 sort메뉴를 통해 유저가 원하는 데이터를 쿼리스트링을 이용하여 변경하기
 
-### `npm run build`
+- 장바구니를 통해 유저가 입력한 값을 저장하기
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 프론트엔드 개발자로써 유저에게 조금 더 멋진 UI를 제공하기(실제 사이트에서 UI보완)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## 데모 영상

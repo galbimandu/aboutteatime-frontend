@@ -7,6 +7,7 @@ import TeaShopPage from "./pages/TeaShop/TeaShopPage";
 import ItemDetial from "./components/ItemDetail/ItemDetail";
 import ItemDetailPage from "./pages/ItemDetailPage/ItemDetailPage";
 import Signup from "./pages/Signup/Signup";
+import comment from "./components/Comment/Comment";
 
 class Routes extends Component {
   render() {
@@ -20,6 +21,7 @@ class Routes extends Component {
           <Route exact path="/basket" component={Basket} />
           <Route exact path="/teashop" component={TeaShopPage} />
           <Route exact path="/detail/:minchang" component={ItemDetailPage} />
+          <Route exact path="/comment" component={comment} />
         </Switch>
       </Router>
     );

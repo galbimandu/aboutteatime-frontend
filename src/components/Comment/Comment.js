@@ -18,14 +18,11 @@ class Comment extends Component {
 
   getFunc() {
     const token = localStorage.getItem("token");
-    fetch(
-      `${url}/review?item_id_from_front=${this.props.match.params.id}`,
-      {
-        headers: {
-          Authorization: token,
-        },
-      }
-    )
+    fetch(`${url}/review?item_id_from_front=${this.props.match.params.id}`, {
+      headers: {
+        Authorization: token,
+      },
+    })
       .then((response) => response.json())
       .then((res) => this.setState({ commentList: res.reviews }));
   }
@@ -37,7 +34,7 @@ class Comment extends Component {
         <Tap2
           commentList={this.state.commentList}
           getFunc={this.getFunc.bind(this)}
-          id= {this.props.match.params.id}
+          id={this.props.match.params.id}
         />
       ),
       3: <Tap3 />,
