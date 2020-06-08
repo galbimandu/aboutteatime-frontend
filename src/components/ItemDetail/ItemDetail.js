@@ -43,6 +43,7 @@ class ItemDetail extends Component {
       sb_text: "",
       rateClass: 0,
       sb_orig: true,
+      response: {},
     };
   }
   changeImage = (key) => {
@@ -142,7 +143,7 @@ class ItemDetail extends Component {
           main_image: response.item.main_image,
           price: Math.floor(response.item.price),
           num_reviews: response.item.num_reviews,
-          rating: response.item.rating.overall_rating__avg,
+          rating: response.item.rating,
           title: response.item.title,
           item: response.item,
           discount_percent: response.item.discount_percent,
@@ -258,7 +259,7 @@ class ItemDetail extends Component {
       sb_orig,
       discount_percent,
     } = this.state;
-    console.log(discount_percent);
+    console.log(rating);
     return (
       <div className="Pager">
         <div className="ItemDetail">

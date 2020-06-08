@@ -18,7 +18,7 @@ class Comment extends Component {
 
   getFunc() {
     const token = localStorage.getItem("token");
-    fetch(`${url}/review/?id=1`, {
+    fetch(`${url}/review/?id=${this.props.match.params.minchang}`, {
       headers: {
         Authorization: token,
       },
@@ -34,7 +34,7 @@ class Comment extends Component {
         <Tap2
           commentList={this.state.commentList}
           getFunc={this.getFunc.bind(this)}
-          id={this.props.match.params.id}
+          id={this.props.match.params.minchang}
         />
       ),
       3: <Tap3 />,

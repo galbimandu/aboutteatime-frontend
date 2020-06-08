@@ -27,7 +27,7 @@ class CommentTap2 extends Component {
       body: JSON.stringify({
         overall_rating: this.state.score,
         content: this.state.inputText,
-        item_id: 1,
+        item_id: this.props.match.params.minchang,
       }),
     }).then((res) => {
       if (res.status === 200) {
