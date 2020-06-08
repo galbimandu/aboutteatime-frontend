@@ -126,6 +126,7 @@ class VideoLayer extends Component {
   }
 
   render() {
+    console.log(this.state);
     //video slide시킬 translate
     const videoStyle = {
       transform: `translate(${this.state.transformStay}px, 0)`,
@@ -163,7 +164,7 @@ class VideoLayer extends Component {
                 this.state.mTea ? "teaVideo teaVideoOn" : "teaVideo teaVideoOff"
               }
             >
-              <video controls="" autoPlay="" loop muted>
+              <video controls="" autoPlay="autoplay" loop muted>
                 <source src={mTeaVideo} type="video/mp4" />
               </video>
               <div
@@ -196,7 +197,7 @@ class VideoLayer extends Component {
                 this.state.gTea ? "teaVideo teaVideoOn" : "teaVideo teaVideoOff"
               }
             >
-              <video controls="" autoPlay="" loop muted>
+              <video controls="" autoPlay="autoplay" loop muted>
                 <source src={gTeaVideo} type="video/mp4" />
               </video>
               <div
@@ -229,7 +230,7 @@ class VideoLayer extends Component {
                 this.state.hTea ? "teaVideo teaVideoOn" : "teaVideo teaVideoOff"
               }
             >
-              <video controls="" autoPlay="" loop muted>
+              <video controls="" autoPlay="autoplay" loop muted>
                 <source src={hTeaVideo} type="video/mp4" />
               </video>
               <div
@@ -262,7 +263,7 @@ class VideoLayer extends Component {
                 this.state.bTea ? "teaVideo teaVideoOn" : "teaVideo teaVideoOff"
               }
             >
-              <video controls="" autoPlay="" loop muted>
+              <video controls="" autoPlay="autoplay" loop muted>
                 <source src={bTeaVideo} type="video/mp4" />
               </video>
               <div
