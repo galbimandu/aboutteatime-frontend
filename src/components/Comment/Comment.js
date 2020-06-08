@@ -34,11 +34,7 @@ class Comment extends Component {
         <Tap2
           commentList={this.state.commentList}
           getFunc={this.getFunc.bind(this)}
-<<<<<<< HEAD
-          id={this.props.match.params.id}
-=======
           id={this.props.match.params.minchang}
->>>>>>> master
         />
       ),
       3: <Tap3 />,
